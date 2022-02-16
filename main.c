@@ -47,14 +47,23 @@ int	main(int ac, char **av)
 	map.map[8] = ft_strdup("1000000001");
 	map.map[9] = ft_strdup("1111111111");
 	map.map[10] = NULL;
-
 	map.map_width = 10;
 	map.map_height = 10;
 
-	map.pers.posx = 1;
-	map.pers.posy = 1;
-//	map.pers.dir = 1.5;
-//	map.pers.fov = 1.5;
+	map.pers.posx = 8;
+	map.pers.posy = 8;
+//	printf("%.1f %.1f\n", map.pers.posx, map.pers.posy);
+	map.pers.dir = 0;							// 0
+//	map.pers.dir = GR;							// 1
+//	map.pers.dir = 3.14159265 / 2.0 - 0.017452;	// 89
+//	map.pers.dir = 3.14159265 / 2.0;			// 90
+//	map.pers.dir = 3.14159265 / 2.0 + 0.017452;	// 91
+//	map.pers.dir = 3.14159265 / 2.0 + PI2 / 2.0;//
+//	map.pers.dir = 3.14159265 - 0.017452;		// 179
+//	map.pers.dir = 3.14159265 + 0.017452 * 1;	// 179
+//	map.pers.dir = 1.5 * 3.14159265 - 0.017452;	// 269
+//	map.pers.dir = 2 * 3.14159265 - 0.017452;	// 359
+	map.pers.fov = 3.14159265 / 3.0;
 
 	/* ---Craft a window--- */
 	craft_the_window(&map);

@@ -4,6 +4,18 @@
 # include "../mlx/mlx.h"
 # include "libft.h"
 
+# define MAPW 320
+# define MAPW_HALF 160
+# define MAPH 200
+# define MAPH_HALF 100
+# define WALL 0x00FF0000
+# define VOID 0x00808080
+# define PI 3.14159265
+# define PI2 1.57079632
+# define GR 0.017452
+# define FOV2 0.523599
+
+
 typedef struct s_minimap
 {
 	void	*img;
@@ -11,8 +23,8 @@ typedef struct s_minimap
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
-	int		minimap_size_x;
-	int		minimap_size_y;
+	int		size_x;
+	int		size_y;
 	int		posx;
 	int		posy;
 	//
@@ -24,6 +36,9 @@ typedef struct s_hero
 	double	posy;
 	double	dir;
 	double	fov;
+	double	ray_len;
+	double	xray_len;
+	double	yray_len;
 	//
 }	t_hero;
 
@@ -57,8 +72,12 @@ typedef struct s_map
 
 /*	gernesto	*/
 int		close_win(t_map *map);
-void	draw_minimap(t_map *map);
 int		g_do_keys(int keycode, t_map *map);
+void	my_mlx_pixel_put(t_minimap *data, int x, int y, int color);
+void	draw_line(t_minimap map, double endx, double endy);
+void	draw_minimap(t_map *map);
+double	ray_cast(t_map *map, double dir, int stat);
+
 /*	gernesto	*/
 
 #endif

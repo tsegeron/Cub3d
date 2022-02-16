@@ -28,7 +28,8 @@ MAIN	=	main.c
 #MAIN_B	=	checker.c
 
 SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c			\
-			minimap/draw_minimap.c		g_do_keys.c
+			minimap/draw_minimap.c		minimap/ray_cast.c				minimap/utils.c				\
+			g_do_keys.c
 #			parsing/m_check_fname.c		parsing/m_check_map.c			parsing/m_init_map.c		\
 #			parsing/m_pars.c			parsing/m_pars_map.c			parsing/m_pars_param.c		\
 #			parsing/m_rerror_r.c		\

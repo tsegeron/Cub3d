@@ -1,10 +1,8 @@
 #include "hdrs/cub3d.h"
 
-int main()
+int	main(void)
 {
-//	int x = 320;
-	double	a = 0.99;
+	printf("%f\n", cos(-FOV2));
 
-	printf("%d\n", (int)a);
-	return 0;
+	return (0);
 }
