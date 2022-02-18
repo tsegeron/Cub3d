@@ -10,13 +10,14 @@
 # define MAPH_HALF 100
 # define WALL 0x00FF0000
 # define VOID 0x00808080
+# define FOV 0x0058C878
 # define PI 3.14159265
 # define PI2 1.57079632
 # define GR 0.017452
 # define FOV2 0.523599
 
 
-typedef struct s_minimap
+typedef struct s_interface
 {
 	void	*img;
 	char	*addr;
@@ -27,8 +28,7 @@ typedef struct s_minimap
 	int		size_y;
 	int		posx;
 	int		posy;
-	//
-}	t_minimap;
+}	t_interface;
 
 typedef struct s_hero
 {
@@ -36,10 +36,7 @@ typedef struct s_hero
 	double	posy;
 	double	dir;
 	double	fov;
-	double	ray_len;
-	double	xray_len;
-	double	yray_len;
-	//
+	int		health;
 }	t_hero;
 
 typedef struct s_mlx
@@ -48,6 +45,8 @@ typedef struct s_mlx
 	void	*win;
 	int		win_size_x;
 	int		win_size_y;
+	int		mouse_x;
+	int		mouse_y;
 }	t_mlx;
 
 typedef struct s_map
@@ -57,7 +56,8 @@ typedef struct s_map
 	int			map_height;
 	t_mlx		mlx;
 	t_hero		pers;
-	t_minimap	minimap;
+	t_interface	minimap;
+	t_interface	hpbar;
 }	t_map;
 
 /*	mseastar	*/
@@ -72,11 +72,14 @@ typedef struct s_map
 
 /*	gernesto	*/
 int		close_win(t_map *map);
+void	do_cam_rot(double *dir, int keycode);
 int		g_do_keys(int keycode, t_map *map);
-void	my_mlx_pixel_put(t_minimap *data, int x, int y, int color);
-void	draw_line(t_minimap map, double endx, double endy);
-void	draw_minimap(t_map *map);
+void	handle_mouse_pos(t_map *map);
+void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
+void	draw_line(t_interface map, double endx, double endy, int color);
 double	ray_cast(t_map *map, double dir, int stat);
+void	draw_minimap(t_map *map);
+void	draw_interface(t_map *map);
 
 /*	gernesto	*/
 

@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 13:05:46 by gernesto          #+#    #+#             */
-/*   Updated: 2022/02/16 13:07:19 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/02/17 21:40:03 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,6 @@ typedef struct s_local
  */
 static void	paint_pixels(t_map *map, t_local *q)
 {
-	q->pix_x = -1;
-	q->pix_map_x = q->save_x;
 	while (++q->pix_x < MAPW + 1 && ++q->pix_map_x < q->pix_map_end_x)
 	{
 		if (q->pix_map_x < 0)
@@ -48,6 +46,10 @@ static void	paint_pixels(t_map *map, t_local *q)
 			continue ;
 		if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == '1')
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, WALL);
+		else if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == 'C')
+			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x00B22222);
+		else if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == 'O')
+			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x00808000);
 		else
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, VOID);
 	}
@@ -73,6 +75,8 @@ void	draw_relative_minimap(t_map *map)
 	{
 		if (!(q.pix_map_y % 20))
 			continue ;
+		q.pix_x = -1;
+		q.pix_map_x = q.save_x;
 		paint_pixels(map, &q);
 	}
 }
@@ -109,17 +113,21 @@ void	draw_fov_in_minimap(t_map *map)
 	double	line_end_y;
 	double	dir_start;
 	double	dir_end;
+	double	dir_center;
 
-	dir_start = map->pers.dir - FOV2;
-	dir_end = dir_start + 2 * FOV2;
+	dir_end = map->pers.dir + FOV2;
 	if (dir_end > PI * 2)
 		dir_end -= PI * 2;
 	dir_start = dir_end - 2 * FOV2;
+	dir_center = dir_end - 30 * GR;
 	while (dir_start <= dir_end)
 	{
 		line_end_x = MAPW_HALF + ray_cast(map, dir_start, 0);
 		line_end_y = MAPH_HALF + ray_cast(map, dir_start, 1);
-		draw_line(map->minimap, line_end_x, line_end_y);
+		if (fabs(dir_start - dir_center) < GR / 2)
+			draw_line(map->minimap, line_end_x, line_end_y, WALL);
+		else
+			draw_line(map->minimap, line_end_x, line_end_y, FOV);
 		dir_start += GR / 2;
 	}
 }

@@ -35,7 +35,7 @@ static double	find_wall_on_y(t_map *map, t_local *q)
 		q->cur_x = map->map_width - 1;
 	if (q->cur_x < 0)
 		q->cur_x = 0;
-	while (map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1')
+	while (map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1' && map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C')
 	{
 		q->cur_y += q->step_y;
 		q->cur_x = (q->pos_y - q->cur_y) / tan(q->dir) + q->pos_x;
@@ -90,7 +90,7 @@ static double	find_wall_on_x(t_map *map, t_local *q)
 		q->cur_y = map->map_height - 1;
 	if (q->cur_y < 0)
 		q->cur_y = 0;
-	while (map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '1')
+	while (map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '1' && map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != 'C')
 	{
 		q->cur_x += q->step_x;
 		q->cur_y = (q->cur_x - q->pos_x) * -tan(q->dir) + q->pos_y;
