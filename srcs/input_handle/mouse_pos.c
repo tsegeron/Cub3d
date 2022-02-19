@@ -30,13 +30,10 @@ void	handle_mouse_pos(t_map *map)
 	mlx_mouse_move(map->mlx.win, mouse_x, mouse_y);
 	if (save_x && mouse_x != save_x)
 	{
-		if (mouse_x - save_x > 1000 || mouse_x < save_x
-			&& save_x - mouse_x < 1000)
+		if (mouse_x - save_x > 1000 || (mouse_x < save_x && save_x - mouse_x < 1000))
 			do_cam_rot(&map->pers.dir, 123);
 		else if (save_x - mouse_x > 1000 || mouse_x > save_x)
 			do_cam_rot(&map->pers.dir, 124);
-		mlx_clear_window(map->mlx.mlx, map->mlx.win);
-		draw_minimap(map);
 	}
 	save_x = mouse_x;
 }

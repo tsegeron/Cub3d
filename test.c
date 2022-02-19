@@ -2,6 +2,7 @@
 
 int	main(void)
 {
-	printf("%f\n", 1.234 / 2);
+	printf("%d\n", 120 / 20);
+	printf("%d\n", 139 % 20);
 	return (0);
 }

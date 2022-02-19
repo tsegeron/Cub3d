@@ -16,7 +16,6 @@
 # define GR 0.017452
 # define FOV2 0.523599
 
-
 typedef struct s_interface
 {
 	void	*img;
@@ -36,7 +35,7 @@ typedef struct s_hero
 	double	posy;
 	double	dir;
 	double	fov;
-	int		health;
+	int		charge;
 }	t_hero;
 
 typedef struct s_mlx
@@ -57,7 +56,8 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	minimap;
-	t_interface	hpbar;
+	t_interface	battery_bar;
+	t_interface	background;
 }	t_map;
 
 /*	mseastar	*/
@@ -80,6 +80,8 @@ void	draw_line(t_interface map, double endx, double endy, int color);
 double	ray_cast(t_map *map, double dir, int stat);
 void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
+void	draw_battery_bar(t_map *map);
+void	draw_background(t_map *map);	//	FOR TEST
 
 /*	gernesto	*/
 

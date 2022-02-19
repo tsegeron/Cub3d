@@ -30,16 +30,7 @@ MAIN	=	main.c
 SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c			\
 			minimap/draw_minimap.c		minimap/ray_cast.c				minimap/utils.c				\
 			input_handle/g_do_keys.c	input_handle/mouse_pos.c		\
-			interface/draw_interface.c
-#			parsing/m_check_fname.c		parsing/m_check_map.c			parsing/m_init_map.c		\
-#			parsing/m_pars.c			parsing/m_pars_map.c			parsing/m_pars_param.c		\
-#			parsing/m_rerror_r.c		\
-#			libfts/ft_bzero.c				libfts/ft_calloc.c			\
-#			libfts/ft_strjoin.c			libfts/ft_itoa_uns.c			libfts/ft_strtrim.c			\
-#			libfts/ft_putendl_fd.c		libfts/ft_strcmp.c				\
-#			libfts/ft_putstr_fd.c			libfts/ft_atoi.c			\
-#			libfts/ft_strchr.c			libfts/ft_substr.c				libfts/ft_split.c			\
-#			libfts/ft_strchr_count.c	libfts/ft_strncmp.c				libfts/ft_strrchr.c			\
+			interface/draw_interface.c	interface/draw_battery_bar.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
@@ -70,6 +61,8 @@ _END	=	\e[33m
 
 ${NAME}: 	${OBJS} ${MAIN}
 			@${AR} ${LIB} $?
+			@${MAKE} -C mlx
+			@cp mlx/libmlx.a libmlx.a
 			@${CC} ${FLAGS_MLX} ${FLAGS} ${OPTFLAGS} ${MAIN} ${LIB} libmlx.a -o ${NAME}
 			@printf "${_CYAN}${READY}${_END}\n"
 

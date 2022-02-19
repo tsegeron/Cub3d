@@ -52,6 +52,13 @@ static void	do_key_wasd(t_map *map, int keycode)
 		map->pers.posx += difx;
 	if (map->map[posy][(int)map->pers.posx] != '1' && map->map[posy][(int)map->pers.posx] != 'C')
 		map->pers.posy += dify;
+	if (map->map[posy][posx] == 'B')
+	{
+		map->map[posy][posx] = '0';
+		if (map->pers.charge < 10)
+			map->pers.charge++;
+	}
+
 }
 
 void	do_cam_rot(double *dir, int keycode)
@@ -100,8 +107,8 @@ int	g_do_keys(int keycode, t_map *map)
 		do_key_wasd(map, keycode);
 	else if (keycode == 123 || keycode == 124)
 		do_cam_rot(&map->pers.dir, keycode);
-	mlx_clear_window(map->mlx.mlx, map->mlx.win);
-	draw_minimap(map);
+//	mlx_clear_window(map->mlx.mlx, map->mlx.win);
+//	draw_minimap(map);
 
 //	draw_map(map);
 //	draw_objects(map);

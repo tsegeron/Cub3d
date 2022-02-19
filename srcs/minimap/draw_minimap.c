@@ -23,6 +23,26 @@ typedef struct s_local
 	int		pix_y;
 }	t_local;
 
+int	draw_charge_square(int x, int y)
+{
+	int	modx;
+	int	mody;
+
+	modx = x % 32;
+	mody = y % 20;
+	if (mody >= 8 && mody < 12)
+	{
+		if (modx > 8 && modx < 25)
+			return (1);
+	}
+	else if (mody >= 2 && mody < 18)
+	{
+		if (modx > 14 && modx < 19)
+			return (1);
+	}
+	return (0);
+}
+
 /*
  *	just paints pixel in minimap
  */
@@ -50,6 +70,13 @@ static void	paint_pixels(t_map *map, t_local *q)
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x00B22222);
 		else if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == 'O')
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x00808000);
+		else if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == 'B')
+		{
+			if (draw_charge_square(q->pix_map_x, q->pix_map_y))
+				my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x008DB600);
+			else
+				my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, VOID);
+		}
 		else
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, VOID);
 	}
@@ -135,7 +162,7 @@ void	draw_fov_in_minimap(t_map *map)
 /*
  *	includes funcs above:
  *	1.	draws a minimap relative to the player
- *	2.	draws a rectangle which is a player
+ *	2.	draws a rectangle on minimap which is a player
  *	3.	draws field of view on minimap (60° or PI/3)
  */
 void	draw_minimap(t_map *map)
@@ -151,4 +178,5 @@ void	draw_minimap(t_map *map)
 	draw_player_in_minimap(map);
 	draw_fov_in_minimap(map);
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->minimap.img, 0, 0);
+//	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->minimap.img, 15, map->mlx.win_size_y - map->minimap.size_y - 15 - map->mlx.win_size_y / 20);
 }
