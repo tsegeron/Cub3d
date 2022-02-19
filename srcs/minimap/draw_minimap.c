@@ -23,7 +23,7 @@ typedef struct s_local
 	int		pix_y;
 }	t_local;
 
-int	draw_charge_square(int x, int y)
+static int	draw_charge_square(int x, int y)
 {
 	int	modx;
 	int	mody;
@@ -180,3 +180,5 @@ void	draw_minimap(t_map *map)
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->minimap.img, 0, 0);
 //	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->minimap.img, 15, map->mlx.win_size_y - map->minimap.size_y - 15 - map->mlx.win_size_y / 20);
 }
+
+//	try drawing round minimap
