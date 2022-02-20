@@ -18,6 +18,7 @@ static int	render_frame(t_map *map)
 		handle_mouse_pos(map);
 		mlx_clear_window(map->mlx.mlx, map->mlx.win);
 		draw_background(map);	//	for test
+//		draw_round_minimap(map);
 		draw_minimap(map);
 		draw_battery_bar(map);
 		mlx_do_sync(map->mlx.mlx);

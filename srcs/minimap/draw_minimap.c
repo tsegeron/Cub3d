@@ -23,7 +23,7 @@ typedef struct s_local
 	int		pix_y;
 }	t_local;
 
-static int	draw_charge_square(int x, int y)
+static int	draw_charge_square_in_minimap(int x, int y)
 {
 	int	modx;
 	int	mody;
@@ -72,7 +72,7 @@ static void	paint_pixels(t_map *map, t_local *q)
 			my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x00808000);
 		else if (map->map[(q->pix_map_y / 20)][(q->pix_map_x / 32)] == 'B')
 		{
-			if (draw_charge_square(q->pix_map_x, q->pix_map_y))
+			if (draw_charge_square_in_minimap(q->pix_map_x, q->pix_map_y))
 				my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, 0x008DB600);
 			else
 				my_mlx_pixel_put(&map->minimap, q->pix_x, q->pix_y, VOID);
@@ -181,4 +181,8 @@ void	draw_minimap(t_map *map)
 //	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->minimap.img, 15, map->mlx.win_size_y - map->minimap.size_y - 15 - map->mlx.win_size_y / 20);
 }
 
-//	try drawing round minimap
+
+/*
+ *	Currently:
+ *	1.	try drawing round minimap
+ */

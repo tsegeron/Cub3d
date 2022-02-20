@@ -26,7 +26,7 @@ void	draw_background(t_map *map)
 	{
 		int	j = -1;
 		while (++j < map->background.size_x)
-			my_mlx_pixel_put(&map->background, j, i, 0x00000000);
+			my_mlx_pixel_put(&map->background, j, i, 0x004B5320);
 	}
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->background.img, 0, 0);
 }

@@ -30,7 +30,8 @@ MAIN	=	main.c
 SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c			\
 			minimap/draw_minimap.c		minimap/ray_cast.c				minimap/utils.c				\
 			input_handle/g_do_keys.c	input_handle/mouse_pos.c		\
-			interface/draw_interface.c	interface/draw_battery_bar.c
+			interface/draw_interface.c	interface/draw_battery_bar.c	\
+			minimap/draw_round_minimap.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})

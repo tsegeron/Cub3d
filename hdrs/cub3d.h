@@ -56,6 +56,7 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	minimap;
+	t_interface	round_minmap;
 	t_interface	battery_bar;
 	t_interface	background;
 }	t_map;
@@ -82,6 +83,7 @@ void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
 void	draw_battery_bar(t_map *map);
 void	draw_background(t_map *map);	//	FOR TEST
+void	draw_round_minimap(t_map *map);
 
 /*	gernesto	*/
 
