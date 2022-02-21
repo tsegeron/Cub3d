@@ -1,29 +1,29 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   draw_round_minimap.c                               :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/16 11:51:02 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/16 12:11:08 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d.h"
 
-void	draw_line_r(t_interface map, double endx, double endy, int color)
+static void	init_params(t_map *map)
 {
-	double	startx;
-	double	starty;
-	double	deltax;
-	double	deltay;
-	double	pixels;
-
-	startx = map.size_x / 2;
-	starty = map.size_y / 2;
-	deltax = endx - startx;
-	deltay = endy - starty;
-	pixels = 100;
-	deltax /= pixels;
-	deltay /= pixels;
-	while (pixels-- > 0)
-	{
-		my_mlx_pixel_put(&map, startx, starty, color);
-		startx += deltax;
-		starty += deltay;
-	}
+	map->round_minmap.size_x = map->mlx.win_size_y / 4 + 20;
+	map->round_minmap.size_y = map->mlx.win_size_y / 4 + 20;
+	map->round_minmap.img = mlx_new_image(map->mlx.mlx,
+			map->round_minmap.size_x, map->round_minmap.size_y);
+	map->round_minmap.addr = mlx_get_data_addr(map->round_minmap.img,
+			&map->round_minmap.bits_per_pixel, &map->round_minmap.line_length,
+			&map->round_minmap.endian);
 }
 
-void	draw_round_minimap_background(t_interface r_minimap)
+static void	draw_round_minimap_background(t_interface *r_minimap)
 {
 	int	y;
 	int	x;
@@ -32,33 +32,28 @@ void	draw_round_minimap_background(t_interface r_minimap)
 
 	y = -1;
 	rad = 110;
-	while (++y < r_minimap.size_y)
+	while (++y < r_minimap->size_y)
 	{
 		x = -1;
-		while (++x < r_minimap.size_x)
+		while (++x < r_minimap->size_x)
 		{
 			res = sqrt((y - rad) * (y - rad) + (x - rad) * (x - rad));
 			if (rad >= res)
-				my_mlx_pixel_put(&r_minimap, x,  y, 0x553B444B);
+				my_mlx_pixel_put(r_minimap, x, y, BACKGR);
 			else
-				my_mlx_pixel_put(&r_minimap, x,  y, 0xFF000000);
+				my_mlx_pixel_put(r_minimap, x, y, EMPTY);
 		}
 	}
 }
 
-void	draw_relative_round_minimap(t_map *map)
-{
-
-}
-
-void	draw_player_in_round_minimap(t_map *map)
+static void	draw_player_in_round_minimap(t_interface *minimap)
 {
 	int		x;
 	int		y;
 	int		end;
 	int		save_y;
 
-	save_y = map->round_minmap.size_x / 2 - 2;
+	save_y = minimap->size_x / 2 - 2;
 	end = save_y + 4;
 	x = save_y;
 	while (x < end)
@@ -66,14 +61,14 @@ void	draw_player_in_round_minimap(t_map *map)
 		y = save_y;
 		while (y < end)
 		{
-			my_mlx_pixel_put(&map->round_minmap, x, y, 0x0058C878);
+			my_mlx_pixel_put(minimap, x, y, PLAYER);
 			y++;
 		}
 		x++;
 	}
 }
 
-void	draw_fov_in_round_minimap(t_map *map)
+static void	draw_fov_in_round_minimap(t_map *map)
 {
 	double	line_end_x;
 	double	line_end_y;
@@ -91,27 +86,20 @@ void	draw_fov_in_round_minimap(t_map *map)
 		line_end_x = 110 + ray_cast(map, dir_start, 0);
 		line_end_y = 110 + ray_cast(map, dir_start, 1);
 		if (fabs(dir_start - dir_center) < GR / 2)
-			draw_line_r(map->round_minmap, line_end_x, line_end_y, WALL);
+			draw_line(map->round_minmap, line_end_x, line_end_y, AIM);
 		else
-			draw_line_r(map->round_minmap, line_end_x, line_end_y, FOV);
+			draw_line(map->round_minmap, line_end_x, line_end_y, FOV);
 		dir_start += GR / 2;
 	}
 }
 
 void	draw_round_minimap(t_map *map)
 {
-	map->round_minmap.size_x = map->mlx.win_size_y / 4 + 20;
-	map->round_minmap.size_y = map->mlx.win_size_y / 4 + 20;
-	map->round_minmap.img = mlx_new_image(map->mlx.mlx,
-									 map->round_minmap.size_x, map->round_minmap.size_y);
-	map->round_minmap.addr = mlx_get_data_addr(map->round_minmap.img,
-										  &map->round_minmap.bits_per_pixel, &map->round_minmap.line_length,
-										  &map->round_minmap.endian);
-	draw_round_minimap_background(map->round_minmap);
-	draw_relative_round_minimap(map);
-	draw_player_in_round_minimap(map);
+	init_params(map);
+	draw_round_minimap_background(&map->round_minmap);
+	draw_minimap_elements(map);
 	draw_fov_in_round_minimap(map);
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->round_minmap.img, 32, 25);
-//	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->round_minmap.img, 15, map->mlx.win_size_y - map->round_minmap.size_y - 15 - map->mlx.win_size_y / 20);
+	draw_player_in_round_minimap(&map->round_minmap);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win,
+		map->round_minmap.img, 32, 25);
 }
-

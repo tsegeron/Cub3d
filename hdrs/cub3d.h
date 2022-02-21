@@ -4,17 +4,29 @@
 # include "../mlx/mlx.h"
 # include "libft.h"
 
-# define MAPW 320
-# define MAPW_HALF 160
-# define MAPH 200
-# define MAPH_HALF 100
-# define WALL 0x00FF0000
-# define VOID 0x00808080
-# define FOV 0x0058C878
+# define MAPW 220
+# define MAPW_HALF 110
+# define MAPH 220
+# define MAPH_HALF 110
+# define FOV 0xEE546951
 # define PI 3.14159265
 # define PI2 1.57079632
 # define GR 0.017452
 # define FOV2 0.523599
+
+/*	colors	*/
+# define EMPTY 0xFF000000
+# define BACKGR 0xCC000000
+# define WALL 0x55000000
+# define VOID 0x99000000
+# define CDOOR 0x44560319
+# define ODOOR 0x88013220
+# define CURE 0x008DB600
+# define BATTERY 0x0018BC9C
+# define PLAYER 0x00155054
+# define AIM 0x33FF0000
+
+
 
 typedef struct s_interface
 {
@@ -36,6 +48,7 @@ typedef struct s_hero
 	double	dir;
 	double	fov;
 	int		charge;
+	int		health;
 }	t_hero;
 
 typedef struct s_mlx
@@ -55,10 +68,10 @@ typedef struct s_map
 	int			map_height;
 	t_mlx		mlx;
 	t_hero		pers;
-	t_interface	minimap;
 	t_interface	round_minmap;
 	t_interface	battery_bar;
 	t_interface	background;
+	t_interface	health;
 }	t_map;
 
 /*	mseastar	*/
@@ -82,9 +95,10 @@ double	ray_cast(t_map *map, double dir, int stat);
 void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
 void	draw_battery_bar(t_map *map);
+void	draw_health_effect(t_map *map);
 void	draw_background(t_map *map);	//	FOR TEST
 void	draw_round_minimap(t_map *map);
-
+void	draw_minimap_elements(t_map *map);
 /*	gernesto	*/
 
 #endif

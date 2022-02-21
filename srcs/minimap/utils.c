@@ -21,7 +21,7 @@ void	my_mlx_pixel_put(t_interface *data, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-// draws one line from x,y {160pix,100pix} (center of minimap) to endx,endy
+// draws one line from x,y {110pix,110pix} (center of minimap) to endx,endy
 void	draw_line(t_interface map, double endx, double endy, int color)
 {
 	double	startx;
@@ -30,11 +30,11 @@ void	draw_line(t_interface map, double endx, double endy, int color)
 	double	deltay;
 	double	pixels;
 
-	startx = MAPW_HALF;
-	starty = MAPH_HALF;
+	startx = map.size_x / 2;
+	starty = map.size_y / 2;
 	deltax = endx - startx;
 	deltay = endy - starty;
-	pixels = 100;
+	pixels = 40;
 	deltax /= pixels;
 	deltay /= pixels;
 	while (pixels-- > 0)

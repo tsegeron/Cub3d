@@ -48,17 +48,20 @@ static void	do_key_wasd(t_map *map, int keycode)
 	find_difs(&difx, &dify, map->pers.dir, keycode);
 	posx = (int)(map->pers.posx + difx + 0.2 * difx / fabs(difx));
 	posy = (int)(map->pers.posy + dify + 0.2  * dify / fabs(dify));
-	if (map->map[(int)map->pers.posy][posx] != '1' && map->map[(int)map->pers.posy][posx] != 'C')
+	if (map->map[(int)map->pers.posy][posx] != '1'
+			&& map->map[(int)map->pers.posy][posx] != 'C')
 		map->pers.posx += difx;
-	if (map->map[posy][(int)map->pers.posx] != '1' && map->map[posy][(int)map->pers.posx] != 'C')
+	if (map->map[posy][(int)map->pers.posx] != '1'
+			&& map->map[posy][(int)map->pers.posx] != 'C')
 		map->pers.posy += dify;
-	if (map->map[posy][posx] == 'B')
+	if (map->map[posy][posx] == 'B' || map->map[posy][posx] == 'H')
 	{
-		map->map[posy][posx] = '0';
-		if (map->pers.charge < 10)
+		if (map->map[posy][posx] == 'B' && map->pers.charge < 10)
 			map->pers.charge++;
+		else if (map->map[posy][posx] == 'H' && map->pers.health < 3)
+			map->pers.health++;
+		map->map[posy][posx] = '0';
 	}
-
 }
 
 void	do_cam_rot(double *dir, int keycode)

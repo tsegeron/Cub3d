@@ -27,11 +27,12 @@ MAIN	=	main.c
 #MAIN	=	test.c
 #MAIN_B	=	checker.c
 
-SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c			\
-			minimap/draw_minimap.c		minimap/ray_cast.c				minimap/utils.c				\
-			input_handle/g_do_keys.c	input_handle/mouse_pos.c		\
-			interface/draw_interface.c	interface/draw_battery_bar.c	\
-			minimap/draw_round_minimap.c
+SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
+			minimap/ray_cast.c			minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
+			minimap/utils.c				\
+			input/g_do_keys.c			input/mouse_pos.c		\
+			interface/draw_interface.c	interface/draw_battery_bar.c	interface/draw_health_effect.c	\
+
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
@@ -75,7 +76,8 @@ clean:
 			@printf "${_PURPLE}${SWEPT}${_END}\n"
 
 fclean:		clean
-			@${RM} ${NAME} ${LIB} ${NAME_U}
+			@${MAKE} clean -C mlx
+			@${RM} ${NAME} ${LIB} ${NAME_U} libmlx.a
 
 re:			fclean all
 

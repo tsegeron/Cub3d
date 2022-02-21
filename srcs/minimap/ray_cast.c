@@ -35,7 +35,8 @@ static double	find_wall_on_y(t_map *map, t_local *q)
 		q->cur_x = map->map_width - 1;
 	if (q->cur_x < 0)
 		q->cur_x = 0;
-	while (map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1' && map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C')
+	while (map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1'
+			&& map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C')
 	{
 		q->cur_y += q->step_y;
 		q->cur_x = (q->pos_y - q->cur_y) / tan(q->dir) + q->pos_x;
@@ -90,7 +91,8 @@ static double	find_wall_on_x(t_map *map, t_local *q)
 		q->cur_y = map->map_height - 1;
 	if (q->cur_y < 0)
 		q->cur_y = 0;
-	while (map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '1' && map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != 'C')
+	while (map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '1'
+			&& map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != 'C')
 	{
 		q->cur_x += q->step_x;
 		q->cur_y = (q->cur_x - q->pos_x) * -tan(q->dir) + q->pos_y;
@@ -154,10 +156,10 @@ double	ray_cast(t_map *map, double dir, int stat)
 		dist = dist_on_x;
 	else
 		dist = dist_on_y;
-	if (dist > 4.5)
-		dist = 4.5;
+	if (dist > 5.5)
+		dist = 5.5;
 	dist_on_y = fabs(sin(dir) * dist) * 20;
-	dist_on_x = fabs(cos(dir) * dist) * 32;
+	dist_on_x = fabs(cos(dir) * dist) * 20;
 	if (dir < PI && dir > 0)
 		dist_on_y = -dist_on_y;
 	if (dir > PI2 && dir < PI2 * 3)

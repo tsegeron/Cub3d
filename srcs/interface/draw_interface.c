@@ -12,7 +12,7 @@
 
 #include "../../hdrs/cub3d.h"
 
-void	draw_background(t_map *map)
+void	draw_background(t_map *map)	//	FOR TEST
 {
 	map->background.size_x = map->mlx.win_size_x;
 	map->background.size_y = map->mlx.win_size_y;
@@ -26,7 +26,10 @@ void	draw_background(t_map *map)
 	{
 		int	j = -1;
 		while (++j < map->background.size_x)
-			my_mlx_pixel_put(&map->background, j, i, 0x004B5320);
+			my_mlx_pixel_put(&map->background, j, i, 0x00F9F2C3);	//	-	milky white
+//			my_mlx_pixel_put(&map->background, j, i, 0x009DE3A2);	//	-	cyan
+//			my_mlx_pixel_put(&map->background, j, i, 0x004B5320);	//	-	shrek
+//			my_mlx_pixel_put(&map->background, j, i, 0x00D74442);	//	-	red 'o pink
 	}
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->background.img, 0, 0);
 }
@@ -34,7 +37,11 @@ void	draw_background(t_map *map)
 void	draw_interface(t_map *map)
 {
 	draw_battery_bar(map);
+	draw_health_effect(map);
 
 
 
 }
+
+//	9DE3A2	-	cyan
+//	5F6D4C	-	nasty green
