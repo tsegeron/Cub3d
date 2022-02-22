@@ -6,7 +6,7 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 11:51:02 by gernesto          #+#    #+#             */
-/*   Updated: 2022/02/16 12:11:08 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/02/22 23:04:47 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,13 @@ static void	init_params(t_map *map)
 	map->round_minmap.addr = mlx_get_data_addr(map->round_minmap.img,
 			&map->round_minmap.bits_per_pixel, &map->round_minmap.line_length,
 			&map->round_minmap.endian);
+	map->minmap_back.size_x = map->round_minmap.size_x;
+	map->minmap_back.size_y = map->round_minmap.size_y;
+	map->minmap_back.img = mlx_new_image(map->mlx.mlx,
+										  map->minmap_back.size_x, map->minmap_back.size_y);
+	map->minmap_back.addr = mlx_get_data_addr(map->minmap_back.img,
+											   &map->minmap_back.bits_per_pixel, &map->minmap_back.line_length,
+											   &map->minmap_back.endian);
 }
 
 static void	draw_round_minimap_background(t_interface *r_minimap)
@@ -38,8 +45,8 @@ static void	draw_round_minimap_background(t_interface *r_minimap)
 		while (++x < r_minimap->size_x)
 		{
 			res = sqrt((y - rad) * (y - rad) + (x - rad) * (x - rad));
-			if (rad >= res)
-				my_mlx_pixel_put(r_minimap, x, y, BACKGR);
+			if (rad > res)
+				my_mlx_pixel_put(r_minimap, x, y, 0x00F9F2C3);
 			else
 				my_mlx_pixel_put(r_minimap, x, y, EMPTY);
 		}
@@ -96,10 +103,12 @@ static void	draw_fov_in_round_minimap(t_map *map)
 void	draw_round_minimap(t_map *map)
 {
 	init_params(map);
-	draw_round_minimap_background(&map->round_minmap);
+	draw_round_minimap_background(&map->minmap_back);
 	draw_minimap_elements(map);
 	draw_fov_in_round_minimap(map);
 	draw_player_in_round_minimap(&map->round_minmap);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win,
+							map->minmap_back.img, 32, 25);
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win,
 		map->round_minmap.img, 32, 25);
 }

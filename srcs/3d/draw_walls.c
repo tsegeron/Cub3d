@@ -6,56 +6,77 @@
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
-/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/02/22 23:20:01 by gernesto         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../hdrs/cub3d.h"
 
-static void	draw_line_w(t_interface map, double endx, double endy, int color)
+static void	draw_line_w(t_interface *back, int starty, int endy, int x)
 {
-	double	startx;
-	double	starty;
-	double	deltax;
-	double	deltay;
-	double	pixels;
+	int	startx;
+	int	y;
+	int	savex;
+	int	endx;
 
-	startx = map.size_x / 2;
-	starty = map.size_y / 2;
-	deltax = endx - startx;
-	deltay = endy - starty;
-	pixels = 40;
-	deltax /= pixels;
-	deltay /= pixels;
-	while (pixels-- > 0)
+	if (starty < 0)
+		starty = 0;
+	if (endy > 799)
+		endy = 799;
+	y = -1;
+	savex = x * 11;
+	endx = (x + 1) * 11;
+//	printf("%d %d\n", savex, endx);
+//	return;
+	while (++y < starty)
 	{
-		my_mlx_pixel_put(&map, startx, starty, color);
-		startx += deltax;
-		starty += deltay;
+		startx = savex;
+		while (startx < endx)
+			my_mlx_pixel_put(back, startx++, y, CEIL);
+	}
+	while (starty < endy)
+	{
+		startx = savex;
+		while (startx < endx)
+			my_mlx_pixel_put(back, startx++, starty, 0x00F9F2C3);
+		starty++;
+	}
+	while (starty < 800)
+	{
+		startx = savex;
+		while (startx < endx)
+			my_mlx_pixel_put(back, startx++, starty, FLOOR);
+		starty++;
 	}
 }
 
 void	draw_walls(t_map *map)
 {
 	double	dist;
-	double	dir;
+	double	dir_start;
 	double	dir_end;
-	double	half_y_len;
-	double	pix_start_y;
-	double	pix_end_y;
+	int		lineh;
+	int		x;
 
 	dir_end = map->pers.dir + FOV2;
 	if (dir_end > PI * 2)
 		dir_end -= PI * 2;
-	dir = dir_end - 2 * FOV2;
-	while (dir < dir_end)
-	{
-		dist = ray_cast(map, dir, 2);
-		half_y_len = dist * tan(0.523599);
-		pix_start_y = 400 - half_y_len;
-		pix_end_y = 400 + half_y_len;
-//		draw_line_w();
-		dir += GR / 2;
-	}
+	dir_start = dir_end - 2 * FOV2;
 
+	x = 119;
+	while (dir_end > dir_start && x > -1)
+	{
+		dist = ray_cast(map, dir_start, 2);
+//		dist =
+		lineh = 800 / dist;
+		if (lineh > 800)
+			lineh = 800;
+		lineh /= 2;
+
+//		pix_start_y = 400 - half_y_len;
+//		pix_end_y = 400 + half_y_len;
+		draw_line_w(&map->background, 400 - lineh, 400 + lineh, x);
+		x--;
+		dir_start += GR / 2;
+	}
 }

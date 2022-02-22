@@ -20,7 +20,7 @@ static int	render_frame(t_map *map)
 		if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
 		{
 			draw_background(map);	//	for test
-			draw_health_effect(map);
+//			draw_health_effect(map);
 			draw_round_minimap(map);
 			draw_battery_bar(map);
 		}
@@ -35,7 +35,7 @@ static int	render_frame(t_map *map)
 void	craft_the_window(t_map *map)
 {
 	map->mlx.mlx = mlx_init();
-	map->mlx.win_size_x = 1280;
+	map->mlx.win_size_x = 1320;
 	map->mlx.win_size_y = 800;
 	map->mlx.win = mlx_new_window(map->mlx.mlx, map->mlx.win_size_x, map->mlx.win_size_y, "Cub3d");
 	mlx_mouse_move(map->mlx.win, map->mlx.win_size_x / 2, map->mlx.win_size_y / 2);	// moves mouse at the center
@@ -77,7 +77,7 @@ int	main(int ac, char **av)
 	map.map_height = 10;
 
 	map.pers.posx = 6.5;
-	map.pers.posy = 5.5;
+	map.pers.posy = 6.5;
 	map.pers.charge = 3;
 	map.pers.health = 1;
 	map.screen_stat = NOSCREEN;

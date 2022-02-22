@@ -18,6 +18,8 @@
 # define EMPTY 0xFF000000
 # define BACKGR 0xCC000000
 # define WALL 0x55000000
+# define CEIL 0x0051A889
+# define FLOOR 0x00426A37
 # define VOID 0x99000000
 # define CDOOR 0x44560319
 # define ODOOR 0x88013220
@@ -77,6 +79,7 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	round_minmap;
+	t_interface	minmap_back;
 	t_interface	battery_bar;
 	t_interface	background;
 	t_interface	health;
