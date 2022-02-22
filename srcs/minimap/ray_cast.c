@@ -156,6 +156,8 @@ double	ray_cast(t_map *map, double dir, int stat)
 		dist = dist_on_x;
 	else
 		dist = dist_on_y;
+	if (stat == 2)
+		return (dist);
 	if (dist > 5.5)
 		dist = 5.5;
 	dist_on_y = fabs(sin(dir) * dist) * 20;

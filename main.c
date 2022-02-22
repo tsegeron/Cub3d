@@ -17,10 +17,14 @@ static int	render_frame(t_map *map)
 	{
 		handle_mouse_pos(map);
 		mlx_clear_window(map->mlx.mlx, map->mlx.win);
-		draw_background(map);	//	for test
-//		draw_health_effect(map);
-		draw_round_minimap(map);
-		draw_battery_bar(map);
+		if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
+		{
+			draw_background(map);	//	for test
+			draw_health_effect(map);
+			draw_round_minimap(map);
+			draw_battery_bar(map);
+		}
+		draw_interface(map);	//	draws start, end, menu screen
 		mlx_do_sync(map->mlx.mlx);
 		random = 0;
 	}
@@ -65,8 +69,8 @@ int	main(int ac, char **av)
 	map.map[4] = ft_strdup("111O111C111000000000000001");
 	map.map[5] = ft_strdup("100000BB000000000000000001");
 	map.map[6] = ft_strdup("10000000000000000000111111");
-	map.map[7] = ft_strdup("10BB00000BBB00000000111111");
-	map.map[8] = ft_strdup("1000H0H0HH0000000000111111");
+	map.map[7] = ft_strdup("10BB00000BBB000000001    1");
+	map.map[8] = ft_strdup("1000H0H0HH00000000001    1");
 	map.map[9] = ft_strdup("11111111111111111111111111");
 	map.map[10] = NULL;
 	map.map_width = 26;
@@ -75,7 +79,8 @@ int	main(int ac, char **av)
 	map.pers.posx = 6.5;
 	map.pers.posy = 5.5;
 	map.pers.charge = 3;
-	map.pers.health = 3;
+	map.pers.health = 1;
+	map.screen_stat = NOSCREEN;
 //	printf("%.1f %.1f\n", map.pers.posx, map.pers.posy);
 //	map.pers.dir = 0;							// 0
 //	map.pers.dir = GR;							// 1

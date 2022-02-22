@@ -89,7 +89,7 @@ static void	paint_pixels(t_map *map, t_local *q, int x, int y)
 	if (map->map[y][x] == '1')
 		my_mlx_pixel_put(&map->round_minmap, q->pix_x, q->pix_y, WALL);
 	else if (map->map[y][x] == ' ')
-		my_mlx_pixel_put(&map->round_minmap, q->pix_x, q->pix_y, EMPTY);
+		my_mlx_pixel_put(&map->round_minmap, q->pix_x, q->pix_y, BACKGR);
 	else if (map->map[y][x] == 'C')
 		my_mlx_pixel_put(&map->round_minmap, q->pix_x, q->pix_y, CDOOR);
 	else if (map->map[y][x] == 'O')

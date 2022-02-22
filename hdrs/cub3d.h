@@ -26,6 +26,13 @@
 # define PLAYER 0x00155054
 # define AIM 0x33FF0000
 
+typedef enum
+{
+	NOSCREEN,
+	START,
+	MENU,
+	END
+}	t_screenstat;
 
 
 typedef struct s_interface
@@ -66,12 +73,16 @@ typedef struct s_map
 	char		**map;
 	int			map_width;
 	int			map_height;
+	int			screen_stat;
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	round_minmap;
 	t_interface	battery_bar;
 	t_interface	background;
 	t_interface	health;
+	t_interface	start_screen;
+	t_interface	menu_screen;
+	t_interface	end_screen;
 }	t_map;
 
 /*	mseastar	*/
@@ -89,6 +100,7 @@ int		close_win(t_map *map);
 void	do_cam_rot(double *dir, int keycode);
 int		g_do_keys(int keycode, t_map *map);
 void	handle_mouse_pos(t_map *map);
+int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
 void	draw_line(t_interface map, double endx, double endy, int color);
 double	ray_cast(t_map *map, double dir, int stat);
@@ -99,6 +111,13 @@ void	draw_health_effect(t_map *map);
 void	draw_background(t_map *map);	//	FOR TEST
 void	draw_round_minimap(t_map *map);
 void	draw_minimap_elements(t_map *map);
+void	draw_start_screen(t_map *map);
+void	draw_menu_screen(t_map *map);
+void	draw_end_screen(t_map *map);
+
+void	draw_walls(t_map *map);
+void	draw_ceil_and_floor(t_map *map);
+void	draw_lightning(t_map *map);
 /*	gernesto	*/
 
 #endif

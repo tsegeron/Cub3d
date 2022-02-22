@@ -36,11 +36,19 @@ void	draw_background(t_map *map)	//	FOR TEST
 
 void	draw_interface(t_map *map)
 {
-	draw_battery_bar(map);
-	draw_health_effect(map);
+//	draw_battery_bar(map);
+//	draw_health_effect(map);
 
 
 
+
+//
+	if (map->screen_stat == START)
+		draw_start_screen(map);
+	else if (map->screen_stat == MENU)
+		draw_menu_screen(map);
+	else if (map->screen_stat == END)
+		draw_end_screen(map);
 }
 
 //	9DE3A2	-	cyan

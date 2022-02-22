@@ -16,9 +16,8 @@ void	draw_health_effect(t_map *map)
 {
 	int	y;
 	int	x;
-	int	step_x;
-	int	step_y;
-	int	x_end;
+	int	rad;
+	int	color;
 
 	if (map->pers.health > 2)
 		return ;
@@ -27,12 +26,64 @@ void	draw_health_effect(t_map *map)
 	map->health.img = mlx_new_image(map->mlx.mlx, map->health.size_x, map->health.size_y);
 	map->health.addr = mlx_get_data_addr(map->health.img, &map->health.bits_per_pixel, &map->health.line_length, &map->health.endian);
 
-
-	step_x = 2;
-	step_y = 5;
-	y = -1;
 	if (map->pers.health == 2)
+		color = 0xDDFF0000;
+	else if (map->pers.health == 1)
+		color = 0xBBFF0000;
+	rad = 110;
+	y = -1;
+	while (++y < map->health.size_y)
 	{
+		x = -1;
+		while (++x < map->health.size_x)
+		{
+			if (rad >= sqrt((y - 25 - rad) * (y - 25 - rad) + (x - 32 - rad) * (x - 32 - rad)))
+				my_mlx_pixel_put(&map->health, x, y, EMPTY);
+			else
+				my_mlx_pixel_put(&map->health, x, y, color);
+		}
+	}
+
+
+
+
+
+
+//	if (map->pers.health == 1)
+//	{
+//		step_x = 2;
+//		step_y = 2;
+//	}
+//	else if (map->pers.health == 2)
+//	{
+//		step_x = 3;
+//		step_y = 3;
+//	}
+//	rad = 110;
+//	y = -1;
+//	while (++y < map->health.size_y)
+//	{
+//		x = 0;
+//		if (y % step_y)
+//			while (++x < map->health.size_x)
+//				my_mlx_pixel_put(&map->health, x, y, EMPTY);
+//		else
+//			while (++x < map->health.size_x)
+//			{
+//				if (rad >= sqrt((y - 25 - rad) * (y - 25 - rad) + (x - 32 - rad) * (x - 32 - rad)))
+//				{
+//					my_mlx_pixel_put(&map->health, x, y, EMPTY);
+//					continue ;
+//				}
+//				if (!(x % step_x))
+//					my_mlx_pixel_put(&map->health, x, y, 0x33FF0000);
+//				else
+//					my_mlx_pixel_put(&map->health, x, y, EMPTY);
+//			}
+//	}
+
+
+
 //		while (++y < map->health.size_y)
 //		{
 //		while (++y < 40)
@@ -64,9 +115,6 @@ void	draw_health_effect(t_map *map)
 //		if (!((x >= 0 && x < 20) || (x >= map->health.size_x - 20 && x < map->health.size_x)))
 //			y = map->health.size_y - 20;
 //		}
-	}
-
-
 
 //	if (map->pers.health == 1)
 //	{

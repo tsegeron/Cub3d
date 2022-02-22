@@ -99,22 +99,22 @@ void	do_open_door(t_map *map)
 
 int	g_do_keys(int keycode, t_map *map)
 {
-//	printf("%d ", keycode);
 	if (keycode == 53)
 		close_win(map);
-	if (keycode == 14)	//	E - open door
+	if (keycode == 12)	//	Q - menu call
+	{
+		if (map->screen_stat == NOSCREEN)
+			map->screen_stat = MENU;
+		else if (map->screen_stat ==  MENU)
+			map->screen_stat = NOSCREEN;
+	}
+	else if (keycode == 14 && map->screen_stat == NOSCREEN)	//	E - open/close the door
 		do_open_door(map);
-//	else if (keycode == 12)	//	Q - menu call
-//		do_call_menu(map);
-	else if (keycode == 13 || keycode == 0 || keycode == 1 || keycode == 2)
+	else if ((keycode == 13 || keycode == 0 || keycode == 1 || keycode == 2)
+			&& map->screen_stat == NOSCREEN)
 		do_key_wasd(map, keycode);
-	else if (keycode == 123 || keycode == 124)
+	else if ((keycode == 123 || keycode == 124) && map->screen_stat == NOSCREEN)
 		do_cam_rot(&map->pers.dir, keycode);
-//	mlx_clear_window(map->mlx.mlx, map->mlx.win);
-//	draw_minimap(map);
-
-//	draw_map(map);
-//	draw_objects(map);
 	return (0);
 }
 
