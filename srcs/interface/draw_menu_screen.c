@@ -30,7 +30,6 @@ void	draw_menu_screen(t_map *map)
 		while (++x < map->menu_screen.size_x)
 			my_mlx_pixel_put(&map->menu_screen, x, y, 0x77000000);
 	}
-
 	//	draw 2 buttons:
 	//	continue
 	y = 300;
@@ -38,7 +37,7 @@ void	draw_menu_screen(t_map *map)
 	{
 		x = 465;
 		while (++x < 815)
-			my_mlx_pixel_put(&map->menu_screen, x, y, 0x993A5739);
+			my_mlx_pixel_put(&map->menu_screen, x, y, 0x333A5739);
 	}
 	//	exit
 	y = 400;
@@ -46,9 +45,7 @@ void	draw_menu_screen(t_map *map)
 	{
 		x = 465;
 		while (++x < 815)
-			my_mlx_pixel_put(&map->menu_screen, x, y, 0xBBF63C0F);
+			my_mlx_pixel_put(&map->menu_screen, x, y, 0x44CF2E34);
 	}
-
-
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->menu_screen.img, 0, 0);
 }

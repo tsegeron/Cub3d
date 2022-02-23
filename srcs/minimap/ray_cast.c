@@ -52,7 +52,7 @@ static double	find_wall_on_y(t_map *map, t_local *q)
 /*
  * finds closest HORIZONTALLY wall crossing Y coordinate towards view direction
  */
-static double	cast_on_y(t_map *map, double posx, double posy, double dir)
+double	cast_on_y(t_map *map, double posx, double posy, double dir)
 {
 	t_local	q;
 
@@ -108,7 +108,7 @@ static double	find_wall_on_x(t_map *map, t_local *q)
 /*
  * finds closest VERTICALLY wall crossing X coordinate towards view direction
  */
-static double	cast_on_x(t_map *map, double posx, double posy, double dir)
+double	cast_on_x(t_map *map, double posx, double posy, double dir)
 {
 	t_local	q;
 

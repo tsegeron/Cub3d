@@ -56,12 +56,14 @@ static void	draw_battery_charges(t_map *map, int *charge, int *color)
 	int	pix_y;
 	int	pix_end_x;
 	int	pix_end_y;
+	int	pix_x_step;
 
 	pix_x = 3;
+	pix_x_step = map->mlx.win_size_x / 44 - pix_x;
 	pix_end_y = map->battery_bar.size_y - 3;
 	while ((*charge)--)
 	{
-		pix_end_x = pix_x + 26;
+		pix_end_x = pix_x + pix_x_step;
 		while (++pix_x < pix_end_x)
 		{
 			pix_y = 3;

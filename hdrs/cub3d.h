@@ -17,16 +17,21 @@
 /*	colors	*/
 # define EMPTY 0xFF000000
 # define BACKGR 0xCC000000
-# define WALL 0x55000000
+# define WALL 0x77000000
+//# define DWALL 0x00F9F2C3
 # define CEIL 0x0051A889
 # define FLOOR 0x00426A37
-# define VOID 0x99000000
+# define VOID 0xAA000000
 # define CDOOR 0x44560319
-# define ODOOR 0x88013220
+# define ODOOR 0x77013220
 # define CURE 0x008DB600
 # define BATTERY 0x0018BC9C
 # define PLAYER 0x00155054
 # define AIM 0x33FF0000
+# define NO 0x00F9F2C3
+# define SO 0x00568C74
+# define WE 0x00683245
+# define EA 0x007DB84D
 
 typedef enum
 {
@@ -106,6 +111,8 @@ void	handle_mouse_pos(t_map *map);
 int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
 void	draw_line(t_interface map, double endx, double endy, int color);
+double	cast_on_y(t_map *map, double posx, double posy, double dir);
+double	cast_on_x(t_map *map, double posx, double posy, double dir);
 double	ray_cast(t_map *map, double dir, int stat);
 void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
@@ -119,8 +126,8 @@ void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
 
 void	draw_walls(t_map *map);
-void	draw_ceil_and_floor(t_map *map);
-void	draw_lightning(t_map *map);
+//void	draw_ceil_and_floor(t_map *map);
+//void	draw_lightning(t_map *map);
 /*	gernesto	*/
 
 #endif

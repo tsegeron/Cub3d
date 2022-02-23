@@ -20,7 +20,7 @@ static int	render_frame(t_map *map)
 		if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
 		{
 			draw_background(map);	//	for test
-//			draw_health_effect(map);
+			draw_health_effect(map);
 			draw_round_minimap(map);
 			draw_battery_bar(map);
 		}
@@ -79,7 +79,7 @@ int	main(int ac, char **av)
 	map.pers.posx = 6.5;
 	map.pers.posy = 6.5;
 	map.pers.charge = 3;
-	map.pers.health = 1;
+	map.pers.health = 3;
 	map.screen_stat = NOSCREEN;
 //	printf("%.1f %.1f\n", map.pers.posx, map.pers.posy);
 //	map.pers.dir = 0;							// 0
