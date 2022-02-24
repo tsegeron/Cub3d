@@ -84,7 +84,7 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	round_minmap;
-	t_interface	minmap_back;
+//	t_interface	minmap_back;
 	t_interface	battery_bar;
 	t_interface	background;
 	t_interface	health;

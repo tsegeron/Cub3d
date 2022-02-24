@@ -79,7 +79,7 @@ int	main(int ac, char **av)
 	map.pers.posx = 6.5;
 	map.pers.posy = 6.5;
 	map.pers.charge = 3;
-	map.pers.health = 3;
+	map.pers.health = 1;
 	map.screen_stat = NOSCREEN;
 //	printf("%.1f %.1f\n", map.pers.posx, map.pers.posy);
 //	map.pers.dir = 0;							// 0

@@ -25,6 +25,7 @@ int	m_check_map(char **map)
 			}
 			if (map[i][j] == 'N' || map[i][j] == 'S' || map[i][j] == 'W' || map[i][j] == 'E')
 				count_resp++;
+
 		}
 	}
 	if (count_resp != 1 || !count_space)
