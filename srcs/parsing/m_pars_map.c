@@ -1,12 +1,12 @@
 #include "../../hdrs/cub3d.h"
 
-int	m_pars_map(char *str, int fd)
+int	m_pars_map(char *str, int fd, t_list **lst_map)
 {
 	while (1)
 	{
-		if (ft_lstadd_back(&lst_map, str))
+		if (m_lstadd_back(lst_map, str))
 		{
-			ft_lstclear(&lst_map);
+			m_lstclear(lst_map);
 			free(str);
 			return (m_close_fd(fd));
 		}

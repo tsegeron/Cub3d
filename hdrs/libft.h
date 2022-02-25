@@ -35,6 +35,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strjoin(char *s1, char *s2);
 char	*ft_strdup(const char *str);
 char	**ft_split(const char *str, char c);
+void	*ft_memset(void *s1, int c, size_t n);
 char	*get_next_line(int fd);
 
 #endif

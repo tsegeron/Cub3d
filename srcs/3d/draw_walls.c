@@ -53,7 +53,6 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 	int	y;
 	int	savex;
 	int	floor_color;
-//	int	wall_color;
 	int	ceil_color;
 	int	dim_factor;
 
@@ -63,73 +62,46 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 		starty = 0;
 	if (endy > 800)
 		endy = 800;
-	dim_factor = (800 / (endy - starty)) - 1;
-	if (dim_factor > 4)
-	{
+	dim_factor = (800 / lineh) - 1;
+	if (dim_factor > 7)
 		wall_color = 0xFF000000;
-//		floor_color = 0xFF000000;
-//		ceil_color = 0xFF000000;
-	}
 	else
-	{
-		wall_color = dim_factor * 855638016 + wall_color;
-//		floor_color = dim_factor * 855638016 + FLOOR;
-//		ceil_color = dim_factor * 855638016 + CEIL;
-	}
-
-
+		wall_color = dim_factor * 570425344 + wall_color;
 	floor_color = FLOOR;
 	ceil_color = CEIL;
+
+
+
 	y = -1;
 	savex = x * 11;
 	endx = (x + 1) * 11;
-//	while (++y < starty && y < 205)
+//	while (++y < starty)
+//	{
+//		startx = savex;
+//		while (startx < endx)
+//			my_mlx_pixel_put(back, startx++, y, ceil_color);
+//		if (y == 135 || y == 200 || y == 240 || y == 265 || y == 285 || y == 300 || y == 309)
+//			ceil_color += 570425344;
+//		else if (y == 317)
+//			ceil_color = 0xEE51A889;
+//	}
+
+//int	rad = 64;
+//int	res;
 	while (++y < starty)
 	{
 		startx = savex;
 		while (startx < endx)
+		{
+//			res = sqrt((y + rad) * (y + rad) + (x + rad) * (x + rad));
+//			ceil_color += res / 64 * 285212672;
 			my_mlx_pixel_put(back, startx++, y, ceil_color);
+		}
+		if (y == 135 || y == 200 || y == 240 || y == 265 || y == 285 || y == 300 || y == 309)
+			ceil_color += 570425344;
+		else if (y == 317)
+			ceil_color = 0xEE51A889;
 	}
-//	if (y == 205 && y < starty)
-//		ceil_color = 855638016 + CEIL;
-//	while (y < starty && y < 270)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, y, ceil_color);
-//		y++;
-//	}
-//	if (y == 270 && y < starty)
-//		ceil_color += 855638016;
-//	while (y < starty && y < 300)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, y, ceil_color);
-//		y++;
-//	}
-//	if (y == 300 && y < starty)
-//		ceil_color += 855638016;
-//	while (y < starty && y < 320)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, y, ceil_color);
-//		y++;
-//	}
-//	if (y == 320 && y < starty)
-//		ceil_color += 855638016;
-//	while (y < starty && y < 333)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, y, ceil_color);
-//		y++;
-//	}
-
-
-
-
 	while (starty < endy)
 	{
 		startx = savex;
@@ -137,65 +109,25 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 			my_mlx_pixel_put(back, startx++, starty, wall_color);
 		starty++;
 	}
-
-
-
-
-
-//	floor_color = -16777216 + FLOOR;
-//	while (starty < 800 - 333)
-	while (starty < 800)
+	endy = 800;
+//	while (starty < endy--)
+//	{
+//		startx = savex;
+//		while (startx < endx)
+//			my_mlx_pixel_put(back, startx++, endy, floor_color);
+//		if (endy == 800 - 135 || endy == 800 - 200 || endy == 800 - 240 || endy == 800 - 265
+//			|| endy == 800 - 285 || endy == 800 - 300 || endy == 800 - 309)
+//			floor_color += 570425344;
+//	}
+	while (starty < endy--)
 	{
 		startx = savex;
 		while (startx < endx)
-			my_mlx_pixel_put(back, startx++, starty, floor_color);
-		starty++;
+			my_mlx_pixel_put(back, startx++, endy, floor_color);
+		if (endy == 800 - 135 || endy == 800 - 200 || endy == 800 - 240 || endy == 800 - 265
+			|| endy == 800 - 285 || endy == 800 - 300 || endy == 800 - 309)
+			floor_color += 570425344;
 	}
-//	if (y == 467 && y < 800 - 320)
-//	floor_color -= 855638016;
-//	while (starty < 800 - 320)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, starty, floor_color);
-//		starty++;
-//	}
-////	if (y == 270 && y < starty)
-//	floor_color -= 855638016;
-//	while (starty < 800 - 300)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, starty, floor_color);
-//		starty++;
-//	}
-////	if (y == 300 && y < starty)
-//	floor_color -= 855638016;
-//	while (starty < 800 - 270)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, starty, floor_color);
-//		starty++;
-//	}
-////	if (y == 320 && y < starty)
-//	floor_color -= 855638016;
-//	while (starty < 800 - 205)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, starty, floor_color);
-//		starty++;
-//	}
-//	while (starty < 800)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, starty, FLOOR);
-//		starty++;
-//	}
-
-
 }
 
 void	draw_walls(t_map *map)

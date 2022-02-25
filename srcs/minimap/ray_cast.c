@@ -25,6 +25,38 @@ typedef struct s_local
 	double	dir;
 }	t_local;
 
+int	find_start_x(char *str)
+{
+	int	i;
+
+	i = -1;
+	while (str[++i] != '1')
+		;
+	return (i);
+}
+
+int	find_start_y(char **map, int x)
+{
+	int	i;
+
+	i = -1;
+	while (map[++i][x] != '1')
+		;
+	return (i);
+}
+
+int	find_end_y(char **map, int x)
+{
+	int	i;
+
+	i = -1;
+	while (map[++i])
+		;
+	while (map[--i][x] != '1')
+		;
+	return (i);
+}
+
 /*
  * returns the path length to that coordinate
  * (from pers position to HORIZONTALLY wall crossing coordinate)
@@ -36,7 +68,8 @@ static double	find_wall_on_y(t_map *map, t_local *q)
 	if (q->cur_x < 0)
 		q->cur_x = 0;
 	while (map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1'
-			&& map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C')
+			&& map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C'
+			&& map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '#')
 	{
 		q->cur_y += q->step_y;
 		q->cur_x = (q->pos_y - q->cur_y) / tan(q->dir) + q->pos_x;
@@ -92,7 +125,8 @@ static double	find_wall_on_x(t_map *map, t_local *q)
 	if (q->cur_y < 0)
 		q->cur_y = 0;
 	while (map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '1'
-			&& map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != 'C')
+			&& map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != 'C'
+			&& map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x] != '#')
 	{
 		q->cur_x += q->step_x;
 		q->cur_y = (q->cur_x - q->pos_x) * -tan(q->dir) + q->pos_y;
@@ -152,6 +186,8 @@ double	ray_cast(t_map *map, double dir, int stat)
 
 	dist_on_y = cast_on_y(map, map->pers.posx, map->pers.posy, dir);
 	dist_on_x = cast_on_x(map, map->pers.posx, map->pers.posy, dir);
+//dist_on_x = 1;
+//dist_on_y = 1;
 	if (dist_on_y > dist_on_x)
 		dist = dist_on_x;
 	else

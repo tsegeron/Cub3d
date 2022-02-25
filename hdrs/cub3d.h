@@ -4,6 +4,8 @@
 # include "../mlx/mlx.h"
 # include "libft.h"
 
+# define BUFFER_SIZE 10
+# define MOVE_SPEED 0.1
 # define MAPW 220
 # define MAPW_HALF 110
 # define MAPH 220
@@ -60,7 +62,6 @@ typedef struct s_hero
 	double	posx;
 	double	posy;
 	double	dir;
-	double	fov;
 	int		charge;
 	int		health;
 }	t_hero;
@@ -75,8 +76,19 @@ typedef struct s_mlx
 	int		mouse_y;
 }	t_mlx;
 
+typedef struct s_vars
+{
+	void	*path_no;
+	void	*path_so;
+	void	*path_we;
+	void	*path_ea;
+	int		flor_long;
+	int		cel_long;
+}	t_vars;
+
 typedef struct s_map
 {
+	t_vars		vars;
 	char		**map;
 	int			map_width;
 	int			map_height;
@@ -84,7 +96,6 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_hero		pers;
 	t_interface	round_minmap;
-//	t_interface	minmap_back;
 	t_interface	battery_bar;
 	t_interface	background;
 	t_interface	health;
@@ -93,14 +104,28 @@ typedef struct s_map
 	t_interface	end_screen;
 }	t_map;
 
+typedef struct s_list
+{
+	char			*str;
+	struct s_list	*next;
+}	t_list;
+
 /*	mseastar	*/
-//int		m_pars(char **av, char ***map);
-//int		m_check_map(char **map);
-//char	**ft_map_create(t_list *map);
-//int		m_pars_map(char *str, int fd);
-//int		m_pars_param(char *str);
-//int		m_perror_r(char *str);
-//int		m_error(char *str);
+int		m_atoi(const char *str, int *i);
+int		m_check_fname(char *str);
+int		m_check_map(t_map *map);
+int		m_check_param(t_vars *vars, char **map);
+char	**m_map_create(t_list *map, t_map *mapa);
+int		m_pars(char **av, t_map *map);
+int		m_pars_map(char *str, int fd, t_list **lst_map);
+int		m_pars_param(char *str, t_map *map);
+void	m_rgb_to_dec(int *array, int *num);
+int		m_error(char *str);
+int		m_perror_r(char *str);
+int		m_close_fd(int fd);
+int		m_lst_size(t_list **lst_a);
+int		m_lstclear(t_list **list);
+int		m_lstadd_back(t_list **lst, char *str);
 /*	mseastar	*/
 
 /*	gernesto	*/

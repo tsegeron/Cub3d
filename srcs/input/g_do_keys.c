@@ -18,23 +18,23 @@ static void	find_difs(double *x, double *y, double dir, int keycode)
 {
 	if (keycode == 13)
 	{
-		*x = 0.2 * cos(dir);
-		*y = -0.2 * sin(dir);
+		*x = MOVE_SPEED * cos(dir);
+		*y = -MOVE_SPEED * sin(dir);
 	}
 	else if (keycode == 1)
 	{
-		*x = -0.2 * cos(dir);
-		*y = 0.2 * sin(dir);
+		*x = -MOVE_SPEED * cos(dir);
+		*y = MOVE_SPEED * sin(dir);
 	}
 	else if (keycode == 0)
 	{
-		*x = -0.2 * sin(dir);
-		*y = 0.2 * -cos(dir);
+		*x = -MOVE_SPEED * sin(dir);
+		*y = MOVE_SPEED * -cos(dir);
 	}
 	else
 	{
-		*x = 0.2 * sin(dir);
-		*y = -0.2 * -cos(dir);
+		*x = MOVE_SPEED * sin(dir);
+		*y = -MOVE_SPEED * -cos(dir);
 	}
 }
 
@@ -46,8 +46,8 @@ static void	do_key_wasd(t_map *map, int keycode)
 	double	dify;
 
 	find_difs(&difx, &dify, map->pers.dir, keycode);
-	posx = (int)(map->pers.posx + difx + 0.2 * difx / fabs(difx));
-	posy = (int)(map->pers.posy + dify + 0.2  * dify / fabs(dify));
+	posx = (int)(map->pers.posx + difx + MOVE_SPEED * difx / fabs(difx));
+	posy = (int)(map->pers.posy + dify + MOVE_SPEED  * dify / fabs(dify));
 	if (map->map[(int)map->pers.posy][posx] != '1'
 			&& map->map[(int)map->pers.posy][posx] != 'C')
 		map->pers.posx += difx;

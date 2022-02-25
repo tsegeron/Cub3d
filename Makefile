@@ -28,12 +28,21 @@ MAIN	=	main.c
 #MAIN_B	=	checker.c
 
 SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
+			libft/ft_calloc.c			libft/ft_clear_array.c			libft/ft_split.c				\
+			libft/ft_strchr_count.c		libft/ft_strncmp.c				libft/get_next_line.c			\
+			libft/ft_bzero.c			libft/ft_strchr.c				libft/ft_strjoin.c				\
+			libft/ft_substr.c			libft/ft_memset.c				libft/ft_strtrim.c				\
+			libft/ft_strcmp.c			\
 			minimap/ray_cast.c			minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
 			minimap/utils.c				\
 			input/g_do_keys.c			input/mouse_pos.c				input/mouse_keys.c				\
-			interface/draw_interface.c	interface/draw_battery_bar.c	interface/draw_health_effect.c	\
-			interface/draw_menu_screen.c\
-			3d/draw_walls.c
+			interface/draw_interface.c	interface/draw_menu_screen.c	interface/draw_health_effect.c	\
+			interface/draw_battery_bar.c\
+			3d/draw_walls.c				\
+			parsing/m_atoi.c			parsing/m_check_fname.c			parsing/m_check_map.c			\
+			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
+			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
+			parsing/m_error.c			parsing/m_lst.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})

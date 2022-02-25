@@ -6,10 +6,9 @@
 /*   By: mseastar <mseastar@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/26 20:53:11 by mseastar          #+#    #+#             */
-/*   Updated: 2022/02/22 18:34:02 by gernesto         ###   ########.fr       */
+/*   Updated: 2022/02/10 22:27:06 by mseastar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
 #include "../../hdrs/cub3d.h"
 
 static void	*m_clear_array(char **a)
@@ -18,23 +17,55 @@ static void	*m_clear_array(char **a)
 	return (NULL);
 }
 
-char	**ft_map_create(t_list *map)
+size_t len_width(t_list *map)
+{
+	t_list *step;
+	size_t i;
+	size_t util;
+
+	i = 0;
+	step = map;
+	while (step)
+	{
+		util = ft_strlen(step->str);
+		if (util > i)
+			i = util;
+		step = step->next;
+	}
+	return (i);
+}
+
+static void ft_strncpy(char *str1, char *str2, size_t n)
+{
+	size_t i;
+
+	i = -1;
+	while(str2[++i] && i < n)
+		str1[i] = str2[i];
+}
+
+char	**m_map_create(t_list *map, t_map *mapa)
 {
 	t_list	*step;
 	char	**array_r;
 	int		i;
+	int		j;
 
-	array_r = ft_calloc(sizeof(char *), ft_lst_size(&map) + 1);
+	array_r = ft_calloc(sizeof(char *), m_lst_size(&map) + 1);
 	if (!array_r)
 		return (NULL);
+	mapa->map_width = (int)len_width(map);
 	i = -1;
 	step = map;
 	while (step)
 	{
-		array_r[++i] = ft_strdup(step->str);
-		if (!array_r[i] || array_r[i][0] == '\0')
-			return (m_clear_array(array_r));
+		array_r[++i] = ft_calloc(1,mapa->map_width + 1);
+		if (!array_r[i])
+			return (NULL);
+		ft_memset(array_r[i], ' ', mapa->map_width);
+		ft_strncpy(array_r[i], step->str, ft_strlen(step->str));
 		step = step->next;
 	}
 	return (array_r);
 }
+

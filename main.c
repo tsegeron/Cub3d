@@ -34,7 +34,7 @@ static int	render_frame(t_map *map)
 
 void	craft_the_window(t_map *map)
 {
-	map->mlx.mlx = mlx_init();
+//	map->mlx.mlx = mlx_init();
 	map->mlx.win_size_x = 1320;
 	map->mlx.win_size_y = 800;
 	map->mlx.win = mlx_new_window(map->mlx.mlx, map->mlx.win_size_x, map->mlx.win_size_y, "Cub3d");
@@ -49,8 +49,8 @@ int	main(int ac, char **av)
 	t_map	map;
 
 	/* ---Parsing--- */
-//	if (ac > 2 || m_pars(av, &map.map) || m_check_map(map.map))
-//		return (EXIT_FAILURE);
+	if (ac != 2 || m_pars(av, &map))
+		return (EXIT_FAILURE);
 //	printf("PATH NO : %s\nPATH SO : %s\nPATH WE : %s\nPATH EA : %s\n", \
 //			path_no, path_so, path_we, path_ea);
 //	for (int i = 0; i < 3; i++)
@@ -61,45 +61,43 @@ int	main(int ac, char **av)
 //	for (int i = 0; map.map[i]; i++)
 //		printf("%s\n", map.map[i]);
 
-	map.map = (char **) malloc(sizeof(char *) * 11);
-	map.map[0] = ft_strdup("11111111111111111111111111");
-	map.map[1] = ft_strdup("10101010001010100010101001");
-	map.map[2] = ft_strdup("10101010001010100010101001");
-	map.map[3] = ft_strdup("1000000000C000000000000001");
-	map.map[4] = ft_strdup("111O111C111000000000000001");
-	map.map[5] = ft_strdup("100000BB000000000000000001");
-	map.map[6] = ft_strdup("10000000000000000000111111");
-	map.map[7] = ft_strdup("10BB00000BBB000000001    1");
-	map.map[8] = ft_strdup("1000H0H0HH00000000001    1");
-	map.map[9] = ft_strdup("11111111111111111111111111");
-	map.map[10] = NULL;
-	map.map_width = 26;
-	map.map_height = 10;
+//	map.map = (char **) malloc(sizeof(char *) * 11);
+//	map.map[0] = ft_strdup("11111111111111111111111111");
+//	map.map[1] = ft_strdup("10101010001010100010101001");
+//	map.map[2] = ft_strdup("10101010001010100010101001");
+//	map.map[3] = ft_strdup("1000000000C000000000000001");
+//	map.map[4] = ft_strdup("111O111C111000000000000001");
+//	map.map[5] = ft_strdup("100000BB000000000000000001");
+//	map.map[6] = ft_strdup("10000000000000000000111111");
+//	map.map[7] = ft_strdup("10BB00000BBB000000001    #");
+//	map.map[8] = ft_strdup("1000H0H0HH00000000001    #");
+//	map.map[9] = ft_strdup("111111111111111111111#####");
+//	map.map[10] = NULL;
 
-	map.pers.posx = 6.5;
-	map.pers.posy = 6.5;
-	map.pers.charge = 3;
-	map.pers.health = 1;
+	map.map_height = ft_len_array(map.map);
+//	map.map_width = 26;
+//	map.map_height = 10;
+
+//	map.pers.posx = 19;
+//	map.pers.posy = 8;
+//	map.pers.charge = 3;
+//	map.pers.health = 3;
 	map.screen_stat = NOSCREEN;
 //	printf("%.1f %.1f\n", map.pers.posx, map.pers.posy);
 //	map.pers.dir = 0;							// 0
 //	map.pers.dir = GR;							// 1
 //	map.pers.dir = 3.14159265 / 2.0 - 0.017452;	// 89
 //	map.pers.dir = 3.14159265 / 2.0;			// 90
-	map.pers.dir = 3.14159265 / 2.0 + 0.017452;	// 91
+//	map.pers.dir = 3.14159265 / 2.0 + 0.017452;	// 91
 //	map.pers.dir = 3.14159265 / 2.0 + PI2 / 2.0;//
 //	map.pers.dir = 3.14159265 - 0.017452;		// 179
 //	map.pers.dir = 3.14159265 + 0.017452 * 1;	// 179
 //	map.pers.dir = 1.5 * 3.14159265 - 0.017452;	// 269
 //	map.pers.dir = 2 * 3.14159265 - 0.017452;	// 359
-	map.pers.fov = 3.14159265 / 3.0;
+//	map.pers.fov = 3.14159265 / 3.0;
 
 	/* ---Craft a window--- */
 	craft_the_window(&map);
-//	draw_background(&map);
-	/* ---Draw minimap--- */
-//	draw_minimap(&map);
-//	draw_interface(&map);
 
 	// Draw 3d view
 
