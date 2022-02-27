@@ -22,7 +22,7 @@ void	draw_background(t_map *map)	//	FOR TEST
 											  &map->background.bits_per_pixel, &map->background.line_length,
 											  &map->background.endian);
 	draw_walls(map);
-
+	draw_ceil_and_floor(map);
 //	int	i = -1;
 //	while (++i < map->background.size_y)
 //	{

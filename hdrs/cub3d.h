@@ -151,8 +151,8 @@ void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
 
 void	draw_walls(t_map *map);
-//void	draw_ceil_and_floor(t_map *map);
-//void	draw_lightning(t_map *map);
+void	draw_ceil_and_floor(t_map *map);
+void	draw_lightning(t_map *map);
 /*	gernesto	*/
 
 #endif

@@ -62,11 +62,11 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 		starty = 0;
 	if (endy > 800)
 		endy = 800;
-	dim_factor = (800 / lineh) - 1;
-	if (dim_factor > 7)
+	dim_factor = (1600 / lineh) - 1;
+	if (dim_factor > 15)
 		wall_color = 0xFF000000;
 	else
-		wall_color = dim_factor * 570425344 + wall_color;
+		wall_color = dim_factor * 285212672 + wall_color;
 	floor_color = FLOOR;
 	ceil_color = CEIL;
 
@@ -86,21 +86,32 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 //			ceil_color = 0xEE51A889;
 //	}
 
-//int	rad = 64;
-//int	res;
+int	rad = 3000;
+int	res;
 	while (++y < starty)
 	{
 		startx = savex;
+		res = sqrt((y + rad) * (y + rad) + (startx - 660) * (startx - 660));
+		if (res >= rad && res < rad + 135)
+			ceil_color = CEIL;
+		else if (res >= rad + 135 && res < rad + 200)
+			ceil_color = CEIL + 285212672 * 2;
+		else if (res >= rad + 200 && res < rad + 240)
+			ceil_color = CEIL + 285212672 * 4;
+		else if (res >= rad + 240 && res < rad + 265)
+			ceil_color = CEIL + 285212672 * 6;
+		else if (res >= rad + 265 && res < rad + 285)
+			ceil_color = CEIL - 2013265920;
+		else if (res >= rad + 285 && res < rad + 300)
+			ceil_color = CEIL - 1442840576;
+		else if (res >= rad + 300 && res < rad + 309)
+			ceil_color = CEIL - 872415232;
+		else if (res >= rad + 309 && res < rad + 317)
+			ceil_color = CEIL - 587202560;
+		else
+			ceil_color = CEIL - 301989888;
 		while (startx < endx)
-		{
-//			res = sqrt((y + rad) * (y + rad) + (x + rad) * (x + rad));
-//			ceil_color += res / 64 * 285212672;
 			my_mlx_pixel_put(back, startx++, y, ceil_color);
-		}
-		if (y == 135 || y == 200 || y == 240 || y == 265 || y == 285 || y == 300 || y == 309)
-			ceil_color += 570425344;
-		else if (y == 317)
-			ceil_color = 0xEE51A889;
 	}
 	while (starty < endy)
 	{
@@ -110,30 +121,40 @@ static void	draw_line_w(t_interface *back, int lineh, int wall_color, int x)
 		starty++;
 	}
 	endy = 800;
-//	while (starty < endy--)
-//	{
-//		startx = savex;
-//		while (startx < endx)
-//			my_mlx_pixel_put(back, startx++, endy, floor_color);
-//		if (endy == 800 - 135 || endy == 800 - 200 || endy == 800 - 240 || endy == 800 - 265
-//			|| endy == 800 - 285 || endy == 800 - 300 || endy == 800 - 309)
-//			floor_color += 570425344;
-//	}
+	rad += 800;
 	while (starty < endy--)
 	{
 		startx = savex;
+		res = sqrt((endy - rad) * (endy - rad) + (startx - 660) * (startx - 660));
+		if (res >= rad - 800 && res < rad - 800 + 135)
+			floor_color = FLOOR;
+		else if (res >= rad - 800 + 135 && res < rad - 800 + 200)
+			floor_color = FLOOR + 285212672 * 2;
+		else if (res >= rad - 800 + 200 && res < rad - 800 + 240)
+			floor_color = FLOOR + 285212672 * 4;
+		else if (res >= rad - 800 + 240 && res < rad - 800 + 265)
+			floor_color = FLOOR + 285212672 * 6;
+		else if (res >= rad - 800 + 265 && res < rad - 800 + 285)
+			floor_color = FLOOR - 2013265920;
+		else if (res >= rad - 800 + 285 && res < rad - 800 + 300)
+			floor_color = FLOOR - 1442840576;
+		else if (res >= rad - 800 + 300 && res < rad - 800 + 309)
+			floor_color = FLOOR - 872415232;
+		else if (res >= rad - 800 + 309 && res < rad - 800 + 317)
+			ceil_color = FLOOR - 587202560;
+		else if (res >= rad - 800 + 317)
+			floor_color = FLOOR - 301989888;
 		while (startx < endx)
 			my_mlx_pixel_put(back, startx++, endy, floor_color);
-		if (endy == 800 - 135 || endy == 800 - 200 || endy == 800 - 240 || endy == 800 - 265
-			|| endy == 800 - 285 || endy == 800 - 300 || endy == 800 - 309)
-			floor_color += 570425344;
+//		if (endy == 800 - 135 || endy == 800 - 200 || endy == 800 - 240 || endy == 800 - 265
+//			|| endy == 800 - 285 || endy == 800 - 300 || endy == 800 - 309)
+//			floor_color += 570425344;
 	}
 }
 
 void	draw_walls(t_map *map)
 {
 	t_wall_clr	data;
-	double		dist;
 	double		dir_start;
 	double		dir_end;
 	double		delta_dir;
@@ -154,9 +175,8 @@ void	draw_walls(t_map *map)
 		else if (delta_dir > 2 * PI)
 			delta_dir -= 2 * PI;
 		get_wall_info(map, &data, dir_start);
-		dist = data.dist;
-		dist *= cos(delta_dir);
-		lineh = 800 / dist;
+		data.dist *= cos(delta_dir);
+		lineh = 800 / data.dist;
 		if (lineh > 800)
 			lineh = 800;
 		lineh /= 2;

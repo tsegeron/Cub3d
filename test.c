@@ -2,5 +2,5 @@
 
 int main()
 {
-	printf("%d\n", 0xFF426A37 - 0x00426A37);
+	printf("%d\n", 0xDD426A37 - 0x00426A37);
 }
