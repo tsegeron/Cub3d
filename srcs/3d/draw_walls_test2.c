@@ -21,17 +21,29 @@ static void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
 	if (dist_on_y > dist_on_x)
 	{
 		if ((dir < 1.5 * PI && dir > PI2) || (dir < 3.5 * PI && dir > 2.5 * PI))
+		{
 			data->wall_img = map->vars.path_we;
+			data->side = 3;
+		}
 		else
+		{
 			data->wall_img = map->vars.path_ea;
+			data->side = 4;
+		}
 		data->dist = dist_on_x;
 	}
 	else
 	{
 		if ((dir < PI && dir > 0) || (dir < 3 * PI && dir > 2 * PI))
+		{
 			data->wall_img = map->vars.path_no;
+			data->side = 1;
+		}
 		else
+		{
 			data->wall_img = map->vars.path_so;
+			data->side = 2;
+		}
 		data->dist = dist_on_y;
 	}
 
@@ -43,10 +55,25 @@ static void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
 		data->x = -data->x;
 	data->x += map->pers.posx;
 	data->y += map->pers.posy;
-	data->x -= floor(data->x);
-	data->y -= floor(data->y);
+	if ((dir < PI && dir > 0) || (dir < 3 * PI && dir > 2 * PI))
+		data->x -= floor(data->x);
+	else
+		data->x = ceil(data->x) - data->x;
+	if ((dir < 1.5 * PI && dir > PI2) || (dir < 3.5 * PI && dir > 2.5 * PI))
+		data->y = ceil(data->y) - data->y;
+	else
+		data->y -= floor(data->y);
 	data->x *= data->wall_img.size_x;
 	data->y *= data->wall_img.size_y;
+}
+
+int	shade_color(int color, double divide)
+{
+	if (divide <= 1.)
+		return (color);
+	return (((int)(((0xFF0000 & color) >> 16) / divide) << 16)
+			+ ((int)(((0x00FF00 & color) >> 8) / divide) << 8)
+			+ ((int)((0x0000FF & color) / divide)));
 }
 
 static void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x)
@@ -70,14 +97,18 @@ static void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x)
 	draw_ceil(&q, &map->background, map->vars.ceil_clr);
 
 
-	pix_step = 1. * wall.wall_img.size_y / lineh * 2;
+	pix_step = 1. * wall.wall_img.size_y / lineh / 2;
 	pix_start = (q.starty - map->mlx.win_size_y / 2 + lineh) * pix_step;
 	while (q.starty < q.endy)
 	{
 		q.startx = q.savex;
 		tex_y = (int )pix_start & (wall.wall_img.size_y - 1);
 		pix_start += pix_step;
-		q.wall_clr = get_pixel(wall.wall_img, wall.x, tex_y);
+		if (wall.side == 1 || wall.side == 2)
+			q.wall_clr = get_pixel(wall.wall_img, wall.x, tex_y);
+		else
+			q.wall_clr = get_pixel(wall.wall_img, wall.y, tex_y);
+		q.wall_clr = shade_color(q.wall_clr, wall.dist / 1.1);
 		while (q.startx < q.endx)
 			my_mlx_pixel_put(&map->background, q.startx++, q.starty, q.wall_clr);
 		q.starty++;
@@ -114,8 +145,6 @@ void	draw_walls_test2(t_map *map)
 		data.dist *= cos(delta_dir);
 
 		lineh = 800 / data.dist;
-		if (lineh > 800)
-			lineh = 800;
 		lineh /= 2;
 
 		draw_line_w(map, lineh, data, x);

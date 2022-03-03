@@ -598,7 +598,7 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_wall_test2.c",
+			"path" : "srcs/3d/draw_walls_test2.c",
 			"sourceGroupIndex" : 0
 		}
 	],

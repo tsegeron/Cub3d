@@ -149,6 +149,7 @@ void	draw_start_screen(t_map *map);
 void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
 
+int		shade_color(int color, double divide);
 void	draw_walls(t_map *map);
 void	draw_walls_test(t_map *map);
 void	draw_walls_test2(t_map *map);

@@ -42,7 +42,11 @@ void	draw_ceil(t_local *q, t_interface *background, int color)
 		q->startx = q->savex;
 		q->res = sqrt((q->y + q->rad) * (q->y + q->rad)
 				+ (q->startx - 660) * (q->startx - 660));
-		get_color(q->res, q->rad, &q->ceil_clr, color);
+//		printf("%d\n", q->res);
+//		exit(0);
+//		get_color(q->res, q->rad, &q->ceil_clr, color);
+		q->ceil_clr = color;
+		q->ceil_clr = shade_color(q->ceil_clr, (q->res - 3000) / 64. / 1.1);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(background, q->startx++, q->y, q->ceil_clr);
 	}

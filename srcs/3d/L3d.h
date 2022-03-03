@@ -6,8 +6,9 @@ typedef struct s_local
 	double		dist;
 	double		x;
 	double		y;
-	int			color;
+//	int			color;
 	t_interface	wall_img;
+	int			side;
 //	int		wall_clr;
 }	t_wall_clr;
 
