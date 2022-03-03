@@ -20,7 +20,7 @@
 # define EMPTY 0xFF000000
 # define BACKGR 0xCC000000
 # define WALL 0x77000000
-//# define DWALL 0x00F9F2C3
+# define DWALL 0x009DE3A2
 # define CEIL 0x0051A889
 # define FLOOR 0x00426A37
 # define VOID 0xAA000000
@@ -72,18 +72,16 @@ typedef struct s_mlx
 	void	*win;
 	int		win_size_x;
 	int		win_size_y;
-	int		mouse_x;
-	int		mouse_y;
 }	t_mlx;
 
 typedef struct s_vars
 {
-	void	*path_no;
-	void	*path_so;
-	void	*path_we;
-	void	*path_ea;
-	int		flor_long;
-	int		cel_long;
+	t_interface	path_no;
+	t_interface	path_so;
+	t_interface	path_we;
+	t_interface	path_ea;
+	int			floor_clr;
+	int			ceil_clr;
 }	t_vars;
 
 typedef struct s_map
@@ -111,21 +109,23 @@ typedef struct s_list
 }	t_list;
 
 /*	mseastar	*/
+char	**m_map_create(t_list *map, t_map *mapa);
+void	m_rgb_to_dec(int *array, int *num);
 int		m_atoi(const char *str, int *i);
 int		m_check_fname(char *str);
 int		m_check_map(t_map *map);
 int		m_check_param(t_vars *vars, char **map);
-char	**m_map_create(t_list *map, t_map *mapa);
 int		m_pars(char **av, t_map *map);
 int		m_pars_map(char *str, int fd, t_list **lst_map);
 int		m_pars_param(char *str, t_map *map);
-void	m_rgb_to_dec(int *array, int *num);
 int		m_error(char *str);
 int		m_perror_r(char *str);
 int		m_close_fd(int fd);
 int		m_lst_size(t_list **lst_a);
 int		m_lstclear(t_list **list);
 int		m_lstadd_back(t_list **lst, char *str);
+int		m_free_util(char *str);
+int		m_file_to_image(char *util, t_map *map, t_interface *path);
 /*	mseastar	*/
 
 /*	gernesto	*/
@@ -139,11 +139,10 @@ void	draw_line(t_interface map, double endx, double endy, int color);
 double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
 double	ray_cast(t_map *map, double dir, int stat);
-void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
 void	draw_battery_bar(t_map *map);
 void	draw_health_effect(t_map *map);
-void	draw_background(t_map *map);	//	FOR TEST
+void	draw_background(t_map *map);
 void	draw_round_minimap(t_map *map);
 void	draw_minimap_elements(t_map *map);
 void	draw_start_screen(t_map *map);
@@ -151,7 +150,8 @@ void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
 
 void	draw_walls(t_map *map);
-void	draw_ceil_and_floor(t_map *map);
+void	draw_walls_test(t_map *map);
+void	draw_walls_test2(t_map *map);
 void	draw_lightning(t_map *map);
 /*	gernesto	*/
 

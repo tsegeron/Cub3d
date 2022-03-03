@@ -36,10 +36,10 @@ static int	m_check_char(char **map, int i, int j, int *count_space)
 	return (0);
 }
 
-static void m_close_map(char **map)
+static int	m_close_map(char **map)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	i = -1;
 	while (map[++i])
@@ -47,11 +47,13 @@ static void m_close_map(char **map)
 		j = -1;
 		while (map[i][++j])
 		{
-			if ((i == 0 && map[i][j] != '1') || (i == ft_len_array(map) - 1 && map[i][j] != '1') || \
-				(j == 0 && map[i][j] != '1') || (j == ft_strlen(map[i]) - 1 && map[i][j] != '1'))
+			if ((i == 0 && map[i][j] != '1') || (i == ft_len_array(map) - 1 && \
+			map[i][j] != '1') || (j == 0 && map[i][j] != '1') || \
+			(j == ft_strlen(map[i]) - 1 && map[i][j] != '1'))
 				map[i][j] = '#';
 		}
 	}
+	return (0);
 }
 
 int	m_check_map(t_map *map)
@@ -80,6 +82,5 @@ int	m_check_map(t_map *map)
 	}
 	if (count_resp != 1 || !count_space)
 		return (m_error("Error"));
-	m_close_map(map->map);
-	return (0);
+	return (m_close_map(map->map));
 }

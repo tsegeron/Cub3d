@@ -17,5 +17,5 @@
 
 void	m_rgb_to_dec(int *array, int *num)
 {
-	*num = array[2] * 65536 + array[1] * 256 + array[0];
+	*num = array[0] * 65536 + array[1] * 256 + array[2];
 }

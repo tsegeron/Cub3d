@@ -38,11 +38,12 @@ SRCS	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
 			input/g_do_keys.c			input/mouse_pos.c				input/mouse_keys.c				\
 			interface/draw_interface.c	interface/draw_menu_screen.c	interface/draw_health_effect.c	\
 			interface/draw_battery_bar.c\
-			3d/draw_walls.c				3d/draw_ceil_and_floor.c		\
+			3d/draw_walls.c				3d/draw_ceil.c					3d/draw_floor.c					\
+			3d/draw_walls_test.c		3d/draw_walls_test2.c			\
 			parsing/m_atoi.c			parsing/m_check_fname.c			parsing/m_check_map.c			\
 			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
 			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
-			parsing/m_error.c			parsing/m_lst.c
+			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})

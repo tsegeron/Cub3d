@@ -29,12 +29,12 @@ static int	m_read_gnl(int fd, t_list **lst_map, t_map *map)
 
 static void	m_init_param(t_vars *vars)
 {
-	vars->path_no = NULL;
-	vars->path_so = NULL;
-	vars->path_we = NULL;
-	vars->path_ea = NULL;
-	vars->cel_long = -1;
-	vars->flor_long = -1;
+	vars->path_no.img = NULL;
+	vars->path_so.img = NULL;
+	vars->path_we.img = NULL;
+	vars->path_ea.img = NULL;
+	vars->ceil_clr = -1;
+	vars->floor_clr = -1;
 }
 
 int	m_pars(char **av, t_map *map)

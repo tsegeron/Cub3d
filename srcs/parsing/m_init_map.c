@@ -17,11 +17,11 @@ static void	*m_clear_array(char **a)
 	return (NULL);
 }
 
-size_t len_width(t_list *map)
+size_t	len_width(t_list *map)
 {
-	t_list *step;
-	size_t i;
-	size_t util;
+	t_list	*step;
+	size_t	i;
+	size_t	util;
 
 	i = 0;
 	step = map;
@@ -35,12 +35,12 @@ size_t len_width(t_list *map)
 	return (i);
 }
 
-static void ft_strncpy(char *str1, char *str2, size_t n)
+static void	ft_strncpy(char *str1, char *str2, size_t n)
 {
-	size_t i;
+	size_t	i;
 
 	i = -1;
-	while(str2[++i] && i < n)
+	while (str2[++i] && i < n)
 		str1[i] = str2[i];
 }
 
@@ -49,7 +49,6 @@ char	**m_map_create(t_list *map, t_map *mapa)
 	t_list	*step;
 	char	**array_r;
 	int		i;
-	int		j;
 
 	array_r = ft_calloc(sizeof(char *), m_lst_size(&map) + 1);
 	if (!array_r)
@@ -59,13 +58,12 @@ char	**m_map_create(t_list *map, t_map *mapa)
 	step = map;
 	while (step)
 	{
-		array_r[++i] = ft_calloc(1,mapa->map_width + 1);
+		array_r[++i] = ft_calloc(1, mapa->map_width + 1);
 		if (!array_r[i])
-			return (NULL);
+			return (m_clear_array(array_r));
 		ft_memset(array_r[i], ' ', mapa->map_width);
 		ft_strncpy(array_r[i], step->str, ft_strlen(step->str));
 		step = step->next;
 	}
 	return (array_r);
 }
-

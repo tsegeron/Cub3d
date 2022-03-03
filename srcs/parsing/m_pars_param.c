@@ -1,48 +1,32 @@
 #include "../../hdrs/cub3d.h"
 
-static int	m_free_util(char *str)
+int	m_free_util(char *str)
 {
 	free(str);
 	return (EXIT_FAILURE);
 }
 
-static int	m_param(char *str, void **path, t_map *map)
+static int	m_param(char *str, t_interface *path, t_map *map)
 {
-	char *util;
-	int width;
-	int height;
+	char	*util;
 
-	if (*path)
-		free(*path);
-	util = ft_strtrim(str + 3 , " ");
+	if (path->img)
+		free(path->img);
+	util = ft_strtrim(str + 3, " ");
 	if (!util)
 		return (m_perror_r("Malloc"));
 	if (ft_strlen(util) <= 4)
-	{
 		return (m_free_util(util) && m_error("Wrong path"));
-	}
-	if (!ft_strcmp(util + ft_strlen(util) - 4, ".xpm"))
-	{
-		path = mlx_xpm_file_to_image(map->mlx.mlx, util, &width, &height);
-		if (!path)
-			return (m_free_util(util) && m_perror_r("Mlx"));
-	}
-//	else if (!ft_strcmp(util + ft_strlen(util) - 4, ".png"))
-//	{
-//		path = mlx_png_file_to_image(map->mlx.mlx, util, &width, &height);
-//		if (!path)
-//			return (m_free_util(util) && m_perror_r("Mlx"));
-//	}
-	else
-		return (m_free_util(util) && m_error("Wrong path"));
+	if (m_file_to_image(util, map, path))
+		return (m_free_util(util) && m_perror_r("Mlx"));
 	return (0);
 }
 
 int	m_pull_array(char **str_split, int *result)
 {
-	int i;
-	int status;
-	int array[3];
+	int	i;
+	int	status;
+	int	array[3];
 
 	i = -1;
 	while (str_split[++i])
@@ -65,14 +49,13 @@ static int	m_fc_param(char *str, char chr, t_vars *vars)
 	if (ft_len_array(str_split) != 3 || ft_strchr_count(str, ',') != 2)
 		return (m_perror_r("Wrong argumenst for f / c\n"));
 	if (chr == 'f')
-		if (m_pull_array(str_split, &vars->flor_long))
+		if (m_pull_array(str_split, &vars->floor_clr))
 			return (ft_clear_arrray(str_split));
 	if (chr == 'c')
-		if (m_pull_array(str_split, &vars->cel_long))
+		if (m_pull_array(str_split, &vars->ceil_clr))
 			return (ft_clear_arrray(str_split));
 	return (ft_clear_arrray(str_split) * 0);
 }
-
 
 int	m_pars_param(char *str, t_map *map)
 {

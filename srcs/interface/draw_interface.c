@@ -14,15 +14,10 @@
 
 void	draw_background(t_map *map)	//	FOR TEST
 {
-	map->background.size_x = map->mlx.win_size_x;
-	map->background.size_y = map->mlx.win_size_y;
-	map->background.img = mlx_new_image(map->mlx.mlx,
-										 map->background.size_x, map->background.size_y);
-	map->background.addr = mlx_get_data_addr(map->background.img,
-											  &map->background.bits_per_pixel, &map->background.line_length,
-											  &map->background.endian);
-	draw_walls(map);
-	draw_ceil_and_floor(map);
+//	draw_walls(map);
+//	draw_walls_test(map);
+	draw_walls_test2(map);
+//	draw_ceil_and_floor(map);
 //	int	i = -1;
 //	while (++i < map->background.size_y)
 //	{

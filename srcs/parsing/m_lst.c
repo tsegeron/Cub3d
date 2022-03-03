@@ -67,5 +67,3 @@ int	m_lst_size(t_list **lst_a)
 	}
 	return (count);
 }
-
-
