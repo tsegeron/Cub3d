@@ -2,8 +2,8 @@
 
 int	m_check_param(t_vars *vars, char **map)
 {
-	if (vars->flor_long < 0 || vars->cel_long < 0 || !map || \
-			vars->flor_long == vars->cel_long)
+	if (vars->floor_clr < 0 || vars->ceil_clr < 0 || !map || \
+			vars->floor_clr == vars->ceil_clr)
 		return (1);
 	return (0);
 }

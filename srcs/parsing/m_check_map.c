@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_check_map.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/06 22:34:59 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/08 22:14:55 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d.h"
 
 static int	m_hero_pos(t_map *map, int i, int j, int *count_resp)
@@ -25,12 +37,12 @@ static int	m_check_char(char **map, int i, int j, int *count_space)
 	if (map[i][j] != 'N' && map[i][j] != 'S' && map[i][j] != 'W' && \
 		map[i][j] != 'E' && map[i][j] != '0')
 		return (m_error("Error"));
-	if (i == 0 || j == 0 || i == ft_len_array(map) - 1 || \
-		j == ft_strlen(map[i]) - 1)
+	if (i == 0 || j == 0 || i == (int )ft_len_array(map) - 1 || \
+		j == (int )ft_strlen(map[i]) - 1)
 		return (m_error("Error"));
 	if (map[i][j - 1] == ' ' || map[i][j + 1] == ' ' || \
-		ft_strlen(map[i - 1]) - 1 < j || map[i - 1][j] == ' ' || \
-			ft_strlen(map[i + 1]) - 1 < j || map[i + 1][j] == ' ')
+		(int )ft_strlen(map[i - 1]) - 1 < j || map[i - 1][j] == ' ' || \
+			(int )ft_strlen(map[i + 1]) - 1 < j || map[i + 1][j] == ' ')
 		return (m_error("Error"));
 	(*count_space)++;
 	return (0);
@@ -47,9 +59,9 @@ static int	m_close_map(char **map)
 		j = -1;
 		while (map[i][++j])
 		{
-			if ((i == 0 && map[i][j] != '1') || (i == ft_len_array(map) - 1 && \
-			map[i][j] != '1') || (j == 0 && map[i][j] != '1') || \
-			(j == ft_strlen(map[i]) - 1 && map[i][j] != '1'))
+			if ((i == 0 && map[i][j] != '1') || (i == (int )ft_len_array(map) \
+			- 1 && map[i][j] != '1') || (j == 0 && map[i][j] != '1') || \
+			(j == (int )ft_strlen(map[i]) - 1 && map[i][j] != '1'))
 				map[i][j] = '#';
 		}
 	}

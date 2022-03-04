@@ -49,10 +49,11 @@ typedef struct s_vilian
 	double			x;
 	double			y;
 	double			dir;
-	int				status_agr;
+	int				status_action;
+	int				health;
+	double			len_to_wall;
 	struct s_vilian	*next;
 }	t_vilian;
-
 
 typedef struct s_interface
 {
@@ -88,12 +89,16 @@ typedef struct s_mlx
 
 typedef struct s_vars
 {
-	void	*path_no;
-	void	*path_so;
-	void	*path_we;
-	void	*path_ea;
-	int		flor_long;
-	int		cel_long;
+	t_interface path_no;
+	t_interface	path_so;
+	t_interface	path_we;
+	t_interface	path_ea;
+	t_interface	enemy;
+	t_interface	door;
+	t_interface	cure;
+	t_interface	charge;
+	int		floor_clr;
+	int		ceil_clr;
 }	t_vars;
 
 typedef struct s_map
@@ -139,13 +144,17 @@ int		m_lstclear(t_list **list);
 int		m_lstadd_back(t_list **lst, char *str);
 int		m_addback_vilian(t_vilian **vil, int y, int x);
 int		m_clear_vilian_lst(t_vilian **vil);
-int m_move_enemy(t_vilian *vilian, t_map *map);
-void m_change_dir_to_hero(t_vilian *vil, t_hero *hero);
-double	ray_cast_vil(t_map *map, double dir);
-int m_check_vil_vil(t_vilian *vilian, t_vilian *now, double posx, double posy);
-void m_change_vil_dir(t_vilian *vil);
-int	m_free_util(char *str);
-int m_file_to_image(char *util, t_map *map, void **path);
+void	m_change_dir_to_hero(t_vilian *vil, t_hero *hero);
+double	ray_cast_vil(t_map *map, double dir, t_vilian *now);
+int		m_check_vil_vil(t_vilian *vilian, t_vilian *now, double posx, double posy);
+void	m_change_vil_dir(t_vilian *vil);
+int		m_free_util(char *str);
+int		m_file_to_image(char *util, t_map *map, t_interface *path);
+int		m_enemy_action(t_map *map);
+void	m_enemy_atack(t_map *map);
+void	m_move_lite(t_vilian *vil, char **map, t_vilian *begin);
+void	m_move_angry(t_vilian *vil, t_vilian *begin, t_map *map);
+void	m_draw_enemy_minimap(t_map *map);
 /*	mseastar	*/
 
 /*	gernesto	*/
@@ -169,6 +178,5 @@ void	draw_minimap_elements(t_map *map);
 void	draw_start_screen(t_map *map);
 void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
-
 void	draw_walls(t_map *map);
 #endif

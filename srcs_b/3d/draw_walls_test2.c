@@ -47,6 +47,20 @@ static void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
 		data->dist = dist_on_y;
 	}
 
+
+	dist_on_y = fabs(sin(dir) * data->dist);
+	dist_on_x = fabs(cos(dir) * data->dist);
+	if (dir < PI && dir > 0)
+		dist_on_y = -dist_on_y;
+	if (dir > PI2 && dir < PI2 * 3)
+		dist_on_x = -dist_on_x;
+	if (map->map[(int)(map->pers.posy + dist_on_y)][(int)(map->pers.posx + dist_on_x)] == 'C')
+		data->wall_img = map->vars.door_closed;
+//	else if (map->map[(int)(map->pers.posy + dist_on_y)][(int)(map->pers.posx + dist_on_x)] == 'O')
+//		data->wall_img = map->vars.door_opened;
+
+
+
 	data->y = fabs(sin(dir) * data->dist);
 	data->x = fabs(cos(dir) * data->dist);
 	if (dir < PI && dir > 0)

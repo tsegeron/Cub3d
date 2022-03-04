@@ -44,10 +44,10 @@ add_executable(Cub3d
         srcs/interface/draw_interface.c
         srcs/interface/draw_menu_screen.c
         srcs/interface/draw_start_screen.c
-        srcs/minimap/draw_minimap_elements.c
-        srcs/minimap/draw_round_minimap.c
-        srcs/minimap/ray_cast.c
-        srcs/minimap/utils.c
+        srcs/rey_cast/draw_minimap_elements.c
+        srcs/rey_cast/draw_round_minimap.c
+        srcs/rey_cast/ray_cast.c
+        srcs/rey_cast/utils.c
         srcs/parsing/m_atoi.c
         srcs/parsing/m_check_fname.c
         srcs/parsing/m_check_map.c
@@ -77,13 +77,13 @@ add_executable(Cub3d
 #        srcs_b/parsing/m_error.c
 #        srcs_b/parsing/m_lst.c
 #        _bonus/srcs_b/enemy/m_move_enemy.c
-#        _bonus/minimap/draw_minimap_elements.c
-#        _bonus/minimap/draw_round_minimap.c
-#        _bonus/minimap/ray_cast.c
-#        _bonus/minimap/utils.c
+#        _bonus/rey_cast/draw_minimap_elements.c
+#        _bonus/rey_cast/draw_round_minimap.c
+#        _bonus/rey_cast/ray_cast.c
+#        _bonus/rey_cast/utils.c
 #
 #        _bonus/srcs_b/enemy/utils.c _bonus/srcs_b/parsing/m_file_to_image.c
-        srcs/3d/utils.c srcs/3d/L3d.h srcs/3d/get_color.c srcs/3d/draw_walls_test.c srcs/3d/draw_walls_test2.c)
+        srcs/3d/utils.c srcs/3d/L3d.h srcs/3d/get_color.c srcs/3d/draw_walls_test.c srcs/3d/draw_walls.c srcs/input/key_utils.c)
 
 target_link_libraries(Cub3d /Users/mseastar/CLionProjects/Cub3d/libmlx.a "-framework OpenGL" "-framework AppKit")
 

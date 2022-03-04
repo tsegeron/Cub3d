@@ -6,43 +6,10 @@
 
 # define BUFFER_SIZE 10
 # define MOVE_SPEED 0.1
-# define MAPW 220
-# define MAPW_HALF 110
-# define MAPH 220
-# define MAPH_HALF 110
-# define FOV 0xEE546951
 # define PI 3.14159265
 # define PI2 1.57079632
 # define GR 0.017452
 # define FOV2 0.523599
-
-/*	colors	*/
-# define EMPTY 0xFF000000
-# define BACKGR 0xCC000000
-# define WALL 0x77000000
-# define DWALL 0x009DE3A2
-# define CEIL 0x0051A889
-# define FLOOR 0x00426A37
-# define VOID 0xAA000000
-# define CDOOR 0x44560319
-# define ODOOR 0x77013220
-# define CURE 0x008DB600
-# define BATTERY 0x0018BC9C
-# define PLAYER 0x00155054
-# define AIM 0x33FF0000
-# define NO 0x00F9F2C3
-# define SO 0x00568C74
-# define WE 0x00683245
-# define EA 0x007DB84D
-
-typedef enum
-{
-	NOSCREEN,
-	START,
-	MENU,
-	END
-}	t_screenstat;
-
 
 typedef struct s_interface
 {
@@ -53,8 +20,6 @@ typedef struct s_interface
 	int		endian;
 	int		size_x;
 	int		size_y;
-	int		posx;
-	int		posy;
 }	t_interface;
 
 typedef struct s_hero
@@ -84,22 +49,26 @@ typedef struct s_vars
 	int			ceil_clr;
 }	t_vars;
 
+typedef struct s_keys
+{
+	int	w;
+	int	a;
+	int	s;
+	int	d;
+	int	left;
+	int	right;
+}	t_keys;
+
 typedef struct s_map
 {
 	t_vars		vars;
 	char		**map;
 	int			map_width;
 	int			map_height;
-	int			screen_stat;
 	t_mlx		mlx;
 	t_hero		pers;
-	t_interface	round_minmap;
-	t_interface	battery_bar;
-	t_interface	background;
-	t_interface	health;
-	t_interface	start_screen;
-	t_interface	menu_screen;
-	t_interface	end_screen;
+	t_interface	back;
+	t_keys		key;
 }	t_map;
 
 typedef struct s_list
@@ -129,31 +98,16 @@ int		m_file_to_image(char *util, t_map *map, t_interface *path);
 /*	mseastar	*/
 
 /*	gernesto	*/
-int		close_win(t_map *map);
-void	do_cam_rot(double *dir, int keycode);
-int		g_do_keys(int keycode, t_map *map);
-void	handle_mouse_pos(t_map *map);
-int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
-void	draw_line(t_interface map, double endx, double endy, int color);
+int		close_win(t_map *map);
+int		press_key(int keycode, t_map *map);
+int		release_key(int keycode, t_keys *key);
+void	check_buttons(t_map *map);
+void	do_cam_rot(double *dir, int keycode);
 double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
-double	ray_cast(t_map *map, double dir, int stat);
-void	draw_interface(t_map *map);
-void	draw_battery_bar(t_map *map);
-void	draw_health_effect(t_map *map);
-void	draw_background(t_map *map);
-void	draw_round_minimap(t_map *map);
-void	draw_minimap_elements(t_map *map);
-void	draw_start_screen(t_map *map);
-void	draw_menu_screen(t_map *map);
-void	draw_end_screen(t_map *map);
-
 int		shade_color(int color, double divide);
 void	draw_walls(t_map *map);
-void	draw_walls_test(t_map *map);
-void	draw_walls_test2(t_map *map);
-void	draw_lightning(t_map *map);
 /*	gernesto	*/
 
 #endif

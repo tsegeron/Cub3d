@@ -24,8 +24,10 @@ static t_vilian	*m_new_vilian(int y, int x, int num_vil)
 	elem->num_vil = num_vil;
 	elem->x = (double)x + 0.5;
 	elem->y = (double)y + 0.5;
+	elem->status_action = 0;
+	elem->health = 1;
 	elem->next = NULL;
-	util = (rand() % 4);
+	util = rand() % 4;
 	if (util == 0)
 		elem->dir = 3.14 / 2 + GR;
 	else if (util == 1)
@@ -33,7 +35,7 @@ static t_vilian	*m_new_vilian(int y, int x, int num_vil)
 	else if (util == 2)
 		elem->dir = 3.14 + GR;
 	else
-		elem->dir = 3.14 * 2 + GR;
+		elem->dir = GR;
 	return (elem);
 }
 

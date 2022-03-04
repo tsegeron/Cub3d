@@ -14,7 +14,9 @@
 
 void	draw_background(t_map *map)	//	FOR TEST
 {
-	draw_walls(map);
+//	draw_walls(map);
+//	draw_walls_test(map);
+	draw_walls_test2(map);
 //	draw_ceil_and_floor(map);
 //	int	i = -1;
 //	while (++i < map->background.size_y)

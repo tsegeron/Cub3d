@@ -6,19 +6,19 @@ int	m_free_util(char *str)
 	return (EXIT_FAILURE);
 }
 
-static int	m_param(char *str, void **path, t_map *map)
+static int	m_param(char *str, t_interface *path, t_map *map)
 {
 	char	*util;
 
-	if (*path)
-		free(*path);
+	if (path->img)
+		free(path->img);
 	util = ft_strtrim(str + 3, " ");
 	if (!util)
 		return (m_perror_r("Malloc"));
 	if (ft_strlen(util) <= 4)
 		return (m_free_util(util) && m_error("Wrong path"));
 	if (m_file_to_image(util, map, path))
-		return (m_free_util(util) && m_perror_r("Mlx"));
+		return (m_perror_r("Mlx"));
 	return (0);
 }
 
@@ -49,10 +49,10 @@ static int	m_fc_param(char *str, char chr, t_vars *vars)
 	if (ft_len_array(str_split) != 3 || ft_strchr_count(str, ',') != 2)
 		return (m_perror_r("Wrong argumenst for f / c\n"));
 	if (chr == 'f')
-		if (m_pull_array(str_split, &vars->flor_long))
+		if (m_pull_array(str_split, &vars->floor_clr))
 			return (ft_clear_arrray(str_split));
 	if (chr == 'c')
-		if (m_pull_array(str_split, &vars->cel_long))
+		if (m_pull_array(str_split, &vars->ceil_clr))
 			return (ft_clear_arrray(str_split));
 	return (ft_clear_arrray(str_split) * 0);
 }

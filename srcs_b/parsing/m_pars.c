@@ -23,18 +23,44 @@ static int	m_read_gnl(int fd, t_list **lst_map, t_map *map)
 			return (m_pars_map(str, fd, lst_map));
 		free(str);
 	}
-	m_close_fd(fd);
-	return (0);
+	return (m_close_fd(fd) * 0);
+}
+
+static int	m_init_imgs(t_vars *vars, void *mlx)
+{
+	vars->door.img = mlx_xpm_file_to_image(mlx, "textures/door.xpm", \
+	&vars->door.size_x, &vars->door.size_y);
+	vars->door.addr = mlx_get_data_addr(vars->door.img, \
+	&vars->door.bits_per_pixel, &vars->door.line_length, &vars->door.endian);
+//	vars->enemy.img = mlx_xpm_file_to_image(mlx, "textures/enemy.xpm", \
+//	&vars->enemy.size_x, &vars->enemy.size_y);
+//	vars->enemy.addr = mlx_get_data_addr(vars->enemy.img, \
+//	&vars->enemy.bits_per_pixel, &vars->enemy.line_length, \
+//	&vars->enemy.endian);
+//	vars->cure.img = mlx_xpm_file_to_image(mlx, "textures/cure.xpm", \
+//	&vars->cure.size_x, &vars->cure.size_y);
+//	vars->cure.addr = mlx_get_data_addr(vars->cure.img, \
+//	&vars->cure.bits_per_pixel, &vars->cure.line_length, &vars->cure.endian);
+//	vars->charge.img = mlx_xpm_file_to_image(mlx, "textures/charge.xpm", \
+//	&vars->charge.size_x, &vars->charge.size_y);
+//	vars->charge.addr = mlx_get_data_addr(vars->charge.img, \
+//	&vars->charge.bits_per_pixel, &vars->charge.line_length, \
+//	&vars->charge.endian);
+//	if (!vars->charge.img || !vars->enemy.img || !vars->door.img || \
+//		!vars->cure.img)
+	if (!vars->door.img)
+		exit(m_perror_r("Mlx"));
+	return (EXIT_SUCCESS);
 }
 
 static void	m_init_param(t_vars *vars)
 {
-	vars->path_no = NULL;
-	vars->path_so = NULL;
-	vars->path_we = NULL;
-	vars->path_ea = NULL;
-	vars->cel_long = -1;
-	vars->flor_long = -1;
+	vars->path_no.img = NULL;
+	vars->path_so.img = NULL;
+	vars->path_we.img = NULL;
+	vars->path_ea.img = NULL;
+	vars->ceil_clr = -1;
+	vars->floor_clr = -1;
 }
 
 int	m_pars(char **av, t_map *map)
@@ -52,12 +78,13 @@ int	m_pars(char **av, t_map *map)
 		return (EXIT_FAILURE);
 	fd = open(av[1], O_RDONLY, 0644);
 	if (fd < 0 || read(fd, 0, 0) < 0)
-		return (m_perror_r("Fd"));
+		return (m_perror_r("Fd") && m_close_fd(fd));
 	if (m_read_gnl(fd, &lst_map, map))
 		return (EXIT_FAILURE);
 	(map->map) = m_map_create(lst_map, map);
 	m_lstclear(&lst_map);
 	if (!(map->map))
 		return (EXIT_FAILURE);
+	m_close_fd(fd);
 	return (m_check_param(&map->vars, map->map) || m_check_map(map));
 }

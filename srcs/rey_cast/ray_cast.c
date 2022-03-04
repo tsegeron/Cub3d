@@ -138,38 +138,3 @@ double	cast_on_x(t_map *map, double posx, double posy, double dir)
 	q.dir = dir;
 	return (find_wall_on_x(map, &q));
 }
-
-/*
- * compares path lengths of both VERTICALLY and HORIZONTALLY
- * wall crossing routes, finds the lowest path
- * and, based on it, counts shifts on X and Y coordinates
- *
- * returns values of that shifts
- */
-double	ray_cast(t_map *map, double dir, int stat)
-{
-	double	dist_on_y;
-	double	dist_on_x;
-	double	dist;
-
-	dist_on_y = cast_on_y(map, map->pers.posx, map->pers.posy, dir);
-	dist_on_x = cast_on_x(map, map->pers.posx, map->pers.posy, dir);
-	if (dist_on_y > dist_on_x)
-		dist = dist_on_x;
-	else
-		dist = dist_on_y;
-	if (stat == 2)
-		return (dist);
-	if (dist > 5.5)
-		dist = 5.5;
-	dist_on_y = fabs(sin(dir) * dist) * 20;
-	dist_on_x = fabs(cos(dir) * dist) * 20;
-	if (dir < PI && dir > 0)
-		dist_on_y = -dist_on_y;
-	if (dir > PI2 && dir < PI2 * 3)
-		dist_on_x = -dist_on_x;
-	if (stat)
-		return (dist_on_y);
-	else
-		return (dist_on_x);
-}
