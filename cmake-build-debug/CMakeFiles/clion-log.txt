@@ -3,7 +3,7 @@
 CMake Error at CMakeLists.txt:6 (add_executable):
   Cannot find source file:
 
-    srcs/libft/ft_atoi.c
+    srcs_b/3d/draw_lightning.c
 
 
 CMake Error at CMakeLists.txt:6 (add_executable):

@@ -10,36 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
-
-void	draw_background(t_map *map)	//	FOR TEST
-{
-//	draw_walls(map);
-//	draw_walls_test(map);
-	draw_walls_test2(map);
-//	draw_ceil_and_floor(map);
-//	int	i = -1;
-//	while (++i < map->background.size_y)
-//	{
-//		int	j = -1;
-//		while (++j < map->background.size_x)
-//			my_mlx_pixel_put(&map->background, j, i, 0x00F9F2C3);	//	-	milky white
-////			my_mlx_pixel_put(&map->background, j, i, 0x009DE3A2);	//	-	cyan
-////			my_mlx_pixel_put(&map->background, j, i, 0x004B5320);	//	-	shrek
-////			my_mlx_pixel_put(&map->background, j, i, 0x00D74442);	//	-	red 'o pink
-//	}
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->background.img, 0, 0);
-}
+#include "../../hdrs/cub3d_bonus.h"
 
 void	draw_interface(t_map *map)
 {
-//	draw_battery_bar(map);
-//	draw_health_effect(map);
-
-
-
-
-//
 //	if (map->screen_stat == START)
 //		draw_start_screen(map);
 //	else if (map->screen_stat == MENU)

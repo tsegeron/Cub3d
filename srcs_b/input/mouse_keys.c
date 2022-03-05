@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 int	handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map)
 {

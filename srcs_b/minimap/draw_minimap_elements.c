@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 typedef struct s_local
 {

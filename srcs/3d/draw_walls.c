@@ -56,7 +56,7 @@ static void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x)
 	draw_floor(&q, &map->back, map->vars.floor_clr);
 }
 
-void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
+static void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
 {
 	double	dist_on_y;
 	double	dist_on_x;
@@ -92,7 +92,7 @@ void	draw_walls(t_map *map)
 			delta_dir -= 2 * PI;
 		get_wall_info(map, &data, dir_start);
 		data.dist *= cos(delta_dir);
-		draw_line_w(map, 800 / data.dist / 2, data, x);
+		draw_line_w(map, (int)(800 / data.dist / 2), data, x);
 		dir_start += 0.00158666;
 		x--;
 	}

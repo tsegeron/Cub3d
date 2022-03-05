@@ -34,10 +34,10 @@ static void	init_all(t_map *map)
 	map->back.size_x = map->mlx.win_size_x;
 	map->back.size_y = map->mlx.win_size_y;
 	map->back.img = mlx_new_image(map->mlx.mlx,
-								  map->back.size_x, map->back.size_y);
+			map->back.size_x, map->back.size_y);
 	map->back.addr = mlx_get_data_addr(map->back.img,
-									   &map->back.bits_per_pixel, &map->back.line_length,
-									   &map->back.endian);
+			&map->back.bits_per_pixel, &map->back.line_length,
+			&map->back.endian);
 	map->key.w = 0;
 	map->key.a = 0;
 	map->key.s = 0;
@@ -55,8 +55,8 @@ int	main(int ac, char **av)
 	map.map_height = (int )ft_len_array(map.map);
 	craft_the_window(&map);
 	init_all(&map);
-
-	mlx_mouse_move(map.mlx.win, map.mlx.win_size_x / 2, map.mlx.win_size_y / 2);
+	mlx_mouse_move(map.mlx.win, map.mlx.win_size_x / 2,
+		map.mlx.win_size_y / 2);
 	mlx_hook(map.mlx.win, 2, 1L << 0, press_key, &map);
 	mlx_hook(map.mlx.win, 3, 1L << 1, release_key, &map.key);
 	mlx_hook(map.mlx.win, 17, 1L << 0, close_win, &map);

@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 static void	find_difs(double *x, double *y, double dir, int keycode)
 {
@@ -83,8 +83,8 @@ void	do_open_door(t_map *map)
 	int		dif;
 
 	find_difs(&difx, &dify, map->pers.dir, 13);
-	posx = (map->pers.posx + 2.5 * difx);
-	posy = (map->pers.posy + 2.5 * dify);
+	posx = (map->pers.posx + 8.5 * difx);
+	posy = (map->pers.posy + 8.5 * dify);
 	dif = abs((int)map->pers.posx - posx) + abs((int)map->pers.posy - posy);
 	if (map->map[(int)map->pers.posy][(int)map->pers.posx] != 'O' && dif <= 1)
 	{
@@ -95,24 +95,18 @@ void	do_open_door(t_map *map)
 	}
 }
 
-int	g_do_keys(int keycode, t_map *map)
+void	check_buttons(t_map *map)
 {
-	if (keycode == 53)
-		close_win(map);
-	if (keycode == 12)
-	{
-		if (map->screen_stat == NOSCREEN)
-			map->screen_stat = MENU;
-		else if (map->screen_stat == MENU)
-			map->screen_stat = NOSCREEN;
-	}
-	else if (keycode == 14 && map->screen_stat == NOSCREEN)
-		do_open_door(map);
-	else if ((keycode == 13 || keycode == 0 || keycode == 1 || keycode == 2)
-		&& map->screen_stat == NOSCREEN)
-		do_key_wasd(map, keycode);
-	else if ((keycode == 123 || keycode == 124)
-		&& map->screen_stat == NOSCREEN)
-		do_cam_rot(&map->pers.dir, keycode);
-	return (0);
+	if (map->key.w && map->screen_stat == NOSCREEN)
+		do_key_wasd(map, 13);
+	if (map->key.a && map->screen_stat == NOSCREEN)
+		do_key_wasd(map, 0);
+	if (map->key.s && map->screen_stat == NOSCREEN)
+		do_key_wasd(map, 1);
+	if (map->key.d && map->screen_stat == NOSCREEN)
+		do_key_wasd(map, 2);
+	if (map->key.left && map->screen_stat == NOSCREEN)
+		do_cam_rot(&map->pers.dir, 123);
+	if (map->key.right && map->screen_stat == NOSCREEN)
+		do_cam_rot(&map->pers.dir, 124);
 }

@@ -43,6 +43,12 @@ typedef enum
 	END
 }	t_screenstat;
 
+typedef enum boolean
+{
+	false,
+	true
+}	t_boolean;
+
 typedef struct s_vilian
 {
 	int				num_vil;
@@ -101,6 +107,18 @@ typedef struct s_vars
 	int		ceil_clr;
 }	t_vars;
 
+typedef struct s_keys
+{
+	int	w;
+	int	a;
+	int	s;
+	int	d;
+	int	e;
+	int	q;
+	int	left;
+	int	right;
+}	t_keys;
+
 typedef struct s_map
 {
 	t_vars		vars;
@@ -109,11 +127,12 @@ typedef struct s_map
 	int			map_height;
 	int			screen_stat;
 	t_mlx		mlx;
+	t_keys		key;
 	t_hero		pers;
 	t_vilian 	*vilian;
 	t_interface	round_minmap;
 	t_interface	battery_bar;
-	t_interface	background;
+	t_interface	back;
 	t_interface	health;
 	t_interface	start_screen;
 	t_interface	menu_screen;
@@ -158,15 +177,26 @@ void	m_draw_enemy_minimap(t_map *map);
 /*	mseastar	*/
 
 /*	gernesto	*/
-int		close_win(t_map *map);
-void	do_cam_rot(double *dir, int keycode);
-int		g_do_keys(int keycode, t_map *map);
-void	handle_mouse_pos(t_map *map);
-int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
-void	draw_line(t_interface map, double endx, double endy, int color);
+int		close_win(t_map *map);
+int		press_key(int keycode, t_map *map);
+int		release_key(int keycode, t_keys *key);
+void	do_open_door(t_map *map);
+void	check_buttons(t_map *map);
+void	do_cam_rot(double *dir, int keycode);
 double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
+int		shade_color(int color, double divide);
+void	draw_walls(t_map *map);
+
+//void	do_cam_rot(double *dir, int keycode);
+//int		g_do_keys(int keycode, t_map *map);
+//double	cast_on_y(t_map *map, double posx, double posy, double dir);
+//double	cast_on_x(t_map *map, double posx, double posy, double dir);
+//void	draw_walls(t_map *map);
+void	handle_mouse_pos(t_map *map);
+int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
+void	draw_line(t_interface map, double endx, double endy, int color);
 double	ray_cast(t_map *map, double dir, int stat);
 void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
@@ -178,5 +208,4 @@ void	draw_minimap_elements(t_map *map);
 void	draw_start_screen(t_map *map);
 void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
-void	draw_walls(t_map *map);
 #endif

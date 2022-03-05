@@ -28,7 +28,7 @@ static int	m_read_gnl(int fd, t_list **lst_map, t_map *map)
 
 static int	m_init_imgs(t_vars *vars, void *mlx)
 {
-	vars->door.img = mlx_xpm_file_to_image(mlx, "textures/door.xpm", \
+	vars->door.img = mlx_xpm_file_to_image(mlx, "./textures/door.xpm", \
 	&vars->door.size_x, &vars->door.size_y);
 	vars->door.addr = mlx_get_data_addr(vars->door.img, \
 	&vars->door.bits_per_pixel, &vars->door.line_length, &vars->door.endian);
@@ -49,7 +49,7 @@ static int	m_init_imgs(t_vars *vars, void *mlx)
 //	if (!vars->charge.img || !vars->enemy.img || !vars->door.img || \
 //		!vars->cure.img)
 	if (!vars->door.img)
-		exit(m_perror_r("Mlx"));
+		exit(m_perror_r("Error: mlx_xpm_file_to_image"));
 	return (EXIT_SUCCESS);
 }
 
@@ -86,5 +86,6 @@ int	m_pars(char **av, t_map *map)
 	if (!(map->map))
 		return (EXIT_FAILURE);
 	m_close_fd(fd);
+	m_init_imgs(&map->vars, map->mlx.mlx);
 	return (m_check_param(&map->vars, map->map) || m_check_map(map));
 }

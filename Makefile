@@ -24,7 +24,7 @@ FLDR_B	=	srcs_b/
 FLDR_H	=	hdrs/
 
 MAIN	=	main.c
-MAIN_B	=	main.c
+MAIN_B	=	main_b.c
 
 SRCS	=	libft/ft_strlen.c			libft/ft_calloc.c				libft/ft_bzero.c				\
 			libft/ft_strcpy.c			libft/ft_strdup.c				libft/ft_clear_array.c			\
@@ -32,7 +32,7 @@ SRCS	=	libft/ft_strlen.c			libft/ft_calloc.c				libft/ft_bzero.c				\
 			libft/get_next_line.c		libft/ft_strjoin.c				libft/ft_strchr.c				\
 			libft/ft_substr.c			libft/ft_memset.c				libft/ft_strtrim.c				\
 			libft/ft_strcmp.c			\
-			rey_cast/ray_cast.c			rey_cast/utils.c				\
+			ray_cast/utils.c			ray_cast/ray_cast.c				\
 			input/g_do_keys.c			input/key_utils.c				\
 			3d/draw_walls.c				3d/draw_ceil.c					3d/draw_floor.c					\
 			3d/utils.c					\
@@ -47,13 +47,14 @@ SRCS_B	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
 			libft/ft_bzero.c			libft/ft_strchr.c				libft/ft_strjoin.c				\
 			libft/ft_substr.c			libft/ft_memset.c				libft/ft_strtrim.c				\
 			libft/ft_strcmp.c			\
-			minimap/ray_cast.c			minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
-			minimap/utils.c				\
+			minimap/utils.c				minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
+			minimap/ray_cast.c			\
 			input/g_do_keys.c			input/mouse_pos.c				input/mouse_keys.c				\
+			input/key_utils.c			\
 			interface/draw_interface.c	interface/draw_menu_screen.c	interface/draw_health_effect.c	\
 			interface/draw_battery_bar.c\
 			3d/draw_walls.c				3d/draw_ceil.c					3d/draw_floor.c					\
-			3d/draw_walls_test.c		3d/draw_walls_test2.c			\
+			3d/utils.c					\
 			parsing/m_atoi.c			parsing/m_check_fname.c			parsing/m_check_map.c			\
 			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
 			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
@@ -109,18 +110,10 @@ re:			fclean all
 bonus:
 			@make OBJS="${OBJS_B}" LIB="${LIB_B}" MAIN="${MAIN_B}" NAME="${NAME_B}" READY="${READYB}" all
 
-#main:
-#			@${CC} ${FLAGS} ${OPTFLAGS} main.c ${LIB}
-
-#test:
-#			@${CC} ${FLAGS} ${OPTFLAGS} test.c ${LIB}
 
 norm:
 			@norminette ${MAIN} ${FLDR_H} ${FLDR_S}
-
-
-#exec:		${SRCS}
-#			${CC} ${FLAGS} ${OPTFLAGS} ${SRCS} -o ${ENAME}
+#			@norminette ${MAIN} ${FLDR_H} ${FLDR_S}
 
 
 # ------------------------------------------------------------------------------

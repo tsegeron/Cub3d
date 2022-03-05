@@ -39,9 +39,9 @@ typedef struct s_local_vars
 
 void	draw_ceil(t_local *q, t_interface *background, int color);
 void	draw_floor(t_local *q, t_interface *background, int color);
-void	get_wall_info(t_map *map, t_wall_clr *data, double dir);
 void	get_ea_we_data(t_vars *vars, t_wall_clr *data, double dist, double dir);
 void	get_no_so_data(t_vars *vars, t_wall_clr *data, double dist, double dir);
 void	calc_tex_dims(t_wall_clr *data, double dir, double persx, double persy);
 int		get_pixel(t_interface wall, double x, double y);
+
 #endif

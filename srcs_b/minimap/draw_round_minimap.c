@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 static void	draw_round_minimap_background(t_interface *r_minimap)
 {

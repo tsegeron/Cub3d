@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 void	handle_mouse_pos(t_map *map)
 {

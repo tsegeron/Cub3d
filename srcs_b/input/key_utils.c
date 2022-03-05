@@ -10,14 +10,14 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 static void	m_clear_mlx(void *mlx, t_interface *path)
 {
+//	if (path->img)
+	mlx_destroy_image(mlx, path->img);
 	if (path->addr)
 		free(path->addr);
-	if (path->img)
-		mlx_destroy_image(mlx, path->img);
 
 }
 
@@ -30,6 +30,10 @@ int	close_win(t_map *map)
 		free(map->map[i]);
 	free(map->map);
 	mlx_clear_window(map->mlx.mlx, map->mlx.win);
+//	m_clear_mlx(map->mlx.mlx, &map->vars.enemy);
+//	m_clear_mlx(map->mlx.mlx, &map->vars.door);
+//	m_clear_mlx(map->mlx.mlx, &map->vars.cure);
+//	m_clear_mlx(map->mlx.mlx, &map->vars.charge);
 	m_clear_mlx(map->mlx.mlx, &map->vars.path_no);
 	m_clear_mlx(map->mlx.mlx, &map->vars.path_so);
 	m_clear_mlx(map->mlx.mlx, &map->vars.path_we);
@@ -46,34 +50,43 @@ int	press_key(int keycode, t_map *map)
 {
 	if (keycode == 53)
 		close_win(map);
-	if (keycode == 13)
-		map->key.w = 1;
-	if (keycode == 0)
-		map->key.a = 1;
-	if (keycode == 1)
-		map->key.s = 1;
-	if (keycode == 2)
-		map->key.d = 1;
-	if (keycode == 123)
-		map->key.left = 1;
-	if (keycode == 124)
-		map->key.right = 1;
+	if (keycode == 12)
+	{
+		if (map->screen_stat == NOSCREEN)
+			map->screen_stat = MENU;
+		else if (map->screen_stat == MENU)
+			map->screen_stat = NOSCREEN;
+	}
+	if (keycode == 14 && map->screen_stat == NOSCREEN)
+		do_open_door(map);
+	if (keycode == 13 && map->screen_stat == NOSCREEN)
+		map->key.w = true;
+	if (keycode == 0 && map->screen_stat == NOSCREEN)
+		map->key.a = true;
+	if (keycode == 1 && map->screen_stat == NOSCREEN)
+		map->key.s = true;
+	if (keycode == 2 && map->screen_stat == NOSCREEN)
+		map->key.d = true;
+	if (keycode == 123 && map->screen_stat == NOSCREEN)
+		map->key.left = true;
+	if (keycode == 124 && map->screen_stat == NOSCREEN)
+		map->key.right = true;
 	return (0);
 }
 
 int	release_key(int keycode, t_keys *key)
 {
 	if (keycode == 13)
-		key->w = 0;
+		key->w = false;
 	if (keycode == 0)
-		key->a = 0;
+		key->a = false;
 	if (keycode == 1)
-		key->s = 0;
+		key->s = false;
 	if (keycode == 2)
-		key->d = 0;
+		key->d = false;
 	if (keycode == 123)
-		key->left = 0;
+		key->left = false;
 	if (keycode == 124)
-		key->right = 0;
+		key->right = false;
 	return (0);
 }

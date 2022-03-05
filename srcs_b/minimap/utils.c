@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../hdrs/cub3d.h"
+#include "../../hdrs/cub3d_bonus.h"
 
 //	paints a pixel
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color)
@@ -21,7 +21,7 @@ void	my_mlx_pixel_put(t_interface *data, int x, int y, int color)
 	*(unsigned int *)dst = color;
 }
 
-// draws one line from x,y {110pix,110pix} (center of rey_cast) to endx,endy
+// draws one line from x,y {110pix,110pix} (center of ray_cast) to endx,endy
 void	draw_line(t_interface map, double endx, double endy, int color)
 {
 	double	startx;
