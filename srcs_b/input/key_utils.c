@@ -12,37 +12,19 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-static void	m_clear_mlx(void *mlx, t_interface *path)
-{
-//	if (path->img)
-	mlx_destroy_image(mlx, path->img);
-	if (path->addr)
-		free(path->addr);
-
-}
+//static void	m_clear_mlx(void *mlx, t_interface *path)
+//{
+////	if (path->img)
+//	mlx_destroy_image(mlx, path->img);
+//	if (path->addr)
+//		free(path->addr);
+//
+//}
 
 int	close_win(t_map *map)
 {
-	int	i;
-
-	i = -1;
-	while (map->map[++i])
-		free(map->map[i]);
-	free(map->map);
-	mlx_clear_window(map->mlx.mlx, map->mlx.win);
-//	m_clear_mlx(map->mlx.mlx, &map->vars.enemy);
-//	m_clear_mlx(map->mlx.mlx, &map->vars.door);
-//	m_clear_mlx(map->mlx.mlx, &map->vars.cure);
-//	m_clear_mlx(map->mlx.mlx, &map->vars.charge);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_no);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_so);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_we);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_ea);
-	m_clear_mlx(map->mlx.mlx, &map->back);
-	if (map->mlx.mlx)
-		free(map->mlx.mlx);
-	if (map->mlx.win)
-		free(map->mlx.win);
+	ft_clear_arrray(map->map);
+	m_clear_vilian_lst(&map->vilian);
 	exit(EXIT_SUCCESS);
 }
 

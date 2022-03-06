@@ -12,12 +12,14 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-void	get_color(int hp, int *color)
+void	get_color(double hp, int *color)
 {
-	if (hp == 2)
+	if (round(hp) == 2.)
 		*color = 0xDDFF0000;
-	else if (hp == 1)
+	else if (round(hp) == 1.)
 		*color = 0xBBFF0000;
+	else if (round(hp) == 0)
+		*color = 0x11FF0000;
 }
 
 void	draw_health_effect(t_map *map)
@@ -27,7 +29,7 @@ void	draw_health_effect(t_map *map)
 	int	rad;
 	int	color;
 
-	if (map->pers.health > 2)
+	if (round(map->pers.health) > 2.)
 		return ;
 	get_color(map->pers.health, &color);
 	rad = 110;
@@ -45,4 +47,6 @@ void	draw_health_effect(t_map *map)
 		}
 	}
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->health.img, 0, 0);
+	if (round(map->pers.health) == 0.)
+		map->screen_stat = MENU;
 }

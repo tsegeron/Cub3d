@@ -54,8 +54,25 @@ void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 	data->x += map->pers.posx;
 	data->y += map->pers.posy;
 //	printf("%f %f\n", data->x, data->y);
-	if (map->map[(int)(data->y)][(int)(data->x)] == 'C')
-		data->wall_img = map->vars.door;
+	if (data->side == 2 || data->side == 4)
+	{
+		if (map->map[(int)(data->y)][(int)(data->x)] == 'C')
+			data->wall_img = map->vars.door;
+	}
+	else if (data->side == 1 || data->side == 3)
+	{
+		if (map->map[(int)(data->y - 1)][(int)(data->x)] == 'C' && data->side == 1)
+		{
+			data->wall_img = map->vars.door;
+			data->x--;
+		}
+		else if (map->map[(int)(data->y)][(int)(data->x) - 1] == 'C' && data->side == 3)
+		{
+			data->wall_img = map->vars.door;
+			data->y--;
+		}
+	}
+
 	if ((dir < PI && dir > 0) || (dir < 3 * PI && dir > 2 * PI))
 		data->x -= floor(data->x);
 	else

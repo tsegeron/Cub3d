@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_pars.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d_bonus.h"
 
 int	m_close_fd(int fd)
@@ -26,39 +38,17 @@ static int	m_read_gnl(int fd, t_list **lst_map, t_map *map)
 	return (m_close_fd(fd) * 0);
 }
 
-static int	m_init_imgs(t_vars *vars, void *mlx)
-{
-	vars->door.img = mlx_xpm_file_to_image(mlx, "./textures/door.xpm", \
-	&vars->door.size_x, &vars->door.size_y);
-	vars->door.addr = mlx_get_data_addr(vars->door.img, \
-	&vars->door.bits_per_pixel, &vars->door.line_length, &vars->door.endian);
-//	vars->enemy.img = mlx_xpm_file_to_image(mlx, "textures/enemy.xpm", \
-//	&vars->enemy.size_x, &vars->enemy.size_y);
-//	vars->enemy.addr = mlx_get_data_addr(vars->enemy.img, \
-//	&vars->enemy.bits_per_pixel, &vars->enemy.line_length, \
-//	&vars->enemy.endian);
-//	vars->cure.img = mlx_xpm_file_to_image(mlx, "textures/cure.xpm", \
-//	&vars->cure.size_x, &vars->cure.size_y);
-//	vars->cure.addr = mlx_get_data_addr(vars->cure.img, \
-//	&vars->cure.bits_per_pixel, &vars->cure.line_length, &vars->cure.endian);
-//	vars->charge.img = mlx_xpm_file_to_image(mlx, "textures/charge.xpm", \
-//	&vars->charge.size_x, &vars->charge.size_y);
-//	vars->charge.addr = mlx_get_data_addr(vars->charge.img, \
-//	&vars->charge.bits_per_pixel, &vars->charge.line_length, \
-//	&vars->charge.endian);
-//	if (!vars->charge.img || !vars->enemy.img || !vars->door.img || \
-//		!vars->cure.img)
-	if (!vars->door.img)
-		exit(m_perror_r("Error: mlx_xpm_file_to_image"));
-	return (EXIT_SUCCESS);
-}
-
 static void	m_init_param(t_vars *vars)
 {
 	vars->path_no.img = NULL;
 	vars->path_so.img = NULL;
 	vars->path_we.img = NULL;
 	vars->path_ea.img = NULL;
+	vars->door.img = NULL;
+	vars->enemy.img = NULL;
+	vars->cure.img = NULL;
+	vars->charge.img = NULL;
+	vars->wand.img = NULL;
 	vars->ceil_clr = -1;
 	vars->floor_clr = -1;
 }
@@ -86,6 +76,7 @@ int	m_pars(char **av, t_map *map)
 	if (!(map->map))
 		return (EXIT_FAILURE);
 	m_close_fd(fd);
-	m_init_imgs(&map->vars, map->mlx.mlx);
+	if (m_init_imgs(&map->vars, map->mlx.mlx))
+		return (EXIT_FAILURE);
 	return (m_check_param(&map->vars, map->map) || m_check_map(map));
 }

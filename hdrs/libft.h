@@ -1,5 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
-#define LIBFT_H
+# define LIBFT_H
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -8,12 +20,6 @@
 # include <sys/types.h>
 # include <string.h>
 # include <math.h>
-
-//t_list	*ft_lstnew(char *content);
-//void	ft_lstdelone(t_list *lst, void (*del)(void *));
-//int		ft_lst_size(t_list **lst_a);
-//int		ft_lstclear(t_list **list);
-//int		ft_lstadd_back(t_list **lst, char *str);
 
 size_t	ft_strlen(const char *str);
 size_t	ft_len_array(char **array);

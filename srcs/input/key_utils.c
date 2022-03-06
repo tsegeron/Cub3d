@@ -12,15 +12,6 @@
 
 #include "../../hdrs/cub3d.h"
 
-static void	m_clear_mlx(void *mlx, t_interface *path)
-{
-	if (path->addr)
-		free(path->addr);
-	if (path->img)
-		mlx_destroy_image(mlx, path->img);
-
-}
-
 int	close_win(t_map *map)
 {
 	int	i;
@@ -29,16 +20,6 @@ int	close_win(t_map *map)
 	while (map->map[++i])
 		free(map->map[i]);
 	free(map->map);
-	mlx_clear_window(map->mlx.mlx, map->mlx.win);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_no);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_so);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_we);
-	m_clear_mlx(map->mlx.mlx, &map->vars.path_ea);
-	m_clear_mlx(map->mlx.mlx, &map->back);
-	if (map->mlx.mlx)
-		free(map->mlx.mlx);
-	if (map->mlx.win)
-		free(map->mlx.win);
 	exit(EXIT_SUCCESS);
 }
 

@@ -1,19 +1,16 @@
-#include "../../hdrs/cub3d_bonus.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_rgb_to_dec.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-//int	m_rgb_to_16(int *array, char **result)
-//{
-//	int	i;
-//
-//	i = -1;
-//	*result = NULL;
-//	while (++i < 3)
-//	{
-//		*result = ft_strjoin(*result, ft_itoa_hex(array[i]));
-//		if (!*result)
-//			return (EXIT_FAILURE);
-//	}
-//	return (EXIT_SUCCESS);
-//}
+#include "../../hdrs/cub3d_bonus.h"
 
 void	m_rgb_to_dec(int *array, int *num)
 {

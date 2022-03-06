@@ -51,7 +51,7 @@ int	main(int ac, char **av)
 	t_map	map;
 
 	if (ac != 2 || m_pars(av, &map))
-		return (EXIT_FAILURE);
+		return (m_clear_all(&map));
 	map.map_height = (int )ft_len_array(map.map);
 	craft_the_window(&map);
 	init_all(&map);

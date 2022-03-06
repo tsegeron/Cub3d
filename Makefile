@@ -39,7 +39,8 @@ SRCS	=	libft/ft_strlen.c			libft/ft_calloc.c				libft/ft_bzero.c				\
 			parsing/m_atoi.c			parsing/m_check_fname.c			parsing/m_check_map.c			\
 			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
 			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
-			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c
+			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c		\
+			parsing/m_clear_all.c
 
 SRCS_B	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
 			libft/ft_calloc.c			libft/ft_clear_array.c			libft/ft_split.c				\
@@ -59,7 +60,10 @@ SRCS_B	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
 			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
 			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
 			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c		\
-			parsing/m_add_vilian.c
+			parsing/m_add_vilian.c		parsing/m_clear_all.c			parsing/m_init_imgs.c			\
+			enemy/m_enemy_action.c      enemy/utils.c					enemy/m_enemy_atack.c 			\
+			enemy/m_move_enemy.c		enemy/m_draw_enemy_minimap.c	enemy/m_player_attack.c
+
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})
 SRCB	=	$(addprefix ${FLDR_B},${SRCS_B})
@@ -98,11 +102,11 @@ ${NAME}: 	${OBJS} ${MAIN}
 all:		${NAME}
 
 clean:
+			@${MAKE} clean -C mlx
 			@${RM} ${OBJS} ${OBJS_B}
 			@printf "${_PURPLE}${SWEPT}${_END}\n"
 
 fclean:		clean
-			@${MAKE} clean -C mlx
 			@${RM} ${NAME} ${NAME_B} ${LIB} ${LIB_B} libmlx.a
 
 re:			fclean all

@@ -79,8 +79,8 @@ typedef struct s_hero
 	double	posx;
 	double	posy;
 	double	dir;
+	double	health;
 	int		charge;
-	int		health;
 }	t_hero;
 
 typedef struct s_mlx
@@ -89,8 +89,6 @@ typedef struct s_mlx
 	void	*win;
 	int		win_size_x;
 	int		win_size_y;
-	int		mouse_x;
-	int		mouse_y;
 }	t_mlx;
 
 typedef struct s_vars
@@ -103,6 +101,9 @@ typedef struct s_vars
 	t_interface	door;
 	t_interface	cure;
 	t_interface	charge;
+	t_interface	wand;
+	t_interface	light;
+	t_interface	rasengan;
 	int		floor_clr;
 	int		ceil_clr;
 }	t_vars;
@@ -171,9 +172,12 @@ int		m_free_util(char *str);
 int		m_file_to_image(char *util, t_map *map, t_interface *path);
 int		m_enemy_action(t_map *map);
 void	m_enemy_atack(t_map *map);
-void	m_move_lite(t_vilian *vil, char **map, t_vilian *begin);
-void	m_move_angry(t_vilian *vil, t_vilian *begin, t_map *map);
+void	m_move_lite(t_vilian *vil, char **map);
+void	m_move_angry(t_vilian *vil, t_map *map);
 void	m_draw_enemy_minimap(t_map *map);
+int		m_clear_all(t_map *map);
+int		m_player_attack(int keycode, int mouse_x, int mouse_y, t_map *map);
+int		m_init_imgs(t_vars *vars, void *mlx);
 /*	mseastar	*/
 
 /*	gernesto	*/

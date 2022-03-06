@@ -64,16 +64,38 @@ static void	craft_the_window(t_map *map)
 
 }
 
+void	draw_wand_and_rasengan(t_map *map)
+{
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.wand.img,
+			map->back.size_x / 3 + map->vars.wand.size_x,
+			map->back.size_y - map->vars.wand.size_y);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.light.img,
+							map->back.size_x / 3 + map->vars.wand.size_x - map->vars.light.size_x / 8,
+							map->back.size_y / 2);
+//	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.rasengan.img,
+//			map->map_width * 5 / 8 - map->vars.wand.size_x,
+//			map->map_height - map->vars.wand.size_y);
+
+}
+
 static int	render_frame(t_map *map)
 {
-//	static int	random;
+	static int	random;
 
+	if (random % 2 && map->screen_stat == NOSCREEN)
+	{
+		m_enemy_action(map);
+		random = 0;
+	}
+	else if (map->screen_stat == NOSCREEN)
+		random++;
 	handle_mouse_pos(map);
 	mlx_clear_window(map->mlx.mlx, map->mlx.win);
 	check_buttons(map);
 	if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
 	{
 		draw_walls(map);
+		draw_wand_and_rasengan(map);
 		draw_health_effect(map);
 		draw_round_minimap(map);
 		draw_battery_bar(map);
@@ -88,10 +110,8 @@ int	main(int ac, char **av)
 	t_map	map;
 
 	if (ac != 2 || m_pars(av, &map))
-		return (EXIT_FAILURE);
+		return (m_clear_all(&map));
 	map.map_height = ft_len_array(map.map);
-	printf("%u\n", map.map_height);
-	printf("%u\n", map.map_width);
 	map.screen_stat = NOSCREEN;
 	craft_the_window(&map);
 	init_all1(&map);
@@ -100,6 +120,7 @@ int	main(int ac, char **av)
 	mlx_hook(map.mlx.win, 2, 1L << 0, press_key, &map);
 	mlx_hook(map.mlx.win, 3, 1L << 1, release_key, &map.key);
 	mlx_hook(map.mlx.win, 17, 1L << 0, close_win, &map);
+	mlx_mouse_hook(map.mlx.win, m_player_attack, &map);
 	mlx_loop_hook(map.mlx.mlx, render_frame, &map);
 	mlx_loop(map.mlx.mlx);
 	return (0);

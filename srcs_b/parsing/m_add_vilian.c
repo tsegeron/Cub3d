@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_add_vilian.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d_bonus.h"
 
 int	m_clear_vilian_lst(t_vilian **vil)
@@ -62,3 +74,4 @@ int	m_addback_vilian(t_vilian **vil, int y, int x)
 	num_vil++;
 	return (0);
 }
+

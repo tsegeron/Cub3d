@@ -86,6 +86,7 @@ void	draw_round_minimap(t_map *map)
 {
 	draw_round_minimap_background(&map->round_minmap);
 	draw_minimap_elements(map);
+	m_draw_enemy_minimap(map);
 	draw_fov_in_round_minimap(map);
 	draw_player_in_round_minimap(&map->round_minmap);
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win,

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   m_error.c                                          :+:      :+:    :+:   */
+/*   m_enemy_atack.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,14 +12,7 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-int	m_perror_r(char *str)
+void	m_enemy_atack(t_map *map)
 {
-	perror(str);
-	return (1);
-}
-
-int	m_error(char *str)
-{
-	printf("%s\n", str);
-	return (1);
+	map->pers.health -= 0.01;
 }

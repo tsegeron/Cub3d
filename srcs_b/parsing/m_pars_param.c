@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_pars_param.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d_bonus.h"
 
 int	m_free_util(char *str)
@@ -11,7 +23,7 @@ static int	m_param(char *str, t_interface *path, t_map *map)
 	char	*util;
 
 	if (path->img)
-		free(path->img);
+		return (m_free_util(str) && m_error("Error"));
 	util = ft_strtrim(str + 3, " ");
 	if (!util)
 		return (m_perror_r("Malloc"));

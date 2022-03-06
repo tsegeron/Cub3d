@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_check_map.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 23:15:11 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/18 00:30:23 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d_bonus.h"
 
 static int	m_hero_pos(t_map *map, int i, int j, int *count_resp)
@@ -5,7 +17,7 @@ static int	m_hero_pos(t_map *map, int i, int j, int *count_resp)
 	map->pers.posx = j + 0.5;
 	map->pers.posy = i + 0.5;
 	map->pers.charge = 3;
-	map->pers.health = 3;
+	map->pers.health = 3.;
 	if (map->map[i][j] == 'N')
 		map->pers.dir = 3.14 / 2 + GR;
 	else if (map->map[i][j] == 'S')
@@ -26,14 +38,15 @@ static int	m_check_char(t_map *map, int i, int j, int *count_space)
 		map->map[i][j] != 'W' && map->map[i][j] != 'E' && \
 			map->map[i][j] != '0' && map->map[i][j] != 'C' && \
 				map->map[i][j] != 'O' && map->map[i][j] != 'V' && \
-					map->map[i][j] != 'B')
+					map->map[i][j] != 'B' && map->map[i][j] != 'H')
 		return (m_error("Error"));
-	if (i == 0 || j == 0 || i == ft_len_array(map->map) - 1 || \
-		j == ft_strlen(map->map[i]) - 1)
+	if (i == 0 || j == 0 || i == (int)ft_len_array(map->map) - 1 || \
+		j == (int)ft_strlen(map->map[i]) - 1)
 		return (m_error("Error"));
 	if (map->map[i][j - 1] == ' ' || map->map[i][j + 1] == ' ' || \
-		ft_strlen(map->map[i - 1]) - 1 < j || map->map[i - 1][j] == ' ' || \
-			ft_strlen(map->map[i + 1]) - 1 < j || map->map[i + 1][j] == ' ')
+		(int)ft_strlen(map->map[i - 1]) - 1 < j || map->map[i - 1][j] == ' ' || \
+			(int)ft_strlen(map->map[i + 1]) - 1 < j || \
+			map->map[i + 1][j] == ' ')
 		return (m_error("Error"));
 	if (map->map[i][j] == 'V')
 	{
@@ -56,9 +69,10 @@ static int	m_close_map(char **map)
 		j = -1;
 		while (map[i][++j])
 		{
-			if ((i == 0 && map[i][j] != '1') || (i == ft_len_array(map) - 1 \
+			if ((i == 0 && map[i][j] != '1') || \
+			(i == (int)ft_len_array(map) - 1 \
 				&& map[i][j] != '1') || (j == 0 && map[i][j] != '1') || \
-					(j == ft_strlen(map[i]) - 1 && map[i][j] != '1'))
+					(j == (int)ft_strlen(map[i]) - 1 && map[i][j] != '1'))
 				map[i][j] = '#';
 		}
 	}

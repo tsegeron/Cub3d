@@ -23,12 +23,12 @@ static int	m_param(char *str, t_interface *path, t_map *map)
 	char	*util;
 
 	if (path->img)
-		free(path->img);
+		return (m_free_util(str) && m_error("Error"));
 	util = ft_strtrim(str + 3, " ");
 	if (!util)
 		return (m_perror_r("Malloc"));
 	if (ft_strlen(util) <= 4)
-		return (m_free_util(util) + m_error("Wrong path"));
+		return (m_free_util(util) && m_error("Wrong path"));
 	if (m_file_to_image(util, map, path))
 		return (m_perror_r("Mlx"));
 	return (0);

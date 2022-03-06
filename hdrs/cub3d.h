@@ -107,6 +107,7 @@ int		m_lstclear(t_list **list);
 int		m_lstadd_back(t_list **lst, char *str);
 int		m_free_util(char *str);
 int		m_file_to_image(char *util, t_map *map, t_interface *path);
+int		m_clear_all(t_map *map);
 /*	mseastar	*/
 
 /*	gernesto	*/
