@@ -97,16 +97,16 @@ void	do_open_door(t_map *map)
 
 void	check_buttons(t_map *map)
 {
-	if (map->key.w && map->screen_stat == NOSCREEN)
+	if (map->key.w)
 		do_key_wasd(map, 13);
-	if (map->key.a && map->screen_stat == NOSCREEN)
+	if (map->key.a)
 		do_key_wasd(map, 0);
-	if (map->key.s && map->screen_stat == NOSCREEN)
+	if (map->key.s)
 		do_key_wasd(map, 1);
-	if (map->key.d && map->screen_stat == NOSCREEN)
+	if (map->key.d)
 		do_key_wasd(map, 2);
-	if (map->key.left && map->screen_stat == NOSCREEN)
+	if (map->key.left)
 		do_cam_rot(&map->pers.dir, 123);
-	if (map->key.right && map->screen_stat == NOSCREEN)
+	if (map->key.right)
 		do_cam_rot(&map->pers.dir, 124);
 }

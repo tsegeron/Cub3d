@@ -42,27 +42,27 @@ SRCS	=	libft/ft_strlen.c			libft/ft_calloc.c				libft/ft_bzero.c				\
 			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c		\
 			parsing/m_clear_all.c
 
-SRCS_B	=	libft/ft_strlen.c			libft/ft_strcpy.c				libft/ft_strdup.c				\
-			libft/ft_calloc.c			libft/ft_clear_array.c			libft/ft_split.c				\
-			libft/ft_strchr_count.c		libft/ft_strncmp.c				libft/get_next_line.c			\
-			libft/ft_bzero.c			libft/ft_strchr.c				libft/ft_strjoin.c				\
-			libft/ft_substr.c			libft/ft_memset.c				libft/ft_strtrim.c				\
-			libft/ft_strcmp.c			\
-			minimap/utils.c				minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
-			minimap/ray_cast.c			\
-			input/g_do_keys.c			input/mouse_pos.c				input/mouse_keys.c				\
-			input/key_utils.c			\
-			interface/draw_interface.c	interface/draw_menu_screen.c	interface/draw_health_effect.c	\
-			interface/draw_battery_bar.c\
-			3d/draw_walls.c				3d/draw_ceil.c					3d/draw_floor.c					\
-			3d/utils.c					\
-			parsing/m_atoi.c			parsing/m_check_fname.c			parsing/m_check_map.c			\
-			parsing/m_check_param.c		parsing/m_init_map.c			parsing/m_pars.c				\
-			parsing/m_pars_map.c		parsing/m_pars_param.c			parsing/m_rgb.c					\
-			parsing/m_error.c			parsing/m_lst.c					parsing/m_file_to_image.c		\
-			parsing/m_add_vilian.c		parsing/m_clear_all.c			parsing/m_init_imgs.c			\
-			enemy/m_enemy_action.c      enemy/utils.c					enemy/m_enemy_atack.c 			\
-			enemy/m_move_enemy.c		enemy/m_draw_enemy_minimap.c	enemy/m_player_attack.c
+SRCS_B	=	libft/ft_strlen.c				libft/ft_strcpy.c				libft/ft_strdup.c				\
+			libft/ft_calloc.c				libft/ft_clear_array.c			libft/ft_split.c				\
+			libft/ft_strchr_count.c			libft/ft_strncmp.c				libft/get_next_line.c			\
+			libft/ft_bzero.c				libft/ft_strchr.c				libft/ft_strjoin.c				\
+			libft/ft_substr.c				libft/ft_memset.c				libft/ft_strtrim.c				\
+			libft/ft_strcmp.c				\
+			minimap/utils.c					minimap/draw_minimap_elements.c	minimap/draw_round_minimap.c	\
+			minimap/ray_cast.c				\
+			input/g_do_keys.c				input/mouse_pos.c				input/mouse_keys.c				\
+			input/key_utils.c				\
+			interface/draw_interface.c		interface/draw_menu_screen.c	interface/draw_health_effect.c	\
+			interface/draw_start_screen.c	interface/draw_battery_bar.c	\
+			3d/draw_walls.c					3d/draw_ceil.c					3d/draw_floor.c					\
+			3d/utils.c						\
+			parsing/m_atoi.c				parsing/m_check_fname.c			parsing/m_check_map.c			\
+			parsing/m_check_param.c			parsing/m_init_map.c			parsing/m_pars.c				\
+			parsing/m_pars_map.c			parsing/m_pars_param.c			parsing/m_rgb.c					\
+			parsing/m_error.c				parsing/m_lst.c					parsing/m_file_to_image.c		\
+			parsing/m_add_vilian.c			parsing/m_clear_all.c			parsing/m_init_imgs.c			\
+			enemy/m_enemy_action.c      	enemy/utils.c					enemy/m_enemy_atack.c 			\
+			enemy/m_move_enemy.c			enemy/m_draw_enemy_minimap.c	enemy/m_player_attack.c
 
 
 SRC		=	$(addprefix ${FLDR_S},${SRCS})

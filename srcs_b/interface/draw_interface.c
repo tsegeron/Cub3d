@@ -14,11 +14,11 @@
 
 void	draw_interface(t_map *map)
 {
-//	if (map->screen_stat == START)
-//		draw_start_screen(map);
-//	else if (map->screen_stat == MENU)
-	if (map->screen_stat == MENU)
+	if (map->screen_stat == START)
+		draw_start_screen(map);
+	else if (map->screen_stat == MENU)
 		draw_menu_screen(map);
+//	if (map->screen_stat == MENU)
 //	else if (map->screen_stat == END)
 //		draw_end_screen(map);
 }

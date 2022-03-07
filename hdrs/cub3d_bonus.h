@@ -91,6 +91,13 @@ typedef struct s_mlx
 	int		win_size_y;
 }	t_mlx;
 
+typedef struct s_imgs
+{
+	void	*img;
+	int		width;
+	int		height;
+}	t_imgs;
+
 typedef struct s_vars
 {
 	t_interface path_no;
@@ -104,6 +111,7 @@ typedef struct s_vars
 	t_interface	wand;
 	t_interface	light;
 	t_interface	rasengan;
+	t_imgs		but_imgs[3];
 	int		floor_clr;
 	int		ceil_clr;
 }	t_vars;
@@ -135,7 +143,7 @@ typedef struct s_map
 	t_interface	battery_bar;
 	t_interface	back;
 	t_interface	health;
-	t_interface	start_screen;
+//	t_interface	start_screen;
 	t_interface	menu_screen;
 	t_interface	end_screen;
 }	t_map;
