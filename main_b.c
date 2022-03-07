@@ -1,5 +1,7 @@
 #include "hdrs/cub3d_bonus.h"
 
+#include "srcs_b/3d/L3d.h"
+
 static void	init_all2(t_map *map)
 {
 	map->battery_bar.size_x = map->mlx.win_size_x / 5;
@@ -64,8 +66,50 @@ static void	craft_the_window(t_map *map)
 
 }
 
+//void	draw_wall_line(t_map *map, int lineh)
+//{
+//	double	pix_start;
+//	double	pix_step;
+//	int		tex_y;
+//
+//	pix_step = 1. * wall->wall_img.size_y / lineh / 2;
+//	pix_start = (q->starty - map->mlx.win_size_y / 2. + lineh) * pix_step;
+//	while (q->starty < q->endy)
+//	{
+//		q->startx = q->savex;
+//		tex_y = (int )pix_start & (wall->wall_img.size_y - 1);
+//		pix_start += pix_step;
+//		if (wall->side == 1 || wall->side == 2)
+//			q->wall_clr = get_pixel(wall->wall_img, wall->x, tex_y);
+//		else
+//			q->wall_clr = get_pixel(wall->wall_img, wall->y, tex_y);
+//		q->wall_clr = shade_color(q->wall_clr, wall->dist / 1.1);
+//		while (q->startx < q->endx)
+//			my_mlx_pixel_put(&map->back, q->startx++, q->starty, q->wall_clr);
+//		q->starty++;
+//	}
+//}
+
 void	draw_wand_and_rasengan(t_map *map)
 {
+//	double	pix_start;
+//	double	pix_step;
+//	int		tex_y;
+//	int		clr;
+//
+//	int x,y;
+
+//	pix_step = 1. * map->vars.light.size_y / 100;
+//	pix_start = (map->back.size_y - map->vars.wand.size_y - map->mlx.win_size_y / 2. + 100) * pix_step;
+//	x = map->back.size_x / 3 + map->vars.wand.size_x;
+//	y = map->back.size_y - map->vars.wand.size_y;
+//	while (pix_start < pix_start + map->vars.light.size_y)
+//	{
+//		tex_y = (int )pix_start & (map->vars.light.size_y - 1);
+//		pix_start += pix_step;
+//		clr = get_pixel(map->vars.light, map->vars.light.size_y, tex_y);
+//		my_mlx_pixel_put(&map->back, x, y, clr);
+//	}
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.wand.img,
 			map->back.size_x / 3 + map->vars.wand.size_x,
 			map->back.size_y - map->vars.wand.size_y);

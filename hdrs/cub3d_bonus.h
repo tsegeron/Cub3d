@@ -193,11 +193,7 @@ double	cast_on_x(t_map *map, double posx, double posy, double dir);
 int		shade_color(int color, double divide);
 void	draw_walls(t_map *map);
 
-//void	do_cam_rot(double *dir, int keycode);
-//int		g_do_keys(int keycode, t_map *map);
-//double	cast_on_y(t_map *map, double posx, double posy, double dir);
-//double	cast_on_x(t_map *map, double posx, double posy, double dir);
-//void	draw_walls(t_map *map);
+
 void	handle_mouse_pos(t_map *map);
 int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	draw_line(t_interface map, double endx, double endy, int color);

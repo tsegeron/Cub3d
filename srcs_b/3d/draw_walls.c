@@ -37,7 +37,7 @@ static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 	}
 }
 
-static void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x)
+void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x)
 {
 	t_local	q;
 

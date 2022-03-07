@@ -24,23 +24,21 @@ void	my_mlx_pixel_put(t_interface *data, int x, int y, int color)
 // draws one line from x,y {110pix,110pix} (center of ray_cast) to endx,endy
 void	draw_line(t_interface map, double endx, double endy, int color)
 {
-	double	startx;
-	double	starty;
-	double	deltax;
-	double	deltay;
+	double	start[2];
+	double	delta[2];
 	double	pixels;
 
-	startx = map.size_x / 2;
-	starty = map.size_y / 2;
-	deltax = endx - startx;
-	deltay = endy - starty;
-	pixels = 40;
-	deltax /= pixels;
-	deltay /= pixels;
+	start[0] = map.size_x / 2;
+	start[1] = map.size_y / 2;
+	delta[0] = endx - start[0];
+	delta[1] = endy - start[1];
+	pixels = sqrt(delta[0] * delta[0] + delta[1] * delta[1]) / 3;
+	delta[0] /= pixels;
+	delta[1] /= pixels;
 	while (pixels-- > 0)
 	{
-		my_mlx_pixel_put(&map, startx, starty, color);
-		startx += deltax;
-		starty += deltay;
+		my_mlx_pixel_put(&map, start[0], start[1], color);
+		start[0] += delta[0];
+		start[1] += delta[1];
 	}
 }

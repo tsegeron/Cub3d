@@ -14,5 +14,5 @@
 
 void	m_enemy_atack(t_map *map)
 {
-	map->pers.health -= 0.01;
+	map->pers.health -= 0.1;
 }
