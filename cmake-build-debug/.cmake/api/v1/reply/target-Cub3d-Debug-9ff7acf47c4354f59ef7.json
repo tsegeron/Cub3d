@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 88,
+				"line" : 100,
 				"parent" : 0
 			}
 		]
@@ -115,9 +115,18 @@
 				54,
 				55,
 				56,
+				57,
 				58,
 				59,
-				60
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68
 			]
 		}
 	],
@@ -136,7 +145,7 @@
 			},
 			{
 				"backtrace" : 2,
-				"fragment" : "/Users/mseastar/CLionProjects/Cub3d/libmlx.a",
+				"fragment" : "../libmlx.a",
 				"role" : "libraries"
 			},
 			{
@@ -221,17 +230,25 @@
 				54,
 				55,
 				56,
+				57,
 				58,
 				59,
-				60
+				60,
+				61,
+				62,
+				63,
+				64,
+				65,
+				66,
+				67,
+				68
 			]
 		},
 		{
 			"name" : "Header Files",
 			"sourceIndexes" : 
 			[
-				26,
-				57
+				26
 			]
 		}
 	],
@@ -240,365 +257,414 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_atoi.c",
+			"path" : "srcs_b/libft/ft_atoi.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_bzero.c",
+			"path" : "srcs_b/libft/ft_bzero.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_calloc.c",
+			"path" : "srcs_b/libft/ft_calloc.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_clear_array.c",
+			"path" : "srcs_b/libft/ft_clear_array.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_itoa_uns.c",
+			"path" : "srcs_b/libft/ft_itoa_uns.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_lst_addback.c",
+			"path" : "srcs_b/libft/ft_lst_addback.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_lstclear.c",
+			"path" : "srcs_b/libft/ft_lstclear.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_lstdelone.c",
+			"path" : "srcs_b/libft/ft_lstdelone.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_lstnew.c",
+			"path" : "srcs_b/libft/ft_lstnew.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_lstsize.c",
+			"path" : "srcs_b/libft/ft_lstsize.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_memset.c",
+			"path" : "srcs_b/libft/ft_memset.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_putendl_fd.c",
+			"path" : "srcs_b/libft/ft_putendl_fd.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_putstr_fd.c",
+			"path" : "srcs_b/libft/ft_putstr_fd.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_split.c",
+			"path" : "srcs_b/libft/ft_split.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strchr.c",
+			"path" : "srcs_b/libft/ft_strchr.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strchr_count.c",
+			"path" : "srcs_b/libft/ft_strchr_count.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strcmp.c",
+			"path" : "srcs_b/libft/ft_strcmp.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strcpy.c",
+			"path" : "srcs_b/libft/ft_strcpy.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strdup.c",
+			"path" : "srcs_b/libft/ft_strdup.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strjoin.c",
+			"path" : "srcs_b/libft/ft_strjoin.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strlen.c",
+			"path" : "srcs_b/libft/ft_strlen.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strncmp.c",
+			"path" : "srcs_b/libft/ft_strncmp.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strrchr.c",
+			"path" : "srcs_b/libft/ft_strrchr.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_strtrim.c",
+			"path" : "srcs_b/libft/ft_strtrim.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/ft_substr.c",
+			"path" : "srcs_b/libft/ft_substr.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/libft/get_next_line.c",
+			"path" : "srcs_b/libft/get_next_line.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
-			"path" : "hdrs/cub3d.h",
+			"path" : "hdrs/cub3d_bonus.h",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "main.c",
+			"path" : "main_b.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_ceil.c",
+			"path" : "srcs_b/3d/draw_ceil.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_lightning.c",
+			"path" : "srcs_b/3d/draw_floor.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_walls.c",
+			"path" : "srcs_b/3d/draw_walls.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/input/g_do_keys.c",
+			"path" : "srcs_b/3d/utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/input/mouse_keys.c",
+			"path" : "srcs_b/enemy/m_draw_enemy_minimap.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/input/mouse_pos.c",
+			"path" : "srcs_b/enemy/m_enemy_action.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_battery_bar.c",
+			"path" : "srcs_b/enemy/m_enemy_atack.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_end_screen.c",
+			"path" : "srcs_b/enemy/m_move_enemy.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_health_effect.c",
+			"path" : "srcs_b/enemy/m_player_attack.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_interface.c",
+			"path" : "srcs_b/enemy/utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_menu_screen.c",
+			"path" : "srcs_b/input/g_do_keys.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/interface/draw_start_screen.c",
+			"path" : "srcs_b/input/mouse_keys.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/minimap/draw_minimap_elements.c",
+			"path" : "srcs_b/input/mouse_pos.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/minimap/draw_round_minimap.c",
+			"path" : "srcs_b/input/key_utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/minimap/ray_cast.c",
+			"path" : "srcs_b/interface/draw_battery_bar.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/minimap/utils.c",
+			"path" : "srcs_b/interface/draw_end_screen.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_atoi.c",
+			"path" : "srcs_b/interface/draw_health_effect.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_check_fname.c",
+			"path" : "srcs_b/interface/draw_interface.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_check_map.c",
+			"path" : "srcs_b/interface/draw_menu_screen.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_check_param.c",
+			"path" : "srcs_b/interface/draw_start_screen.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_error.c",
+			"path" : "srcs_b/minimap/draw_minimap_elements.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_init_map.c",
+			"path" : "srcs_b/minimap/draw_round_minimap.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_lst.c",
+			"path" : "srcs_b/minimap/ray_cast.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_pars.c",
+			"path" : "srcs_b/minimap/utils.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_pars_map.c",
+			"path" : "srcs_b/parsing/m_atoi.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_pars_param.c",
+			"path" : "srcs_b/parsing/m_check_fname.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_rgb.c",
+			"path" : "srcs_b/parsing/m_check_map.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/parsing/m_file_to_image.c",
+			"path" : "srcs_b/parsing/m_check_param.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/utils.c",
-			"sourceGroupIndex" : 0
-		},
-		{
-			"backtrace" : 1,
-			"path" : "srcs/3d/L3d.h",
-			"sourceGroupIndex" : 1
-		},
-		{
-			"backtrace" : 1,
-			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/get_color.c",
+			"path" : "srcs_b/parsing/m_error.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_walls_test.c",
+			"path" : "srcs_b/parsing/m_init_map.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs/3d/draw_walls_test2.c",
+			"path" : "srcs_b/parsing/m_lst.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_pars.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_pars_map.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_pars_param.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_rgb.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_file_to_image.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_add_vilian.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_clear_all.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/parsing/m_init_imgs.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/interface/draw_wand_and_light.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/interface/utils.c",
 			"sourceGroupIndex" : 0
 		}
 	],

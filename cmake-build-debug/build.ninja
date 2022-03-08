@@ -72,359 +72,413 @@ build edit_cache: phony CMakeFiles/edit_cache.util
 
 build cmake_object_order_depends_target_Cub3d: phony || CMakeFiles/Cub3d.dir
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_atoi.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_atoi.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_atoi.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_atoi.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_atoi.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_atoi.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_bzero.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_bzero.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_bzero.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_bzero.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_bzero.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_bzero.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_calloc.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_calloc.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_calloc.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_calloc.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_calloc.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_calloc.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_clear_array.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_clear_array.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_clear_array.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_clear_array.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_clear_array.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_clear_array.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_itoa_uns.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_itoa_uns.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_itoa_uns.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_itoa_uns.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_itoa_uns.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_itoa_uns.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_lst_addback.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_lst_addback.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_lst_addback.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lst_addback.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_lst_addback.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lst_addback.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_lstclear.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_lstclear.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_lstclear.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstclear.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_lstclear.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstclear.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_lstdelone.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_lstdelone.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_lstdelone.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstdelone.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_lstdelone.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstdelone.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_lstnew.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_lstnew.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_lstnew.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstnew.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_lstnew.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstnew.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_lstsize.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_lstsize.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_lstsize.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstsize.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_lstsize.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstsize.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_memset.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_memset.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_memset.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_memset.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_memset.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_memset.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_putendl_fd.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_putendl_fd.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_putendl_fd.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putendl_fd.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_putendl_fd.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putendl_fd.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_putstr_fd.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_putstr_fd.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_putstr_fd.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putstr_fd.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_putstr_fd.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putstr_fd.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_split.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_split.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_split.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_split.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_split.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_split.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strchr.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strchr.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr_count.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strchr_count.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr_count.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr_count.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strchr_count.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr_count.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strcmp.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strcmp.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strcmp.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcmp.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strcmp.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcmp.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strcpy.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strcpy.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strcpy.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcpy.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strcpy.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcpy.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strdup.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strdup.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strdup.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strdup.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strdup.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strdup.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strjoin.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strjoin.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strjoin.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strjoin.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strjoin.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strjoin.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strlen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strlen.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strlen.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strlen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strlen.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strlen.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strncmp.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strncmp.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strncmp.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strncmp.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strncmp.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strncmp.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strrchr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strrchr.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strrchr.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strrchr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strrchr.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strrchr.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_strtrim.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_strtrim.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_strtrim.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strtrim.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_strtrim.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strtrim.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/ft_substr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/ft_substr.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/ft_substr.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/ft_substr.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/ft_substr.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/ft_substr.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/srcs/libft/get_next_line.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/libft/get_next_line.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/libft/get_next_line.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/libft/get_next_line.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/libft/get_next_line.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/libft/get_next_line.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/libft
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/libft
 
-build CMakeFiles/Cub3d.dir/main.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/main.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/main.c.o.d
+build CMakeFiles/Cub3d.dir/main_b.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/main_b.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/main_b.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
   OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir
 
-build CMakeFiles/Cub3d.dir/srcs/3d/draw_ceil.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/draw_ceil.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/draw_ceil.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/3d/draw_ceil.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/3d/draw_ceil.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/3d/draw_ceil.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/3d
 
-build CMakeFiles/Cub3d.dir/srcs/3d/draw_lightning.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/draw_lightning.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/draw_lightning.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/3d/draw_floor.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/3d/draw_floor.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/3d/draw_floor.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/3d
 
-build CMakeFiles/Cub3d.dir/srcs/3d/draw_walls.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/draw_walls.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/draw_walls.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/3d/draw_walls.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/3d/draw_walls.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/3d/draw_walls.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/3d
 
-build CMakeFiles/Cub3d.dir/srcs/input/g_do_keys.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/input/g_do_keys.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/input/g_do_keys.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/3d/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/3d/utils.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/3d/utils.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/input
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/3d
 
-build CMakeFiles/Cub3d.dir/srcs/input/mouse_keys.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/input/mouse_keys.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/input/mouse_keys.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/m_draw_enemy_minimap.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/m_draw_enemy_minimap.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/m_draw_enemy_minimap.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/input
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/input/mouse_pos.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/input/mouse_pos.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/input/mouse_pos.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_action.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/m_enemy_action.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_action.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/input
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_battery_bar.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_battery_bar.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_battery_bar.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_atack.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/m_enemy_atack.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_atack.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_end_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_end_screen.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_end_screen.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/m_move_enemy.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/m_move_enemy.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/m_move_enemy.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_health_effect.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_health_effect.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_health_effect.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/m_player_attack.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/m_player_attack.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/m_player_attack.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_interface.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_interface.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_interface.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/enemy/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/enemy/utils.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/enemy/utils.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/enemy
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_menu_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_menu_screen.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_menu_screen.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/input/g_do_keys.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/input/g_do_keys.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/input/g_do_keys.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/input
 
-build CMakeFiles/Cub3d.dir/srcs/interface/draw_start_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/interface/draw_start_screen.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/interface/draw_start_screen.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/input/mouse_keys.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/input/mouse_keys.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/input/mouse_keys.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/interface
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/input
 
-build CMakeFiles/Cub3d.dir/srcs/minimap/draw_minimap_elements.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/minimap/draw_minimap_elements.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/minimap/draw_minimap_elements.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/input/mouse_pos.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/input/mouse_pos.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/input/mouse_pos.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/minimap
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/input
 
-build CMakeFiles/Cub3d.dir/srcs/minimap/draw_round_minimap.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/minimap/draw_round_minimap.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/minimap/draw_round_minimap.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/input/key_utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/input/key_utils.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/input/key_utils.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/minimap
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/input
 
-build CMakeFiles/Cub3d.dir/srcs/minimap/ray_cast.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/minimap/ray_cast.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/minimap/ray_cast.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_battery_bar.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_battery_bar.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_battery_bar.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/minimap
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/minimap/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/minimap/utils.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/minimap/utils.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_end_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_end_screen.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_end_screen.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/minimap
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_atoi.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_atoi.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_atoi.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_health_effect.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_health_effect.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_health_effect.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_check_fname.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_check_fname.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_check_fname.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_interface.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_interface.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_interface.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_check_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_check_map.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_check_map.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_menu_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_menu_screen.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_menu_screen.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_check_param.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_check_param.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_check_param.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_start_screen.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_start_screen.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_start_screen.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_error.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_error.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_error.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_minimap_elements.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/minimap/draw_minimap_elements.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_minimap_elements.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/minimap
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_init_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_init_map.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_init_map.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_round_minimap.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/minimap/draw_round_minimap.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_round_minimap.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/minimap
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_lst.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_lst.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_lst.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/minimap/ray_cast.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/minimap/ray_cast.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/minimap/ray_cast.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/minimap
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_pars.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_pars.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_pars.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/minimap/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/minimap/utils.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/minimap/utils.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/minimap
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_pars_map.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_map.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_atoi.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_atoi.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_atoi.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_param.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_pars_param.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_param.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_fname.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_check_fname.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_fname.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_rgb.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_rgb.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_rgb.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_check_map.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_map.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/parsing/m_file_to_image.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/parsing/m_file_to_image.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/parsing/m_file_to_image.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_param.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_check_param.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_param.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/parsing
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/3d/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/utils.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/utils.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_error.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_error.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_error.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/3d/get_color.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/get_color.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/get_color.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_init_map.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_map.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/draw_walls_test.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_lst.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_lst.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_lst.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
 
-build CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test2.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs/3d/draw_walls_test2.c || cmake_object_order_depends_target_Cub3d
-  DEP_FILE = CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test2.c.o.d
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_pars.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars.c.o.d
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
   OBJECT_DIR = CMakeFiles/Cub3d.dir
-  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs/3d
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_map.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_pars_map.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_map.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_param.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_pars_param.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_param.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_rgb.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_rgb.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_rgb.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_file_to_image.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_file_to_image.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_file_to_image.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_add_vilian.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_add_vilian.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_add_vilian.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_clear_all.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_clear_all.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_clear_all.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_imgs.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/parsing/m_init_imgs.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_imgs.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/parsing
+
+build CMakeFiles/Cub3d.dir/srcs_b/interface/draw_wand_and_light.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/draw_wand_and_light.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/draw_wand_and_light.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
+
+build CMakeFiles/Cub3d.dir/srcs_b/interface/utils.c.o: C_COMPILER__Cub3d_Debug /Users/gernesto/Desktop/Cub3d/srcs_b/interface/utils.c || cmake_object_order_depends_target_Cub3d
+  DEP_FILE = CMakeFiles/Cub3d.dir/srcs_b/interface/utils.c.o.d
+  FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14 -std=gnu99
+  OBJECT_DIR = CMakeFiles/Cub3d.dir
+  OBJECT_FILE_DIR = CMakeFiles/Cub3d.dir/srcs_b/interface
 
 
 # =============================================================================
@@ -434,9 +488,9 @@ build CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test2.c.o: C_COMPILER__Cub3d_Debug
 #############################################
 # Link the executable Cub3d
 
-build Cub3d: C_EXECUTABLE_LINKER__Cub3d_Debug CMakeFiles/Cub3d.dir/srcs/libft/ft_atoi.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_bzero.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_calloc.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_clear_array.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_itoa_uns.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_lst_addback.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_lstclear.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_lstdelone.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_lstnew.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_lstsize.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_memset.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_putendl_fd.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_putstr_fd.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_split.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strchr_count.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strcmp.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strcpy.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strdup.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strjoin.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strlen.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strncmp.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strrchr.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_strtrim.c.o CMakeFiles/Cub3d.dir/srcs/libft/ft_substr.c.o CMakeFiles/Cub3d.dir/srcs/libft/get_next_line.c.o CMakeFiles/Cub3d.dir/main.c.o CMakeFiles/Cub3d.dir/srcs/3d/draw_ceil.c.o CMakeFiles/Cub3d.dir/srcs/3d/draw_lightning.c.o CMakeFiles/Cub3d.dir/srcs/3d/draw_walls.c.o CMakeFiles/Cub3d.dir/srcs/input/g_do_keys.c.o CMakeFiles/Cub3d.dir/srcs/input/mouse_keys.c.o CMakeFiles/Cub3d.dir/srcs/input/mouse_pos.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_battery_bar.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_end_screen.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_health_effect.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_interface.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_menu_screen.c.o CMakeFiles/Cub3d.dir/srcs/interface/draw_start_screen.c.o CMakeFiles/Cub3d.dir/srcs/minimap/draw_minimap_elements.c.o CMakeFiles/Cub3d.dir/srcs/minimap/draw_round_minimap.c.o CMakeFiles/Cub3d.dir/srcs/minimap/ray_cast.c.o CMakeFiles/Cub3d.dir/srcs/minimap/utils.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_atoi.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_check_fname.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_check_map.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_check_param.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_error.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_init_map.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_lst.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_pars.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_map.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_pars_param.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_rgb.c.o CMakeFiles/Cub3d.dir/srcs/parsing/m_file_to_image.c.o CMakeFiles/Cub3d.dir/srcs/3d/utils.c.o CMakeFiles/Cub3d.dir/srcs/3d/get_color.c.o CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test.c.o CMakeFiles/Cub3d.dir/srcs/3d/draw_walls_test2.c.o | /Users/mseastar/CLionProjects/Cub3d/libmlx.a
+build Cub3d: C_EXECUTABLE_LINKER__Cub3d_Debug CMakeFiles/Cub3d.dir/srcs_b/libft/ft_atoi.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_bzero.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_calloc.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_clear_array.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_itoa_uns.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lst_addback.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstclear.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstdelone.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstnew.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstsize.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_memset.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putendl_fd.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putstr_fd.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_split.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strchr_count.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcmp.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcpy.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strdup.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strjoin.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strlen.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strncmp.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strrchr.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strtrim.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/ft_substr.c.o CMakeFiles/Cub3d.dir/srcs_b/libft/get_next_line.c.o CMakeFiles/Cub3d.dir/main_b.c.o CMakeFiles/Cub3d.dir/srcs_b/3d/draw_ceil.c.o CMakeFiles/Cub3d.dir/srcs_b/3d/draw_floor.c.o CMakeFiles/Cub3d.dir/srcs_b/3d/draw_walls.c.o CMakeFiles/Cub3d.dir/srcs_b/3d/utils.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/m_draw_enemy_minimap.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_action.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_atack.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/m_move_enemy.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/m_player_attack.c.o CMakeFiles/Cub3d.dir/srcs_b/enemy/utils.c.o CMakeFiles/Cub3d.dir/srcs_b/input/g_do_keys.c.o CMakeFiles/Cub3d.dir/srcs_b/input/mouse_keys.c.o CMakeFiles/Cub3d.dir/srcs_b/input/mouse_pos.c.o CMakeFiles/Cub3d.dir/srcs_b/input/key_utils.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_battery_bar.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_end_screen.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_health_effect.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_interface.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_menu_screen.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_start_screen.c.o CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_minimap_elements.c.o CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_round_minimap.c.o CMakeFiles/Cub3d.dir/srcs_b/minimap/ray_cast.c.o CMakeFiles/Cub3d.dir/srcs_b/minimap/utils.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_atoi.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_fname.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_map.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_check_param.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_error.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_map.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_lst.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_map.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_param.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_rgb.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_file_to_image.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_add_vilian.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_clear_all.c.o CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_imgs.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/draw_wand_and_light.c.o CMakeFiles/Cub3d.dir/srcs_b/interface/utils.c.o | ../libmlx.a
   FLAGS = -g -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk -mmacosx-version-min=10.14
-  LINK_LIBRARIES = /Users/mseastar/CLionProjects/Cub3d/libmlx.a  -framework OpenGL  -framework AppKit
+  LINK_LIBRARIES = ../libmlx.a  -framework OpenGL  -framework AppKit
   OBJECT_DIR = CMakeFiles/Cub3d.dir
   POST_BUILD = :
   PRE_LINK = :

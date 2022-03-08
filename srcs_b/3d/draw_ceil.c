@@ -18,7 +18,7 @@ void	draw_ceil(t_local *q, t_interface *background, int color)
 	while (++q->y < q->starty)
 	{
 		q->startx = q->savex;
-		q->res = sqrt((q->y + q->rad) * (q->y + q->rad)
+		q->res = (int )sqrt((q->y + q->rad) * (q->y + q->rad)
 				+ (q->startx - 660) * (q->startx - 660));
 		q->ceil_clr = color;
 		q->ceil_clr = shade_color(q->ceil_clr, (q->res - q->rad) / 64. / 1.9);

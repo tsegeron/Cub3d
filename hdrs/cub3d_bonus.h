@@ -109,7 +109,6 @@ typedef struct s_vars
 	t_interface	cure;
 	t_interface	charge;
 	t_interface	wand;
-	t_interface	light;
 	t_interface	rasengan;
 	t_imgs		but_imgs[3];
 	int		floor_clr;
@@ -143,7 +142,7 @@ typedef struct s_map
 	t_interface	battery_bar;
 	t_interface	back;
 	t_interface	health;
-//	t_interface	start_screen;
+	t_interface	light;
 	t_interface	menu_screen;
 	t_interface	end_screen;
 }	t_map;
@@ -199,6 +198,7 @@ void	do_cam_rot(double *dir, int keycode);
 double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
 int		shade_color(int color, double divide);
+int		add_transparency(int color, double divide);
 void	draw_walls(t_map *map);
 
 
@@ -213,6 +213,7 @@ void	draw_health_effect(t_map *map);
 void	draw_background(t_map *map);	//	FOR TEST
 void	draw_round_minimap(t_map *map);
 void	draw_minimap_elements(t_map *map);
+void	draw_wand_and_light(t_map *map);
 void	draw_start_screen(t_map *map);
 void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);

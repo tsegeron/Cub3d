@@ -25,12 +25,13 @@ static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 	{
 		q->startx = q->savex;
 		tex_y = (int )pix_start & (wall->wall_img.size_y - 1);
+//		tex_y = (int )pix_start & ((wall->wall_img.size_y - 1) / 2);
 		pix_start += pix_step;
 		if (wall->side == 1 || wall->side == 2)
 			q->wall_clr = get_pixel(wall->wall_img, wall->x, tex_y);
 		else
 			q->wall_clr = get_pixel(wall->wall_img, wall->y, tex_y);
-		q->wall_clr = shade_color(q->wall_clr, wall->dist / 1.1);
+		q->wall_clr = shade_color(q->wall_clr, wall->dist / 1.);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(&map->back, q->startx++, q->starty, q->wall_clr);
 		q->starty++;

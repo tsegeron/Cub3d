@@ -22,8 +22,7 @@ static int	open_but_imgs(t_imgs *path, char *str, void *mlx)
 int	m_init_imgs(t_vars *vars, void *mlx)
 {
 	if (m_open_addr(&(vars->door), "textures/door.xpm", mlx) || \
-		m_open_addr(&(vars->wand), "textures/wand.xpm", mlx) || \
-        m_open_addr(&vars->light, "textures/light.xpm", mlx))
+		m_open_addr(&(vars->wand), "textures/wand.xpm", mlx))
 		return (EXIT_FAILURE);
 	if (open_but_imgs(&vars->but_imgs[0], "textures/continue.xpm", mlx) || \
 		open_but_imgs(&vars->but_imgs[1], "textures/exit.xpm", mlx) || \

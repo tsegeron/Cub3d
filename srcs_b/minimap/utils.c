@@ -32,7 +32,7 @@ void	draw_line(t_interface map, double endx, double endy, int color)
 	start[1] = map.size_y / 2;
 	delta[0] = endx - start[0];
 	delta[1] = endy - start[1];
-	pixels = sqrt(delta[0] * delta[0] + delta[1] * delta[1]) / 3;
+	pixels = sqrt(delta[0] * delta[0] + delta[1] * delta[1]) / 2;
 	delta[0] /= pixels;
 	delta[1] /= pixels;
 	while (pixels-- > 0)

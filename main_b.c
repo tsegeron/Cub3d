@@ -1,21 +1,25 @@
 #include "hdrs/cub3d_bonus.h"
 
+#include "srcs_b/3d/L3d.h"
+
 static void	init_all2(t_map *map)
 {
 	map->battery_bar.size_x = map->mlx.win_size_x / 5;
 	map->battery_bar.size_y = map->mlx.win_size_y / 25 - 15;
 	map->battery_bar.posx = 15;
 	map->battery_bar.posy = map->mlx.win_size_y - map->battery_bar.size_y - 10;
-	map->battery_bar.img = mlx_new_image(map->mlx.mlx, map->battery_bar.size_x,
-			map->battery_bar.size_y);
-	map->battery_bar.addr = mlx_get_data_addr(map->battery_bar.img, &map->battery_bar.bits_per_pixel, &map->battery_bar.line_length, &map->battery_bar.endian);
+	map->battery_bar.img = mlx_new_image(map->mlx.mlx, \
+	map->battery_bar.size_x, map->battery_bar.size_y);
+	map->battery_bar.addr = mlx_get_data_addr(map->battery_bar.img, \
+	&map->battery_bar.bits_per_pixel, &map->battery_bar.line_length, \
+	&map->battery_bar.endian);
 	map->menu_screen.size_x = map->mlx.win_size_x;
 	map->menu_screen.size_y = map->mlx.win_size_y;
-	map->menu_screen.img = mlx_new_image(map->mlx.mlx, map->menu_screen.size_x,
-			map->menu_screen.size_y);
-	map->menu_screen.addr = mlx_get_data_addr(map->menu_screen.img, &map->menu_screen.bits_per_pixel, &map->menu_screen.line_length, &map->menu_screen.endian);
-//	map->start_screen.size_x = map->mlx.win_size_x;
-//	map->start_screen.size_y = map->mlx.win_size_y;
+	map->menu_screen.img = mlx_new_image(map->mlx.mlx, \
+	map->menu_screen.size_x, map->menu_screen.size_y);
+	map->menu_screen.addr = mlx_get_data_addr(map->menu_screen.img, \
+	&map->menu_screen.bits_per_pixel, &map->menu_screen.line_length, \
+	&map->menu_screen.endian);
 	map->key.w = false;
 	map->key.a = false;
 	map->key.s = false;
@@ -31,25 +35,32 @@ static void	init_all1(t_map *map)
 {
 	map->back.size_x = map->mlx.win_size_x;
 	map->back.size_y = map->mlx.win_size_y;
-	map->back.img = mlx_new_image(map->mlx.mlx,
-			map->back.size_x,map->back.size_y);
-	map->back.addr = mlx_get_data_addr(map->back.img,
-			&map->back.bits_per_pixel, &map->back.line_length,
-			&map->back.endian);
+	map->back.img = mlx_new_image(map->mlx.mlx, \
+	map->back.size_x,map->back.size_y);
+	map->back.addr = mlx_get_data_addr(map->back.img, \
+	&map->back.bits_per_pixel, &map->back.line_length, \
+	&map->back.endian);
 	map->health.size_x = map->mlx.win_size_x;
 	map->health.size_y = map->mlx.win_size_y;
-	map->health.img = mlx_new_image(map->mlx.mlx,
-			map->health.size_x, map->health.size_y);
-	map->health.addr = mlx_get_data_addr(map->health.img,
-			&map->health.bits_per_pixel, &map->health.line_length,
-			&map->health.endian);
+	map->health.img = mlx_new_image(map->mlx.mlx, \
+	map->health.size_x, map->health.size_y);
+	map->health.addr = mlx_get_data_addr(map->health.img, \
+	&map->health.bits_per_pixel, &map->health.line_length, \
+	&map->health.endian);
 	map->round_minmap.size_x = map->mlx.win_size_y / 4 + 20;
 	map->round_minmap.size_y = map->mlx.win_size_y / 4 + 20;
-	map->round_minmap.img = mlx_new_image(map->mlx.mlx,
-			map->round_minmap.size_x, map->round_minmap.size_y);
-	map->round_minmap.addr = mlx_get_data_addr(map->round_minmap.img,
-			&map->round_minmap.bits_per_pixel, &map->round_minmap.line_length,
-			&map->round_minmap.endian);
+	map->round_minmap.img = mlx_new_image(map->mlx.mlx, \
+	map->round_minmap.size_x, map->round_minmap.size_y);
+	map->round_minmap.addr = mlx_get_data_addr(map->round_minmap.img, \
+	&map->round_minmap.bits_per_pixel, &map->round_minmap.line_length, \
+	&map->round_minmap.endian);
+	map->light.size_x = 200;
+	map->light.size_y = 200;
+	map->light.img = mlx_new_image(map->mlx.mlx, \
+	map->light.size_x, map->light.size_y);
+	map->light.addr = mlx_get_data_addr(map->light.img, \
+	&map->light.bits_per_pixel, &map->light.line_length, \
+	&map->light.endian);
 }
 
 static void	craft_the_window(t_map *map)
@@ -61,37 +72,9 @@ static void	craft_the_window(t_map *map)
 	map->screen_stat = START;
 }
 
-void	draw_wand_and_rasengan(t_map *map)
-{
-//	double	pix_start;
-//	double	pix_step;
-//	int		tex_y;
-//	int		clr;
-//
-//	int x,y;
-
-//	pix_step = 1. * map->vars.light.size_y / 100;
-//	pix_start = (map->back.size_y - map->vars.wand.size_y - map->mlx.win_size_y / 2. + 100) * pix_step;
-//	x = map->back.size_x / 3 + map->vars.wand.size_x;
-//	y = map->back.size_y - map->vars.wand.size_y;
-//	while (pix_start < pix_start + map->vars.light.size_y)
-//	{
-//		tex_y = (int )pix_start & (map->vars.light.size_y - 1);
-//		pix_start += pix_step;
-//		clr = get_pixel(map->vars.light, map->vars.light.size_y, tex_y);
-//		my_mlx_pixel_put(&map->back, x, y, clr);
-//	}
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.wand.img,
-			map->back.size_x / 3 + map->vars.wand.size_x,
-			map->back.size_y - map->vars.wand.size_y);
-//	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.light.img,
-//							map->back.size_x / 3 + map->vars.wand.size_x - map->vars.light.size_x / 8,
-//							map->back.size_y / 2);
 //	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.rasengan.img,
 //			map->map_width * 5 / 8 - map->vars.wand.size_x,
 //			map->map_height - map->vars.wand.size_y);
-
-}
 
 static int	render_frame(t_map *map)
 {
@@ -110,7 +93,8 @@ static int	render_frame(t_map *map)
 	if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
 	{
 		draw_walls(map);
-		draw_wand_and_rasengan(map);
+		draw_wand_and_light(map);
+//		draw_rasengan(map);
 		draw_health_effect(map);
 		draw_round_minimap(map);
 		draw_battery_bar(map);
@@ -126,7 +110,7 @@ int	main(int ac, char **av)
 
 	if (ac != 2 || m_pars(av, &map))
 		return (m_clear_all(&map));
-	map.map_height = ft_len_array(map.map);
+	map.map_height = (int)ft_len_array(map.map);
 	craft_the_window(&map);
 	init_all1(&map);
 	init_all2(&map);

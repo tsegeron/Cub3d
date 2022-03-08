@@ -26,9 +26,9 @@ void	m_change_dir_to_hero(t_vilian *vil, t_hero *hero)
 		(sqrt((vec_a[0] * vec_a[0]) + (vec_a[1] * vec_a[1])) * \
 			sqrt((vec_b[0] * vec_b[0]) + (vec_b[1] * vec_b[1])));
 	if (vil->y >= hero->posy)
-		vil->dir = fabs(acos(dir));
+		vil->dir = fabs(acos(dir)) + GR;
 	else
-		vil->dir = 2 / PI - fabs(acos(dir));
+		vil->dir = 2 / PI - fabs(acos(dir)) + GR;
 	if (vil->dir < 0)
 		vil->dir += 2 * PI;
 	if (vil->dir >= 2 * PI)

@@ -33,21 +33,29 @@ add_executable(Cub3d
 
         hdrs/cub3d_bonus.h main_b.c
         srcs_b/3d/draw_ceil.c
-        srcs_b/3d/draw_lightning.c
+        srcs_b/3d/draw_floor.c
         srcs_b/3d/draw_walls.c
+        srcs_b/3d/utils.c
+        srcs_b/enemy/m_draw_enemy_minimap.c
+        srcs_b/enemy/m_enemy_action.c
+        srcs_b/enemy/m_enemy_atack.c
+        srcs_b/enemy/m_move_enemy.c
+        srcs_b/enemy/m_player_attack.c
+        srcs_b/enemy/utils.c
         srcs_b/input/g_do_keys.c
         srcs_b/input/mouse_keys.c
         srcs_b/input/mouse_pos.c
+        srcs_b/input/key_utils.c
         srcs_b/interface/draw_battery_bar.c
         srcs_b/interface/draw_end_screen.c
         srcs_b/interface/draw_health_effect.c
         srcs_b/interface/draw_interface.c
         srcs_b/interface/draw_menu_screen.c
         srcs_b/interface/draw_start_screen.c
-        srcs_b/ray_cast/draw_minimap_elements.c
-        srcs_b/ray_cast/draw_round_minimap.c
-        srcs_b/ray_cast/ray_cast.c
-        srcs_b/ray_cast/utils.c
+        srcs_b/minimap/draw_minimap_elements.c
+        srcs_b/minimap/draw_round_minimap.c
+        srcs_b/minimap/ray_cast.c
+        srcs_b/minimap/utils.c
         srcs_b/parsing/m_atoi.c
         srcs_b/parsing/m_check_fname.c
         srcs_b/parsing/m_check_map.c
@@ -60,6 +68,9 @@ add_executable(Cub3d
         srcs_b/parsing/m_pars_param.c
         srcs_b/parsing/m_rgb.c
         srcs_b/parsing/m_file_to_image.c
+        srcs_b/parsing/m_add_vilian.c
+        srcs_b/parsing/m_clear_all.c
+        srcs_b/parsing/m_init_imgs.c
 #
 
 
@@ -83,7 +94,8 @@ add_executable(Cub3d
 #        _bonus/ray_cast/utils.c
 #
 #        _bonus/srcs_b/enemy/utils.c _bonus/srcs_b/parsing/m_file_to_image.c
-        srcs/3d/utils.c srcs/3d/L3d.h srcs/3d/get_color.c srcs/3d/draw_walls_test.c srcs/3d/draw_walls.c srcs/input/key_utils.c srcs_b/3d/draw_enemy.c)
+#        srcs/3d/utils.c srcs/3d/L3d.h srcs/3d/get_color.c srcs/3d/draw_walls_test.c srcs/3d/draw_walls.c srcs/input/key_utils.c srcs_b/3d/draw_enemy.c
+        srcs_b/interface/draw_wand_and_light.c srcs_b/interface/utils.c)
 
-target_link_libraries(Cub3d /Users/mseastar/CLionProjects/Cub3d/libmlx.a "-framework OpenGL" "-framework AppKit")
+target_link_libraries(Cub3d /Users/gernesto/Desktop/Cub3d/libmlx.a "-framework OpenGL" "-framework AppKit")
 

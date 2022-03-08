@@ -68,6 +68,7 @@ double	cast_on_y(t_map *map, double posx, double posy, double dir)
 	{
 		q.cur_x = posx;
 		q.cur_y = posy;
+		q.dif_y = 0;
 	}
 	else
 	{
@@ -125,6 +126,7 @@ double	cast_on_x(t_map *map, double posx, double posy, double dir)
 	{
 		q.cur_x = posx;
 		q.cur_y = posy;
+		q.dif_x = 0;
 	}
 	else
 	{

@@ -39,10 +39,10 @@ void	draw_menu_screen(t_map *map)
 	int	x;
 
 	y = -1;
-	while (++y < map->menu_screen.size_y - 1)
+	while (++y < map->menu_screen.size_y)
 	{
 		x = -1;
-		while (++x < map->menu_screen.size_x - 1)
+		while (++x < map->menu_screen.size_x)
 			my_mlx_pixel_put(&map->menu_screen, x, y, 0x55000000);
 	}
 	draw_buttons(&map->menu_screen);

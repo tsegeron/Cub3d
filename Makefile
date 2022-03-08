@@ -53,7 +53,8 @@ SRCS_B	=	libft/ft_strlen.c				libft/ft_strcpy.c				libft/ft_strdup.c				\
 			input/g_do_keys.c				input/mouse_pos.c				input/mouse_keys.c				\
 			input/key_utils.c				\
 			interface/draw_interface.c		interface/draw_menu_screen.c	interface/draw_health_effect.c	\
-			interface/draw_start_screen.c	interface/draw_battery_bar.c	\
+			interface/draw_start_screen.c	interface/draw_battery_bar.c	interface/draw_wand_and_light.c	\
+			interface/utils.c				\
 			3d/draw_walls.c					3d/draw_ceil.c					3d/draw_floor.c					\
 			3d/utils.c						\
 			parsing/m_atoi.c				parsing/m_check_fname.c			parsing/m_check_map.c			\
