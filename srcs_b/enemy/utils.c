@@ -25,10 +25,10 @@ void	m_change_dir_to_hero(t_vilian *vil, t_hero *hero)
 	dir = ((vec_a[0] * vec_b[0]) + (vec_a[1] * vec_b[1])) / \
 		(sqrt((vec_a[0] * vec_a[0]) + (vec_a[1] * vec_a[1])) * \
 			sqrt((vec_b[0] * vec_b[0]) + (vec_b[1] * vec_b[1])));
-	if (vil->y >= hero->posy)
-		vil->dir = fabs(acos(dir)) + GR;
+	if (vil->y > hero->posy)
+		vil->dir = fabs(acos(dir));
 	else
-		vil->dir = 2 / PI - fabs(acos(dir)) + GR;
+		vil->dir = 2 / PI - fabs(acos(dir));
 	if (vil->dir < 0)
 		vil->dir += 2 * PI;
 	if (vil->dir >= 2 * PI)
@@ -46,6 +46,21 @@ double	ray_cast_vil(t_map *map, double dir, t_vilian *now)
 		return (dist_on_x);
 	else
 		return (dist_on_y);
+}
+
+int	m_check_vil_vil(t_vilian *vilian, t_vilian *now, double posx, double posy)
+{
+	t_vilian	*step;
+
+	step = vilian;
+	while (step)
+	{
+		if (step->num_vil != now->num_vil)
+			if (fabs(posx - step->x) < 1 && fabs(posy - step->y) < 1)
+				return (1);
+		step = step->next;
+	}
+	return (0);
 }
 
 void	m_change_vil_dir(t_vilian *vil)

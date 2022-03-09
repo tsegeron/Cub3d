@@ -24,6 +24,7 @@ static void	init_all2(t_map *map)
 	map->key.a = false;
 	map->key.s = false;
 	map->key.d = false;
+	map->key.e = false;
 	map->key.left = false;
 	map->key.right = false;
 	if (!map->back.img || !map->health.img || !map->round_minmap.img
@@ -80,25 +81,24 @@ static int	render_frame(t_map *map)
 {
 	static int	random;
 
-	if (random % 2 && map->screen_stat == NOSCREEN)
-	{
-		m_enemy_action(map);
-		random = 0;
-	}
-	else if (map->screen_stat == NOSCREEN)
-		random++;
+//	if (random % 2 && map->screen_stat == NOSCREEN)
+//		m_enemy_action(map);
+//	else if (map->screen_stat == NOSCREEN)
 	handle_mouse_pos(map);
 	mlx_clear_window(map->mlx.mlx, map->mlx.win);
 	check_buttons(map);
 	if (map->screen_stat == NOSCREEN || map->screen_stat == MENU)
 	{
-		draw_walls(map);
+		draw_walls(map, &random);
+//		draw_doors(map);
 		draw_wand_and_light(map);
 //		draw_rasengan(map);
 		draw_health_effect(map);
 		draw_round_minimap(map);
 		draw_battery_bar(map);
 	}
+//	if (random > 64)
+//		random = 0;
 	draw_interface(map);	//	draws start, end, menu screen
 	mlx_do_sync(map->mlx.mlx);
 	return (0);

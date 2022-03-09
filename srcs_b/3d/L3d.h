@@ -20,6 +20,8 @@ typedef struct s_local
 	double		y;
 	t_interface	wall_img;
 	int			side;
+	int			wall_stat;
+	int			rand;
 }	t_wall_clr;
 
 typedef struct s_local_vars

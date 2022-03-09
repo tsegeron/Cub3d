@@ -1,9 +1,9 @@
 # ninja log v5
 209	261	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_memset.c.o	7996d5b253feeea9
 212	298	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_putstr_fd.c.o	6c0b6430c2278737
-1	41	1646753245000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_add_vilian.c.o	d0ad3421281b469d
-208	257	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstsize.c.o	cd56cc995dfd937b
 1	207	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_calloc.c.o	e5a78536c3323973
+208	257	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_lstsize.c.o	cd56cc995dfd937b
+1	41	1646753245000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_add_vilian.c.o	d0ad3421281b469d
 2	71	1646753495000000000	CMakeFiles/Cub3d.dir/srcs_b/enemy/utils.c.o	edb56ea89b401ade
 341	392	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/3d/draw_ceil.c.o	311ee291e47503a1
 2	50	1646753291000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_imgs.c.o	56f3805f922ee8a4
@@ -54,15 +54,15 @@
 307	380	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strtrim.c.o	af9f0fd76f00c937
 2	55	1646753227000000000	CMakeFiles/Cub3d.dir/srcs_b/enemy/m_move_enemy.c.o	288c1b33c75ffb9e
 298	347	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strrchr.c.o	d07cfd8a954b2789
+2	79	1646753410000000000	CMakeFiles/Cub3d.dir/srcs_b/minimap/ray_cast.c.o	3d750c980a4fb325
+488	536	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_atoi.c.o	b907fda21bcf1610
+261	328	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcpy.c.o	fcd394530bf982ea
+549	601	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_param.c.o	fc074b73981f9bf9
+2	50	1646753227000000000	CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_atack.c.o	a2b1fa53982c70e9
 551	597	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_rgb.c.o	3d30a79533dd22f2
 506	585	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_init_map.c.o	2cecab7c2bcf1455
 2	51	1646753227000000000	CMakeFiles/Cub3d.dir/srcs_b/input/key_utils.c.o	bed48a2c35260309
-549	601	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_pars_param.c.o	fc074b73981f9bf9
-261	328	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/libft/ft_strcpy.c.o	fcd394530bf982ea
 392	504	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/input/mouse_keys.c.o	7c590496fcc3811c
-2	50	1646753227000000000	CMakeFiles/Cub3d.dir/srcs_b/enemy/m_enemy_atack.c.o	a2b1fa53982c70e9
-2	79	1646753410000000000	CMakeFiles/Cub3d.dir/srcs_b/minimap/ray_cast.c.o	3d750c980a4fb325
-488	536	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_atoi.c.o	b907fda21bcf1610
 451	500	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/minimap/draw_minimap_elements.c.o	59791ead4f7d3065
 406	456	1646753140000000000	CMakeFiles/Cub3d.dir/srcs_b/interface/draw_interface.c.o	d655cac678d20239
 1	50	1646753291000000000	CMakeFiles/Cub3d.dir/srcs_b/parsing/m_clear_all.c.o	d9384d9ba03e8353

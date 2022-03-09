@@ -23,14 +23,14 @@ void	m_draw_all_enemy(t_map *map, int x, int y)
 	{
 		if (step->health)
 		{
-			l = (int) ((step->y - (map->pers.posy - 5.5)) * 20);
-			k = (int) ((step->x - (map->pers.posx - 5.5)) * 20);
+			l = (int)((step->y - (map->pers.posy - 5.5)) * 20);
+			k = (int)((step->x - (map->pers.posx - 5.5)) * 20);
 			if (y > l - 4 && y < l + 4 && x > k - 4 && x < k + 4)
 				my_mlx_pixel_put(&map->round_minmap, x, y, AIM);
 			if ((y >= l - 5 && y <= l - 4 && x >= k - 5 && x <= k + 5) || \
-            (y >= l + 4 && y <= l + 5 && x >= k - 5 && x <= k + 5) || \
-            (x >= k - 5 && x <= k - 4 && y >= l - 5 && y <= l + 5) || \
-            (x >= k + 4 && x <= k + 5 && y >= l - 5 && y <= l + 5))
+			(y >= l + 4 && y <= l + 5 && x >= k - 5 && x <= k + 5) || \
+			(x >= k - 5 && x <= k - 4 && y >= l - 5 && y <= l + 5) || \
+			(x >= k + 4 && x <= k + 5 && y >= l - 5 && y <= l + 5))
 				my_mlx_pixel_put(&map->round_minmap, x, y, 0x000000);
 		}
 		step = step->next;

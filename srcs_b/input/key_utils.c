@@ -12,14 +12,26 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-//static void	m_clear_mlx(void *mlx, t_interface *path)
-//{
-////	if (path->img)
-//	mlx_destroy_image(mlx, path->img);
-//	if (path->addr)
-//		free(path->addr);
-//
-//}
+int check_ps(char **map)
+{
+	int y;
+	int x;
+	int count;
+
+	count = 0;
+	y = -1;
+	while (map[++y])
+	{
+		x = -1;
+		while (map[y][++x])
+			if (map[y][x] == 'P')
+				count++;
+	}
+	if (!count)
+		return (EXIT_SUCCESS);
+	else
+		return (EXIT_FAILURE);
+}
 
 int	close_win(t_map *map)
 {

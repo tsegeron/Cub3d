@@ -179,7 +179,7 @@ int		m_free_util(char *str);
 int		m_file_to_image(char *util, t_map *map, t_interface *path);
 int		m_enemy_action(t_map *map);
 void	m_enemy_atack(t_map *map);
-void	m_move_lite(t_vilian *vil, char **map);
+void	m_move_lite(t_vilian *vil, t_map *map);
 void	m_move_angry(t_vilian *vil, t_map *map);
 void	m_draw_enemy_minimap(t_map *map);
 int		m_clear_all(t_map *map);
@@ -192,14 +192,17 @@ void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
 int		close_win(t_map *map);
 int		press_key(int keycode, t_map *map);
 int		release_key(int keycode, t_keys *key);
+int		check_ps(char **map);
 void	do_open_door(t_map *map);
 void	check_buttons(t_map *map);
 void	do_cam_rot(double *dir, int keycode);
 double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
+double	cast_on_y_tex(t_map *map, double dir, char stat);
+double	cast_on_x_tex(t_map *map, double dir, char stat);
 int		shade_color(int color, double divide);
 int		add_transparency(int color, double divide);
-void	draw_walls(t_map *map);
+void	draw_walls(t_map *map, int *random);
 
 
 void	handle_mouse_pos(t_map *map);

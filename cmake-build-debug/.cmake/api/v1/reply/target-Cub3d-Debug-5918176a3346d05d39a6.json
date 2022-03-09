@@ -126,7 +126,9 @@
 				65,
 				66,
 				67,
-				68
+				68,
+				69,
+				70
 			]
 		}
 	],
@@ -241,7 +243,9 @@
 				65,
 				66,
 				67,
-				68
+				68,
+				69,
+				70
 			]
 		},
 		{
@@ -665,6 +669,18 @@
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
 			"path" : "srcs_b/interface/utils.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/3d/draw_doors.c",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "srcs_b/3d/ray_cast_for_tex.c",
 			"sourceGroupIndex" : 0
 		}
 	],

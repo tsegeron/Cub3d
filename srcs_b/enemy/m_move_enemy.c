@@ -12,7 +12,7 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-void	m_move_lite(t_vilian *vil, char **map)
+void	m_move_lite(t_vilian *vil, t_map *map)
 {
 	int		posx;
 	int		posy;
@@ -25,14 +25,14 @@ void	m_move_lite(t_vilian *vil, char **map)
 	posx = (int)(vil->x + difx + MOVE_SPEED * difx / fabs(difx));
 	posy = (int)(vil->y + dify + MOVE_SPEED * dify / fabs(dify));
 	status = 0;
-	if (map[(int)vil->y][posx] != '1'
-		&& map[(int)vil->y][posx] != 'C' && (difx >= 0.05 || difx <= -0.05))
+	if (map->map[(int)vil->y][posx] != '1'
+		&& map->map[(int)vil->y][posx] != 'C' && fabs(difx) >= 0.05)
 	{
 		vil->x += difx;
 		status = 1;
 	}
-	if (map[posy][(int)vil->x] != '1'
-		&& map[posy][(int)vil->x] != 'C' && (dify >= 0.05 || dify <= -0.05))
+	if (map->map[posy][(int)vil->x] != '1'
+		&& map->map[posy][(int)vil->x] != 'C' && fabs(dify) >= 0.05)
 	{
 		vil->y += dify;
 		status = 1;

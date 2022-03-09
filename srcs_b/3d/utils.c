@@ -43,6 +43,19 @@ void	get_no_so_data(t_vars *vars, t_wall_clr *data, double dist, double dir)
 	data->dist = dist;
 }
 
+int	check_cell(t_wall_clr *data, char **map)
+{
+	if ((map[(int)(data->y)][(int)(data->x)] == 'C' && (data->side == 2 || data->side == 4)) || \
+	((map[(int)(data->y - 0.5)][(int)(data->x)] == 'C' && data->side == 1) || \
+	(map[(int)(data->y)][(int)(data->x - 0.5)] == 'C' && data->side == 3)))
+		return (1);
+	else if ((map[(int)(data->y)][(int)(data->x)] == 'P' && (data->side == 2 || data->side == 4)) || \
+	((map[(int)(data->y - 0.5)][(int)(data->x)] == 'P' && data->side == 1) || \
+	(map[(int)(data->y)][(int)(data->x - 0.5)] == 'P' && data->side == 3)))
+		return (2);
+	return (0);
+}
+
 void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 {
 	data->y = fabs(sin(dir) * data->dist);
@@ -53,25 +66,16 @@ void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 		data->x = -data->x;
 	data->x += map->pers.posx;
 	data->y += map->pers.posy;
-	if (data->side == 2 || data->side == 4)
+	if (check_cell(data, map->map))
 	{
-		if (map->map[(int)(data->y)][(int)(data->x)] == 'C')
-			data->wall_img = map->vars.door;
+		data->wall_img = map->vars.door;
+		if (!data->wall_stat)
+			data->wall_stat = 1;
+//		else if (check_cell(data, map->map) == 1)
+//			data->wall_stat = 4;
+		else if (check_cell(data, map->map) == 2)
+			data->wall_stat = 3;
 	}
-	else if (data->side == 1 || data->side == 3)
-	{
-		if (map->map[(int)(data->y - 0.5)][(int)(data->x)] == 'C' && data->side == 1)
-		{
-			data->wall_img = map->vars.door;
-//			data->x -= 0.5;
-		}
-		else if (map->map[(int)(data->y)][(int)(data->x - 0.5)] == 'C' && data->side == 3)
-		{
-			data->wall_img = map->vars.door;
-//			data->y -= 0.5;
-		}
-	}
-
 	if ((dir < PI && dir > 0) || (dir < 3 * PI && dir > 2 * PI))
 		data->x -= floor(data->x);
 	else
