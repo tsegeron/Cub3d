@@ -674,13 +674,13 @@
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs_b/3d/draw_doors.c",
+			"path" : "srcs_b/3d/ray_cast_for_tex.c",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "srcs_b/3d/ray_cast_for_tex.c",
+			"path" : "srcs_b/3d/utils2.c",
 			"sourceGroupIndex" : 0
 		}
 	],

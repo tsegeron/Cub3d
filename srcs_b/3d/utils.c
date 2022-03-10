@@ -45,11 +45,13 @@ void	get_no_so_data(t_vars *vars, t_wall_clr *data, double dist, double dir)
 
 int	check_cell(t_wall_clr *data, char **map)
 {
-	if ((map[(int)(data->y)][(int)(data->x)] == 'C' && (data->side == 2 || data->side == 4)) || \
+	if ((map[(int)(data->y)][(int)(data->x)] == 'C' && \
+	(data->side == 2 || data->side == 4)) || \
 	((map[(int)(data->y - 0.5)][(int)(data->x)] == 'C' && data->side == 1) || \
 	(map[(int)(data->y)][(int)(data->x - 0.5)] == 'C' && data->side == 3)))
 		return (1);
-	else if ((map[(int)(data->y)][(int)(data->x)] == 'P' && (data->side == 2 || data->side == 4)) || \
+	else if ((map[(int)(data->y)][(int)(data->x)] == 'P' && \
+	(data->side == 2 || data->side == 4)) || \
 	((map[(int)(data->y - 0.5)][(int)(data->x)] == 'P' && data->side == 1) || \
 	(map[(int)(data->y)][(int)(data->x - 0.5)] == 'P' && data->side == 3)))
 		return (2);
@@ -58,8 +60,6 @@ int	check_cell(t_wall_clr *data, char **map)
 
 void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 {
-	data->y = fabs(sin(dir) * data->dist);
-	data->x = fabs(cos(dir) * data->dist);
 	if (dir < PI && dir > 0)
 		data->y = -data->y;
 	if (dir > PI2 && dir < PI2 * 3)
@@ -71,8 +71,6 @@ void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 		data->wall_img = map->vars.door;
 		if (!data->wall_stat)
 			data->wall_stat = 1;
-//		else if (check_cell(data, map->map) == 1)
-//			data->wall_stat = 4;
 		else if (check_cell(data, map->map) == 2)
 			data->wall_stat = 3;
 	}
@@ -86,15 +84,6 @@ void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 		data->y -= floor(data->y);
 	data->x *= data->wall_img.size_x;
 	data->y *= data->wall_img.size_y;
-}
-
-int	shade_color(int color, double divide)
-{
-	if (divide <= 1.)
-		return (color);
-	return (((int)(((0xFF0000 & color) >> 16) / divide) << 16)
-			+ ((int)(((0x00FF00 & color) >> 8) / divide) << 8)
-			+ ((int)((0x0000FF & color) / divide)));
 }
 
 int	get_pixel(t_interface wall, double x, double y)

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   draw_enemy.c                                       :+:      :+:    :+:   */
+/*   utils2.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -13,7 +13,13 @@
 #include "../../hdrs/cub3d_bonus.h"
 #include "./L3d.h"
 
-void	draw_enemy()
+int	shade_color(int color, double divide)
 {
-
+	if (divide <= 1.)
+		return (color);
+	return (((int)(((0xFF0000 & color) >> 16) / divide) << 16)
+			+ ((int)(((0x00FF00 & color) >> 8) / divide) << 8)
+			+ ((int)((0x0000FF & color) / divide)));
 }
+
+

@@ -48,11 +48,11 @@ static void	do_key_wasd(t_map *map, int keycode)
 	posy = (int)(map->pers.posy + dify + MOVE_SPEED * dify / fabs(dify));
 	if (map->map[(int)map->pers.posy][posx] != '1'
 			&& map->map[(int)map->pers.posy][posx] != 'C'
-			   && map->map[(int)map->pers.posy][posx] != 'P')
+			&& map->map[(int)map->pers.posy][posx] != 'P')
 		map->pers.posx += difx;
 	if (map->map[posy][(int)map->pers.posx] != '1'
 			&& map->map[posy][(int)map->pers.posx] != 'C'
-			   && map->map[posy][(int)map->pers.posx] != 'P')
+			&& map->map[posy][(int)map->pers.posx] != 'P')
 		map->pers.posy += dify;
 	if (map->map[posy][posx] == 'B' || map->map[posy][posx] == 'H')
 	{
@@ -90,7 +90,8 @@ void	do_open_door(t_map *map)
 	dif = abs((int)map->pers.posx - posx) + abs((int)map->pers.posy - posy);
 	if (map->map[(int)map->pers.posy][(int)map->pers.posx] != 'O' && dif <= 1)
 	{
-		if ((map->map[posy][posx] == 'C' || map->map[posy][posx] == 'O') && !check_ps(map->map))
+		if ((map->map[posy][posx] == 'C' || map->map[posy][posx] == 'O') && \
+		!check_ps(map->map))
 		{
 			map->vars.door.posx = posx;
 			map->vars.door.posy = posy;

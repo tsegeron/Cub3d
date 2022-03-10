@@ -110,7 +110,7 @@ typedef struct s_vars
 	t_interface	charge;
 	t_interface	wand;
 	t_interface	rasengan;
-	t_imgs		but_imgs[3];
+	t_imgs		but_imgs[4];
 	int		floor_clr;
 	int		ceil_clr;
 }	t_vars;
@@ -144,7 +144,6 @@ typedef struct s_map
 	t_interface	health;
 	t_interface	light;
 	t_interface	menu_screen;
-	t_interface	end_screen;
 }	t_map;
 
 typedef struct s_list
@@ -204,7 +203,6 @@ int		shade_color(int color, double divide);
 int		add_transparency(int color, double divide);
 void	draw_walls(t_map *map, int *random);
 
-
 void	handle_mouse_pos(t_map *map);
 int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	draw_line(t_interface map, double endx, double endy, int color);
@@ -220,4 +218,5 @@ void	draw_wand_and_light(t_map *map);
 void	draw_start_screen(t_map *map);
 void	draw_menu_screen(t_map *map);
 void	draw_end_screen(t_map *map);
+
 #endif

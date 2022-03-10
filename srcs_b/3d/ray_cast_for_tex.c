@@ -50,7 +50,8 @@ static double	find_wall_on_y(t_map *map, t_local *q, char stat)
 		q->cur_x = map->map_width - 1;
 	if (q->cur_x < 0)
 		q->cur_x = 0;
-	while (!check_cell_symb(map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x], stat))
+	while (!check_cell_symb(map->map[(int)q->cur_y + \
+	q->dif_y][(int)q->cur_x], stat))
 	{
 		q->cur_y += q->step_y;
 		q->cur_x = (q->pos_y - q->cur_y) / tan(q->dir) + q->pos_x;
@@ -59,12 +60,9 @@ static double	find_wall_on_y(t_map *map, t_local *q, char stat)
 		if (q->cur_x < 0)
 			q->cur_x = 0;
 	}
-	return (sqrt((q->cur_x - q->pos_x) * (q->cur_x - q->pos_x)
-				 + (q->cur_y - q->pos_y) * (q->cur_y - q->pos_y)));
+	return (sqrt((q->cur_x - q->pos_x) * (q->cur_x - q->pos_x) \
+	+ (q->cur_y - q->pos_y) * (q->cur_y - q->pos_y)));
 }
-//			map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '1'
-//		   && map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != 'C'
-//		   && map->map[(int)q->cur_y + q->dif_y][(int)q->cur_x] != '#')
 
 /*
  * finds closest HORIZONTALLY wall crossing Y coordinate towards view direction
@@ -73,6 +71,7 @@ double	cast_on_y_tex(t_map *map, double dir, char stat)
 {
 	t_local	q;
 
+	q.dif_y = 0;
 	if (dir < PI && dir > 0)
 	{
 		q.cur_y = floor(map->pers.posy);
@@ -84,14 +83,12 @@ double	cast_on_y_tex(t_map *map, double dir, char stat)
 	{
 		q.cur_x = map->pers.posx;
 		q.cur_y = map->pers.posy;
-		q.dif_y = 0;
 	}
 	else
 	{
 		q.cur_y = ceil(map->pers.posy);
 		q.cur_x = (map->pers.posy - q.cur_y) / tan(dir) + map->pers.posx;
 		q.step_y = 1;
-		q.dif_y = 0;
 	}
 	q.pos_x = map->pers.posx;
 	q.pos_y = map->pers.posy;
@@ -109,7 +106,8 @@ static double	find_wall_on_x(t_map *map, t_local *q, char stat)
 		q->cur_y = map->map_height - 1;
 	if (q->cur_y < 0)
 		q->cur_y = 0;
-	while (!check_cell_symb(map->map[(int)q->cur_y][(int)q->cur_x + q->dif_x], stat))
+	while (!check_cell_symb(map->map[(int)q->cur_y][(int)q->cur_x + \
+	q->dif_x], stat))
 	{
 		q->cur_x += q->step_x;
 		q->cur_y = (q->cur_x - q->pos_x) * -tan(q->dir) + q->pos_y;
@@ -118,8 +116,8 @@ static double	find_wall_on_x(t_map *map, t_local *q, char stat)
 		if (q->cur_y < 0)
 			q->cur_y = 0;
 	}
-	return (sqrt((q->cur_x - q->pos_x) * (q->cur_x - q->pos_x)
-				 + (q->cur_y - q->pos_y) * (q->cur_y - q->pos_y)));
+	return (sqrt((q->cur_x - q->pos_x) * (q->cur_x - q->pos_x) \
+	+ (q->cur_y - q->pos_y) * (q->cur_y - q->pos_y)));
 }
 
 /*
@@ -129,6 +127,7 @@ double	cast_on_x_tex(t_map *map, double dir, char stat)
 {
 	t_local	q;
 
+	q.dif_x = 0;
 	if (dir > PI2 && dir < 1.5 * PI)
 	{
 		q.cur_x = floor(map->pers.posx);
@@ -140,14 +139,12 @@ double	cast_on_x_tex(t_map *map, double dir, char stat)
 	{
 		q.cur_x = map->pers.posx;
 		q.cur_y = map->pers.posy;
-		q.dif_x = 0;
 	}
 	else
 	{
 		q.cur_x = ceil(map->pers.posx);
 		q.cur_y = (q.cur_x - map->pers.posx) * -tan(dir) + map->pers.posy;
 		q.step_x = 1;
-		q.dif_x = 0;
 	}
 	q.pos_x = map->pers.posx;
 	q.pos_y = map->pers.posy;

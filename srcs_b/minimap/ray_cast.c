@@ -57,6 +57,7 @@ double	cast_on_y(t_map *map, double posx, double posy, double dir)
 {
 	t_local	q;
 
+	q.dif_y = 0;
 	if (dir < PI && dir > 0)
 	{
 		q.cur_y = floor(posy);
@@ -68,14 +69,12 @@ double	cast_on_y(t_map *map, double posx, double posy, double dir)
 	{
 		q.cur_x = posx;
 		q.cur_y = posy;
-		q.dif_y = 0;
 	}
 	else
 	{
 		q.cur_y = ceil(posy);
 		q.cur_x = (posy - q.cur_y) / tan(dir) + posx;
 		q.step_y = 1;
-		q.dif_y = 0;
 	}
 	q.pos_x = posx;
 	q.pos_y = posy;
@@ -115,6 +114,7 @@ double	cast_on_x(t_map *map, double posx, double posy, double dir)
 {
 	t_local	q;
 
+	q.dif_x = 0;
 	if (dir > PI2 && dir < 1.5 * PI)
 	{
 		q.cur_x = floor(posx);
@@ -126,14 +126,12 @@ double	cast_on_x(t_map *map, double posx, double posy, double dir)
 	{
 		q.cur_x = posx;
 		q.cur_y = posy;
-		q.dif_x = 0;
 	}
 	else
 	{
 		q.cur_x = ceil(posx);
 		q.cur_y = (q.cur_x - posx) * -tan(dir) + posy;
 		q.step_x = 1;
-		q.dif_x = 0;
 	}
 	q.pos_x = posx;
 	q.pos_y = posy;

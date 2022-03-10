@@ -12,33 +12,49 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-void	draw_wand_and_light(t_map *map)
+typedef struct s_local_vars
 {
 	double	rad;
 	int		clr;
 	int		clr_save;
-	int 	x;
+	int		x;
 	int		y;
+}	t_local;
 
-	clr_save = 0x00c0d4f3;	//	main
-//	clr_save = 0x009DE3A2;	//	cyan
-	y = -1;
-	while (++y < 200)
+static void	put_imgs_to_window(t_map *map)
+{
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.wand.img,
+		map->back.size_x / 3 + map->vars.wand.size_x,
+		map->back.size_y - map->vars.wand.size_y);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->light.img,
+		map->back.size_x / 3 + map->vars.wand.size_x - 25,
+		map->back.size_y / 2);
+}
+
+void	draw_wand_and_light(t_map *map)
+{
+	static double	div = 6.66;
+	static double	step = 0.04;
+	t_local			q;
+
+	q.clr_save = 0x00c0d4f3;
+	q.y = -1;
+	while (++q.y < 200)
 	{
-		x = -1;
-		while (++x < 200)
+		q.x = -1;
+		while (++q.x < 200)
 		{
-			rad = sqrt((y - 100.) * (y - 100.) + (x - 100.) * (x - 100.));
-			clr = 0xFF000000;
-			if (rad <= 100)
-				clr = add_transparency(clr_save, rad / 6.7);
-			my_mlx_pixel_put(&map->light, x, y, clr);
+			q.rad = sqrt((q.y - 100) * (q.y - 100) + (q.x - 100) * (q.x - 100));
+			q.clr = 0xFF000000;
+			if (q.rad <= 100)
+				q.clr = add_transparency(q.clr_save, q.rad / div);
+			my_mlx_pixel_put(&map->light, q.x, q.y, q.clr);
 		}
 	}
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.wand.img,
-							map->back.size_x / 3 + map->vars.wand.size_x,
-							map->back.size_y - map->vars.wand.size_y);
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->light.img,
-							map->back.size_x / 3 + map->vars.wand.size_x - 25,
-							map->back.size_y / 2);
+	div += step;
+	if (div > 7.2 || div < 6.69)
+		step = -step;
+	put_imgs_to_window(map);
 }
+
+//	clr_save = 0x009DE3A2;	//	cyan

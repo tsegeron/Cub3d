@@ -13,6 +13,14 @@
 #include "../../hdrs/cub3d_bonus.h"
 #include "./L3d.h"
 
+static int	get_wall_clr(int side, int tex_y, t_wall_clr *wall)
+{
+	if (side == 1 || side == 2)
+		return (get_pixel(wall->wall_img, wall->x, tex_y));
+	else
+		return (get_pixel(wall->wall_img, wall->y, tex_y));
+}
+
 static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 {
 	double	pix_start;
@@ -33,11 +41,8 @@ static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 		pix_start += pix_step;
 		if (pix_start > 64)
 			break ;
-		if (wall->side == 1 || wall->side == 2)
-			q->wall_clr = get_pixel(wall->wall_img, wall->x, tex_y);
-		else
-			q->wall_clr = get_pixel(wall->wall_img, wall->y, tex_y);
-		q->wall_clr = shade_color(q->wall_clr, wall->dist / 1.);
+		q->wall_clr = get_wall_clr(wall->side, tex_y, wall);
+		q->wall_clr = shade_color(q->wall_clr, wall->dist / 0.5);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(&map->back, q->startx++, q->starty, q->wall_clr);
 		q->starty++;
@@ -76,6 +81,8 @@ static void	get_wall_info(t_map *map, t_wall_clr *data, double dir, char c)
 		get_ea_we_data(&map->vars, data, dist_on_x, dir);
 	else
 		get_no_so_data(&map->vars, data, dist_on_y, dir);
+	data->y = fabs(sin(dir) * data->dist);
+	data->x = fabs(cos(dir) * data->dist);
 	calc_tex_dims(map, data, dir);
 }
 

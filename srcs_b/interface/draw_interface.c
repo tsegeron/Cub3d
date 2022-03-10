@@ -18,10 +18,6 @@ void	draw_interface(t_map *map)
 		draw_start_screen(map);
 	else if (map->screen_stat == MENU)
 		draw_menu_screen(map);
-//	if (map->screen_stat == MENU)
-//	else if (map->screen_stat == END)
-//		draw_end_screen(map);
+	else if (map->screen_stat == END)
+		draw_end_screen(map);
 }
-
-//	9DE3A2	-	cyan
-//	5F6D4C	-	nasty green

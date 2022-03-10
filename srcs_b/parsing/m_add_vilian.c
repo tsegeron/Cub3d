@@ -74,4 +74,3 @@ int	m_addback_vilian(t_vilian **vil, int y, int x)
 	num_vil++;
 	return (0);
 }
-

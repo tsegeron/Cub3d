@@ -12,11 +12,11 @@
 
 #include "../../hdrs/cub3d_bonus.h"
 
-int check_ps(char **map)
+int	check_ps(char **map)
 {
-	int y;
-	int x;
-	int count;
+	int	y;
+	int	x;
+	int	count;
 
 	count = 0;
 	y = -1;

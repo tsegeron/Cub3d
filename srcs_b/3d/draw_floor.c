@@ -23,8 +23,11 @@ void	draw_floor(t_local *q, t_interface *background, int color)
 		q->res = sqrt((q->endy - q->rad) * (q->endy - q->rad)
 				+ (q->startx - 660) * (q->startx - 660));
 		q->floor_clr = color;
-		q->floor_clr = shade_color(q->floor_clr,
-				(800 - q->rad + q->res) / 64. / 1.9);
+		if (800 - q->rad + q->res > 345)
+			q->floor_clr = 0xFF000000;
+		else
+			q->floor_clr = add_transparency(color,
+					(800 - q->rad + q->res) / 23.);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(background, q->startx++, q->endy, q->floor_clr);
 	}

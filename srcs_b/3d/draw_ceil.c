@@ -21,7 +21,10 @@ void	draw_ceil(t_local *q, t_interface *background, int color)
 		q->res = (int )sqrt((q->y + q->rad) * (q->y + q->rad)
 				+ (q->startx - 660) * (q->startx - 660));
 		q->ceil_clr = color;
-		q->ceil_clr = shade_color(q->ceil_clr, (q->res - q->rad) / 64. / 1.9);
+		if (q->res - q->rad > 345)
+			q->ceil_clr = 0xFF000000;
+		else
+			q->ceil_clr = add_transparency(color, (q->res - q->rad) / 23.);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(background, q->startx++, q->y, q->ceil_clr);
 	}

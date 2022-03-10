@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   m_init_imgs.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/02/17 15:23:55 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/17 15:23:59 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "../../hdrs/cub3d_bonus.h"
 
 static int	m_open_addr(t_interface *path, char *str, void *mlx)
@@ -26,7 +38,8 @@ int	m_init_imgs(t_vars *vars, void *mlx)
 		return (EXIT_FAILURE);
 	if (open_but_imgs(&vars->but_imgs[0], "textures/continue.xpm", mlx) || \
 		open_but_imgs(&vars->but_imgs[1], "textures/exit.xpm", mlx) || \
-		open_but_imgs(&vars->but_imgs[2], "textures/start_screen.xpm", mlx))
+		open_but_imgs(&vars->but_imgs[2], "textures/start_screen.xpm", mlx) || \
+		open_but_imgs(&vars->but_imgs[3], "textures/start_screen.xpm", mlx))
 		return (EXIT_FAILURE);
 	return (EXIT_SUCCESS);
 }

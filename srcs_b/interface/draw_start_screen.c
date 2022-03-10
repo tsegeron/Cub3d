@@ -15,5 +15,6 @@
 void	draw_start_screen(t_map *map)
 {
 	mlx_clear_window(map->mlx.mlx, map->mlx.win);
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.but_imgs[2].img, 0, 0);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, \
+	map->vars.but_imgs[2].img, 0, 0);
 }

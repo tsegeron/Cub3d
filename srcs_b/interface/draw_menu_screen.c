@@ -48,6 +48,8 @@ void	draw_menu_screen(t_map *map)
 	draw_buttons(&map->menu_screen);
 	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win,
 		map->menu_screen.img, 0, 0);
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.but_imgs[0].img, 465, 300);
-	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, map->vars.but_imgs[1].img, 465, 400);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, \
+	map->vars.but_imgs[0].img, 465, 300);
+	mlx_put_image_to_window(map->mlx.mlx, map->mlx.win, \
+	map->vars.but_imgs[1].img, 465, 400);
 }

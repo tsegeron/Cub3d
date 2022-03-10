@@ -95,7 +95,7 @@ add_executable(Cub3d
 #
 #        _bonus/srcs_b/enemy/utils.c _bonus/srcs_b/parsing/m_file_to_image.c
 #        srcs/3d/utils.c srcs/3d/L3d.h srcs/3d/get_color.c srcs/3d/draw_walls_test.c srcs/3d/draw_walls.c srcs/input/key_utils.c srcs_b/3d/draw_enemy.c
-        srcs_b/interface/draw_wand_and_light.c srcs_b/interface/utils.c srcs_b/3d/draw_doors.c srcs_b/3d/ray_cast_for_tex.c)
+        srcs_b/interface/draw_wand_and_light.c srcs_b/interface/utils.c srcs_b/3d/ray_cast_for_tex.c srcs_b/3d/utils2.c)
 
 target_link_libraries(Cub3d /Users/gernesto/Desktop/Cub3d/libmlx.a "-framework OpenGL" "-framework AppKit")
 
