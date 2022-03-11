@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   cub3d_bonus.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gernesto <gernesto@student.21-school.ru>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2021/12/06 22:34:59 by gernesto          #+#    #+#             */
+/*   Updated: 2022/02/08 22:14:55 by gernesto         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef CUB3D_BONUS_H
 # define CUB3D_BONUS_H
 
@@ -7,9 +19,7 @@
 # define BUFFER_SIZE 10
 # define MOVE_SPEED 0.1
 # define MAPW 220
-# define MAPW_HALF 110
 # define MAPH 220
-# define MAPH_HALF 110
 # define FOV 0xEE546951
 # define PI 3.14159265
 # define PI2 1.57079632
@@ -18,11 +28,7 @@
 
 /*	colors	*/
 # define EMPTY 0xFF000000
-# define BACKGR 0xCC000000
 # define WALL 0x77000000
-//# define DWALL 0x00F9F2C3
-# define CEIL 0x0051A889
-# define FLOOR 0x00426A37
 # define VOID 0xAA000000
 # define CDOOR 0x44560319
 # define ODOOR 0x77013220
@@ -30,12 +36,8 @@
 # define BATTERY 0x0018BC9C
 # define PLAYER 0x00155054
 # define AIM 0x33FF0000
-# define NO 0x00F9F2C3
-# define SO 0x00568C74
-# define WE 0x00683245
-# define EA 0x007DB84D
 
-typedef enum
+typedef enum s_screenstat
 {
 	NOSCREEN,
 	START,
@@ -100,7 +102,7 @@ typedef struct s_imgs
 
 typedef struct s_vars
 {
-	t_interface path_no;
+	t_interface	path_no;
 	t_interface	path_so;
 	t_interface	path_we;
 	t_interface	path_ea;
@@ -111,8 +113,8 @@ typedef struct s_vars
 	t_interface	wand;
 	t_interface	rasengan;
 	t_imgs		but_imgs[4];
-	int		floor_clr;
-	int		ceil_clr;
+	int			floor_clr;
+	int			ceil_clr;
 }	t_vars;
 
 typedef struct s_keys
@@ -137,7 +139,7 @@ typedef struct s_map
 	t_mlx		mlx;
 	t_keys		key;
 	t_hero		pers;
-	t_vilian 	*vilian;
+	t_vilian	*vilian;
 	t_interface	round_minmap;
 	t_interface	battery_bar;
 	t_interface	back;
@@ -172,7 +174,6 @@ int		m_addback_vilian(t_vilian **vil, int y, int x);
 int		m_clear_vilian_lst(t_vilian **vil);
 void	m_change_dir_to_hero(t_vilian *vil, t_hero *hero);
 double	ray_cast_vil(t_map *map, double dir, t_vilian *now);
-int		m_check_vil_vil(t_vilian *vilian, t_vilian *now, double posx, double posy);
 void	m_change_vil_dir(t_vilian *vil);
 int		m_free_util(char *str);
 int		m_file_to_image(char *util, t_map *map, t_interface *path);
@@ -182,11 +183,12 @@ void	m_move_lite(t_vilian *vil, t_map *map);
 void	m_move_angry(t_vilian *vil, t_map *map);
 void	m_draw_enemy_minimap(t_map *map);
 int		m_clear_all(t_map *map);
-int		m_player_attack(int keycode, int mouse_x, int mouse_y, t_map *map);
+int		m_player_attack(t_map *map);
 int		m_init_imgs(t_vars *vars, void *mlx);
 /*	mseastar	*/
 
 /*	gernesto	*/
+void	init_all(t_map *map);
 void	my_mlx_pixel_put(t_interface *data, int x, int y, int color);
 int		close_win(t_map *map);
 int		press_key(int keycode, t_map *map);
@@ -207,11 +209,9 @@ void	handle_mouse_pos(t_map *map);
 int		handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map);
 void	draw_line(t_interface map, double endx, double endy, int color);
 double	ray_cast(t_map *map, double dir, int stat);
-void	draw_minimap(t_map *map);
 void	draw_interface(t_map *map);
 void	draw_battery_bar(t_map *map);
 void	draw_health_effect(t_map *map);
-void	draw_background(t_map *map);	//	FOR TEST
 void	draw_round_minimap(t_map *map);
 void	draw_minimap_elements(t_map *map);
 void	draw_wand_and_light(t_map *map);

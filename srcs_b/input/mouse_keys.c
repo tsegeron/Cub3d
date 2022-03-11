@@ -16,7 +16,9 @@ int	handle_mouse_keys(int keycode, int mouse_x, int mouse_y, t_map *map)
 {
 	if (keycode == 1 || keycode == 2)
 	{
-		if (map->screen_stat == START)
+		if (map->screen_stat == NOSCREEN)
+			m_player_attack(map);
+		else if (map->screen_stat == START)
 		{
 			if (mouse_y > 587 && mouse_y < 657)
 			{

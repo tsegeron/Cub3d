@@ -30,16 +30,14 @@ static void	m_check_dir_attack(double dir_to_enemy, t_map *map, t_vilian *step)
 {
 	if (fabs(dir_to_enemy - map->pers.dir) < PI / 6 || \
 		fabs(dir_to_enemy - map->pers.dir) > 5 * PI / 3)
-		step->health -= 0.25;
+		step->health = (int )(step->health - 0.25);
 }
 
-int	m_player_attack(int keycode, int mouse_x, int mouse_y, t_map *map)
+int	m_player_attack(t_map *map)
 {
 	t_vilian	*step;
 	double		dir_to_enemy;
 
-	if (keycode != 1 && mouse_x < 1000000 && mouse_y < 10000000)
-		return (1);
 	step = map->vilian;
 	while (step)
 	{
