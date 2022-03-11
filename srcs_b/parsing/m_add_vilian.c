@@ -56,10 +56,10 @@ int	m_addback_vilian(t_vilian **vil, int y, int x)
 	t_vilian	*vil_step;
 	static int	num_vil = 1;
 
-	if (!*vil)
+	if (!(*vil))
 	{
 		*vil = m_new_vilian(y, x, num_vil);
-		if (!*vil)
+		if (!(*vil))
 			return (m_clear_vilian_lst(vil));
 	}
 	else

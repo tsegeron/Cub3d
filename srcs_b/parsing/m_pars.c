@@ -59,6 +59,7 @@ int	m_pars(char **av, t_map *map)
 	int		fd;
 
 	lst_map = NULL;
+	map->vilian = NULL;
 	map->map = NULL;
 	map->mlx.mlx = mlx_init();
 	if (!map->mlx.mlx)
