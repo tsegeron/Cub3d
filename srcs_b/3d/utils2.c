@@ -37,25 +37,23 @@ static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 {
 	double	pix_start;
 	double	pix_step;
-	int		tex_y;
 
-	pix_step = 1. * wall->wall_img.size_y / lineh / 2;
+	pix_step = 1. * wall->wall_img.size_y / (lineh * 2);
 	if (wall->wall_stat == 3 && map->key.e == 1)
 		pix_start = (q->starty - map->mlx.win_size_y / 2. + lineh) * \
 		pix_step + wall->rand;
 	else if (wall->wall_stat == 3 && map->key.e == 2)
 		pix_start = (q->starty - map->mlx.win_size_y / 2. + lineh) \
-		* pix_step + 64 - wall->rand;
+		* pix_step + wall->wall_img.size_y - wall->rand;
 	else
 		pix_start = (q->starty - map->mlx.win_size_y / 2. + lineh) * pix_step;
 	while (q->starty < q->endy)
 	{
 		q->startx = q->savex;
-		tex_y = (int )pix_start & (wall->wall_img.size_y - 1);
 		pix_start += pix_step;
-		if (pix_start > 64)
+		if (pix_start > wall->wall_img.size_y)
 			break ;
-		q->wall_clr = get_wall_clr(wall->side, tex_y, wall);
+		q->wall_clr = get_wall_clr(wall->side, (int)pix_start, wall);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(&map->back, q->startx++, q->starty, q->wall_clr);
 		q->starty++;

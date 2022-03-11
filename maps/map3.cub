@@ -1,7 +1,7 @@
-NO textures/mossy.xpm
-SO textures/purplestone.xpm
-WE textures/redbrick.xpm
-EA textures/wood.xpm
+WE textures/art3.xpm
+NO textures/art1.xpm
+SO textures/art2.xpm
+EA textures/art4.xpm
 
 
 C 0,255,0

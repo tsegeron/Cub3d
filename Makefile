@@ -1,6 +1,6 @@
 CC			=	gcc
 #-Wall -Wextra -Werror
-FLAGS		=	-Wall -Wextra -Werror
+#FLAGS		=	-Wall -Wextra -Werror
 FLAGS_MLX	=	-framework OpenGL -framework AppKit
 OPTFLAGS	=	-O2
 #BON_FLG0	=	-D BONUS=0

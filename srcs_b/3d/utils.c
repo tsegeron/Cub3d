@@ -83,7 +83,7 @@ void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir)
 	else
 		data->y -= floor(data->y);
 	data->x *= data->wall_img.size_x;
-	data->y *= data->wall_img.size_y;
+	data->y *= data->wall_img.size_x;
 }
 
 int	get_pixel(t_interface wall, double x, double y)

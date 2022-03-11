@@ -17,19 +17,17 @@ static void	draw_wall_line(t_map *map, t_local *q, t_wall_clr *wall, int lineh)
 {
 	double	pix_start;
 	double	pix_step;
-	int		tex_y;
 
 	pix_step = 1. * wall->wall_img.size_y / lineh / 2;
 	pix_start = (q->starty - map->mlx.win_size_y / 2. + lineh) * pix_step;
 	while (q->starty < q->endy)
 	{
 		q->startx = q->savex;
-		tex_y = (int )pix_start & (wall->wall_img.size_y - 1);
 		pix_start += pix_step;
 		if (wall->side == 1 || wall->side == 2)
-			q->wall_clr = get_pixel(wall->wall_img, wall->x, tex_y);
+			q->wall_clr = get_pixel(wall->wall_img, wall->x, pix_start);
 		else
-			q->wall_clr = get_pixel(wall->wall_img, wall->y, tex_y);
+			q->wall_clr = get_pixel(wall->wall_img, wall->y, pix_start);
 		q->wall_clr = shade_color(q->wall_clr, wall->dist / 1.1);
 		while (q->startx < q->endx)
 			my_mlx_pixel_put(&map->back, q->startx++, q->starty, q->wall_clr);
@@ -67,6 +65,8 @@ static void	get_wall_info(t_map *map, t_wall_clr *data, double dir)
 		get_ea_we_data(&map->vars, data, dist_on_x, dir);
 	else
 		get_no_so_data(&map->vars, data, dist_on_y, dir);
+	data->y = fabs(sin(dir) * data->dist);
+	data->x = fabs(cos(dir) * data->dist);
 	calc_tex_dims(data, dir, map->pers.posx, map->pers.posy);
 }
 

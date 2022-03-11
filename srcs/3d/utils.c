@@ -45,8 +45,6 @@ void	get_no_so_data(t_vars *vars, t_wall_clr *data, double dist, double dir)
 
 void	calc_tex_dims(t_wall_clr *data, double dir, double persx, double persy)
 {
-	data->y = fabs(sin(dir) * data->dist);
-	data->x = fabs(cos(dir) * data->dist);
 	if (dir < PI && dir > 0)
 		data->y = -data->y;
 	if (dir > PI2 && dir < PI2 * 3)
@@ -62,7 +60,7 @@ void	calc_tex_dims(t_wall_clr *data, double dir, double persx, double persy)
 	else
 		data->y -= floor(data->y);
 	data->x *= data->wall_img.size_x;
-	data->y *= data->wall_img.size_y;
+	data->y *= data->wall_img.size_x;
 }
 
 int	shade_color(int color, double divide)

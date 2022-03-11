@@ -83,7 +83,7 @@ void	draw_walls(t_map *map, int *stat)
 	while (dir_end > dir_start && x > -1)
 	{
 		do_calc(map, &data, dir_start, stat);
-		draw_line_w(map, 800 / data.dist / 2, data, x);
+		draw_line_w(map, (int)(800 / data.dist / 2), data, x);
 		if (data.wall_stat == 1)
 		{
 			data.wall_stat = 2;
