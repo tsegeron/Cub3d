@@ -199,7 +199,7 @@ double	cast_on_y(t_map *map, double posx, double posy, double dir);
 double	cast_on_x(t_map *map, double posx, double posy, double dir);
 double	cast_on_y_tex(t_map *map, double dir, char stat);
 double	cast_on_x_tex(t_map *map, double dir, char stat);
-int		shade_color(int color, double divide);
+//int		shade_color(int color, double divide);
 int		add_transparency(int color, double divide);
 void	draw_walls(t_map *map, int *random);
 

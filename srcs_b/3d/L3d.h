@@ -45,5 +45,6 @@ void	get_ea_we_data(t_vars *vars, t_wall_clr *data, double dist, double dir);
 void	get_no_so_data(t_vars *vars, t_wall_clr *data, double dist, double dir);
 void	calc_tex_dims(t_map *map, t_wall_clr *data, double dir);
 int		get_pixel(t_interface wall, double x, double y);
+void	draw_line_w(t_map *map, int lineh, t_wall_clr wall, int x);
 
 #endif
